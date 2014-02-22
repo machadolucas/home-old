@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" lang="#{localeBean.language}">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="expires" content="0" />
+
+	<link rel="icon" type="image/ico"
+		href="#{facesContext.externalContext.requestContextPath}/resources/img/favicon.ico" />
+
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/resources/style.css"
+		media="all" />
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"
+		type="text/javascript" />
+	<script type="text/javascript"
+		src="#{facesContext.externalContext.requestContextPath}/resources/js/script.js" />
+	<script type="text/javascript"
+		src="#{facesContext.externalContext.requestContextPath}/resources/js/jquery.onepage-scroll.min.js" />
+
+	<meta name="viewport"
+		content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
+
+	<ui:insert name="head" />
+
+	<meta property="og:site_name" content="machadolucas" />
+	<meta property="og:image"
+		content="#{facesContext.externalContext.requestContextPath}/resources/img/site_logo.jpg" />
+
+	<f:view locale="#{localeBean.locale}" />
+</h:head>
+<h:body>
+	<ui:insert name="content" />
+
+	<ui:insert name="dialogs" />
+</h:body>
+</html>
