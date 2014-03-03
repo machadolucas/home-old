@@ -94,7 +94,17 @@ p {
 				color: #fff; text-decoration: none; font-size: 28px; text-align: center; line-height: 150px; padding: 10px;  
 				margin: 0 auto; background: rgba(0,0,0,0.7);}
 	.big-button:hover { background: rgba(255,255,255,0.10); }
-		
+	.medium-button { position: absolute; display: block; width: 100px; height: 100px; border-radius: 50%; border: 2px solid #fff; 
+				color: #fff; text-decoration: none; font-size: 18px; text-align: center; line-height: 100px; padding: 5px;  
+				margin: 0 auto; background: #000; opacity: 0.2; -webkit-transition: all 0.3s linear; transition: all 0.3s linear;}
+	.medium-button:hover { opacity: 1; }
+	.home-text {
+		text-align: center;
+		width: 500px;
+		margin: auto;
+		margin-top: 15%;
+	}
+	.home-text h1, .home-text h2, .home-text h3 { margin: 5px; }
 #page_whoIAm {
 	color: #222222;
 	background: #fafafa url('img/pattern.png') right repeat;
@@ -170,7 +180,7 @@ p {
 	}
 	#timeline {
 		font-family: Georgia, serif;
-		height: 400px;
+		height: 500px;
 		overflow: hidden;
 		margin: 0px auto;
 		position: relative;
@@ -204,13 +214,13 @@ p {
 		
 		#issues {
 			width: 800px;
-			height: 400px;
+			height: 500px;
 			overflow: hidden;
 			padding: 0px;
 		}	
 			#issues li {
 				width: 800px;
-				height: 400px;
+				height: 500px;
 				list-style: none;
 				float: left;
 			}
@@ -312,17 +322,18 @@ p {
 		background: #fff;
 		color: #222;
 		padding: 5px 5px 10px 5px;
+		margin: 15px;
 		box-shadow: 0px 5px 15px 2px rgba(0,0,0,0.7);
 		width: 250px;
 	}
 #page_blog {
-	color: #3a3a3a;
+	color: rgba(0,0,0,0.65);
 	background: #F5F5DC url('img/wood.jpg') right repeat;
 }
 	.sheet{
 		position: absolute;
 		top: 5%;
-		height: 85%;
+		min-height: 85%;
 		left: 15%;
 		width: 60%;
 		margin: auto;
