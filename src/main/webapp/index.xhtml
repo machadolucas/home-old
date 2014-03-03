@@ -8,12 +8,17 @@
 	template="/resources/template/template.xhtml">
 
 	<ui:define name="head">
-		<title><h:outputText value="#{msg.html_title}" /></title>
+		<title><h:outputText value="Lucas Machado" /></title>
 
-		<meta property="og:title" content="#{msg.html_title}" />
+		<meta property="og:title" content="Lucas Machado" />
 		<meta property="og:url"
 			content="#{request.requestURL.substring(0, request.requestURL.length() - request.requestURI.length())}" />
 		<meta property="og:type" content="website" />
+		
+		<script
+		src="#{facesContext.externalContext.requestContextPath}/resources/js/jquery.timelinr-0.9.54.js"
+		type="text/javascript" />
+		
 	</ui:define>
 
 	<ui:define name="content">
@@ -48,8 +53,132 @@
 				</div>
 			</section>
 
-			<section id="timeline">
-				<h1>Timeline</h1>
+			<section id="timeline-section">
+				<h1 style="margin: 0px">Timeline</h1>
+				<div id="timeline-border">
+					<div id="timeline-wrapper">
+						<div id="timeline">
+							<ul id="dates">
+								<li><a href="#">1992</a></li>
+								<li><a href="#">1994</a></li>
+								<li><a href="#">1996</a></li>
+								<li><a href="#">1997</a></li>
+								<li><a href="#">2001</a></li>
+								<li><a href="#">2002</a></li>
+								<li><a href="#">2004</a></li>
+								<li><a href="#">2005</a></li>
+								<li><a href="#">2006</a></li>
+								<li><a href="#">2007</a></li>
+								<li><a href="#">2008</a></li>
+								<li><a href="#">2009</a></li>
+								<li><a href="#">2010</a></li>
+								<li><a href="#">2013</a></li>
+								<li><a href="#">2014</a></li>
+							</ul>
+							<ul id="issues">
+								<li id="1992">
+									<img src="resources/img/timeline/7.png" width="256" height="256" />
+									<h1>1992</h1>
+									<p>March 12: I was born in Sao Jose dos Campos, Brazil.</p>
+								</li>
+								<li id="1994">
+									<img src="resources/img/timeline/7.png" width="256" height="256" />
+									<h1>1994</h1>
+									<p>With 2 years old, I had my first contact with a computer. It was a 386 processor with just some megabytes of HDD that ran Windows 3.1.</p>
+								</li>
+								<li id="1996">
+									<img src="resources/img/timeline/7.png" width="256" height="256" />
+									<h1>1996</h1>
+									<p>Began to learn English language through a computer software. Also started to play some RPG games (like Warcraft and Heroes of Might and Magic).</p>
+								</li>
+								<li id="1997">
+									<img src="resources/img/timeline/7.png" width="256" height="256" />
+									<h1>1997</h1>
+									<p>Playing with little electronic parts like LEDs, engines, batteries and building my own toy cars.</p>
+									<p>In computer games, I become a fan of some FPS games (Doom, Duke Nukem 3D, Quake), Sim City 2000 and Railroad Tycoon.</p>
+									<p>I was a great fan of Lego too. I used to build cities with houses and monuments and establish social, economic and military systems in it.</p>
+								</li>
+								<li id="2001">
+									<img src="resources/img/timeline/7.png" width="256" height="256" />
+									<h1>2001</h1>
+									<p>Memorized the name and habilities of all the first 150 pokemons. :)</p>
+								</li>
+								<li id="2002">
+									<img src="resources/img/timeline/7.png" width="256" height="256" />
+									<h1>2002</h1>
+									<p>In elementary school (in the old 4th grade) I already showed mastery and passion about computers, and with the help of the teachers I suggested, deployed and taught classes of basic digital inclusion for my classmates, using the computer room of the school that was virtually abandoned.</p>
+									<p>My teacher also gave me some weekly time periods in the classroom, so I could teach basic chemistry to my classmates.</p>
+									<p>Began to read at least three books per week.</p>
+									<p>Started Judo</p>
+								</li>
+								<li id="2004">
+									<img src="resources/img/timeline/7.png" width="256" height="256" />
+									<h1>2004</h1>
+									<p>My father (who is an engineer and helped me) made me responsible for the entire project of a house my parents built. I developed myself all the civil, electrical, hydraulic and structural plans along with the architecture.</p>
+									<p>I also had my first experiences playing with HTML and trying to build a static website about games.</p>
+									<p>Started Swimming</p>
+									<p>Earned a medal in a regional chess championship.</p>
+								</li>
+								<li id="2005">
+									<img src="resources/img/timeline/7.png" width="256" height="256" />
+									<h1>2005</h1>
+									<p>In 7th grade, I developed my oratory by founding, participating and electing me president in the first elections of the School Students Association.</p>
+									<p>I first participated in the <a href="http://www.obmep.org.br" target="_blank">Brazilian Mathematical Olympiad of Public Schools (OBMEP)</a>, getting a honor certificate and a year of CNPq Jr. Scientific Initiation program in partnership with the Institute of Pure and Applied Mathematics (IMPA).</p>
+								</li>
+								<li id="2006">
+									<img src="resources/img/timeline/7.png" width="200" height="200" />
+									<h1>2006</h1>
+									<p>I was reelected as president of the School Students Association.</p>
+									<p>Again, I participated in the Brazilian Mathematical Olympiad of Public Schools (OBMEP), getting another honor certificate along with a medal, and another year of CNPq Jr. Scientific Initiation program.</p>
+									<p>I met Lacrimosa music - my favorite band until nowadays -, with the album Satura.</p>
+									<p>My first contact with computer programming in VB.</p>
+									<p>Took an entrance exam to Colegio Embraer Juarez Wanderley for high school, in which I was placed 4th position between more than 5,000 candidates. This school is between the best schools in the country.</p>
+								</li>
+								<li id="2007">
+									<img src="resources/img/timeline/7.png" width="256" height="256" />
+									<h1>2007</h1>
+									<p>In the first year in <a href="http://juarezwanderley.com.br" target="_blank">Juarez Wanderley High School</a>, I was responsible for the marketing and divulgation in the event "Feira de carreiras de engenharia" (Engineering careers fair), by managing the hotsite creation, flyers and brochures.</p>
+									<p>Inside the high school, I began to participate in an Engineering program (with some specific classes) that lasted until 2009.</p>
+								</li>
+								<li id="2008">
+									<img src="resources/img/timeline/7.png" width="256" height="256" />
+									<h1>2008</h1>
+									<p>Still in the high school, I managed a project that carried out the reforestation of an area in the back of the school: The soil was recuperated and more than 300 trees were planted.</p>
+									<p>I started my interests for photography and fashion.</p>
+								</li>
+								<li id="2009">
+									<img src="resources/img/timeline/7.png" width="256" height="256" />
+									<h1>2009</h1>
+									<p>I developed and led a project to install a system in school locker rooms that reuses the water from baths into toilets, saving water.</p>
+									<p>Took entrance exams to several universities, being admitted in pratically all of them. So I choosed the University of Sao Paulo - USP.</p>
+								</li>
+								<li id="2010">
+									<img src="resources/img/timeline/7.png" width="256" height="256" />
+									<h1>2010</h1>
+									<p>With 17 years old, I began to study Information Systems at <a href="http://www5.usp.br/en/" target="_blank">University of Sao Paulo</a> - the top university in latin america.</p>
+									<p>I suggested and led the "1º Dia do Descarte Legal" (First Day of Nice Disposal), which was an event to raise awareness about the correct disposal of electronic waste and collect it from the university community. It was very successful.</p>
+									<p>In June I started working as a programmer at <a href="http://evaltec.com.br/index.php/e-val-tecnologia-english" target="_blank">E-Val</a>, where I was for more than 3 years.</p>
+									<p>Within a college subject, I suggested changes in the EACH/USP website, turning the navigation accessible for visually impaired persons.</p>
+								</li>
+								<li id="2013">
+									<img src="resources/img/timeline/7.png" width="256" height="256" />
+									<h1>2013</h1>
+									<p>Earned the heart of <a href="http://dev.mayogax.me" target="_blank">Priscila Mayumi Sato</a>.</p>
+									<p>Received a sandwhich undergraduate scholarship from CNPq at <a href="http://uta.fi/english/" target="_blank">University of Tampere</a>, in Finland. So, I left my life in Brazil for a few months.</p>
+									<p>I swam in frozen lakes and in the Arctic Ocean (in the winter), saw metal bands and the Santa Claus, went to saunas and drove a huskies sledge.</p>
+								</li>
+								<li id="2014">
+									<img src="resources/img/timeline/7.png" width="256" height="256" />
+									<h1>2014</h1>
+									<p>I was accepted to work in a <a href="http://tampere.demola.fi/projects/watch-out-dangerous" target="_blank">Demola project</a>.</p>
+								</li>
+							</ul>
+							<div id="grad_left"></div>
+							<div id="grad_right"></div>
+							<a href="#" id="next">+</a> <a href="#" id="prev">-</a>
+						</div>
+					</div>
+				</div>
 			</section>
 
 			<section id="education">
@@ -62,10 +191,20 @@
 
 			<section id="photography">
 				<h1>Photography</h1>
+				<div class="photo">
+				<img src="resources/img/wood.jpg" width="250" height="250" />
+				photo
+				</div>
 			</section>
 
 			<section id="blog">
-				<h1>Blog</h1>
+				<div class="sheet">
+				<h1 style="margin: 0px;">Blog</h1>
+				<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
+				</p>
+				<p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.
+				</p>
+				</div>
 			</section>
 
 			<section id="contact">
@@ -93,6 +232,10 @@
 		    .end()
 		    .appendTo('#opinions');
 		},  6000);
+		});
+
+		$(function(){
+			$().timelinr();
 		});
 		</script>
 
