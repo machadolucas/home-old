@@ -15,21 +15,42 @@
 			content="#{request.requestURL.substring(0, request.requestURL.length() - request.requestURI.length())}" />
 		<meta property="og:type" content="website" />
 		
-		<script
-		src="#{facesContext.externalContext.requestContextPath}/resources/js/jquery.timelinr-0.9.54.js"
-		type="text/javascript" />
-		
 	</ui:define>
 
 	<ui:define name="content">
 
-		<div class="main">
+		<div class="main" id="container">
 
-			<section id="home">
-				<h1>Hello</h1>
-			</section>
+			<div id="home">
+				<a class="big-button" style="top:0px; left:42%;" href="#whoIAm" >
+					Who I Am?
+				</a>
+				<a class="big-button" style="top:0px; right:0px" href="#lifeline" >
+					Lifeline
+				</a>
+				<a class="big-button" style="bottom:0px; left:42%;" href="#education" >
+					Education
+				</a>
+				<a class="big-button" style="bottom:0px; right:0px;" href="#professional" >
+					Professional
+				</a>
+				<a class="big-button" style="top:0px; left:0px;" href="#photography" >
+					Photography
+				</a>
+				<a class="big-button" style="top:42%; left:0px;" href="#blog" >
+					Blog
+				</a>
+				<a class="big-button" style="top:42%; right:0px" href="#contact" >
+					Contact
+				</a>
+				
+				<h1 style="text-align: center; margin-top: 20%;">Hello</h1>
+			</div>
 
-			<section id="whoIAm">
+			<div id="whoIAm">
+				<a href="#home" class="home-button" style="bottom:0px; left:42%;">
+					Back
+				</a>
 				<h1>Who I am?</h1>
 
 				<div id="opinions-wrapper">
@@ -51,9 +72,12 @@
 							<h6>- Don Corleone -</h6></div>
 					</div>
 				</div>
-			</section>
+			</div>
 
-			<section id="timeline-section">
+			<div id="lifeline">
+				<a href="#home" class="home-button" style="bottom:0px; left:0px">
+					Back
+				</a>
 				<h1 style="margin: 0px">Timeline</h1>
 				<div id="timeline-border">
 					<div id="timeline-wrapper">
@@ -179,25 +203,37 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 
-			<section id="education">
+			<div id="education">
+				<a href="#home" class="home-button" style="top:0px; left:42%;">
+					Back
+				</a>
 				<h1>Education</h1>
-			</section>
+			</div>
 
-			<section id="professional">
+			<div id="professional">
+				<a href="#home" class="home-button" style="top:0px; left:0px;">
+					Back
+				</a>
 				<h1>Professional</h1>
-			</section>
+			</div>
 
-			<section id="photography">
+			<div id="photography">
+				<a href="#home" class="home-button" style="bottom:0px; right:0px;">
+					Back
+				</a>
 				<h1>Photography</h1>
 				<div class="photo">
 				<img src="resources/img/wood.jpg" width="250" height="250" />
 				photo
 				</div>
-			</section>
+			</div>
 
-			<section id="blog">
+			<div id="blog">
+				<a href="#home" class="home-button" style="top:42%; right:0px">
+					Back
+				</a>
 				<div class="sheet">
 				<h1 style="margin: 0px;">Blog</h1>
 				<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
@@ -205,22 +241,31 @@
 				<p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. Ut scelerisque neque et turpis posuere pulvinar pellentesque nibh ullamcorper. Pharetra in mattis molestie, volutpat elementum justo. Aenean ut ante turpis. Pellentesque laoreet mé vel lectus scelerisque interdum cursus velit auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac mauris lectus, non scelerisque augue. Aenean justo massa.
 				</p>
 				</div>
-			</section>
+			</div>
 
-			<section id="contact">
+			<div id="contact">
+				<a href="#home" class="home-button" style="top:42%; left:0px">
+					Back
+				</a>
 				<h1>Contact</h1>
-			</section>
+			</div>
 		</div>
 
+		<script
+			src="#{facesContext.externalContext.requestContextPath}/resources/js/scrollTo.js"
+			type="text/javascript" />
+		<script
+			src="#{facesContext.externalContext.requestContextPath}/resources/js/fullCont.js"
+			type="text/javascript" />
 		<script type="text/javascript">
-		$(document).ready(function(){
-			$(".main").onepage_scroll({
-					sectionContainer: "section",
-			      responsiveFallback: 600,
-			      updateURL: true
-			      });
-		});
 
+		$('#container').fullContent({ 
+		  stages: 'div', 
+		  mapPosition: [{v: 3, h: 3}, {v: 1, h: 3}, {v: 1, h: 5}, {v: 5, h: 3}, {v: 5, h: 5}, {v: 1, h: 1}, {v: 3, h: 1}, {v: 3, h: 5}], 
+		  stageStart: 1, 
+		  speedTransition: 800
+		});
+		
 		//OPINION
 		$(document).ready(function() {
 		$("#opinions > .opinion:gt(0)").hide();
@@ -238,6 +283,9 @@
 			$().timelinr();
 		});
 		</script>
+		<script
+			src="#{facesContext.externalContext.requestContextPath}/resources/js/jquery.timelinr-0.9.54.js"
+			type="text/javascript" />
 
 	</ui:define>
 </ui:composition>
