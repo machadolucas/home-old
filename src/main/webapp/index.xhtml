@@ -18,29 +18,64 @@
 	</ui:define>
 
 	<ui:define name="content">
-
+		<div class="main-menu-link">
+				<a  href="javascript:openMenu()" >
+					Menu
+				</a>
+		</div>
+		<div class="main-menu">
+				<div id="menu-focus"></div>
+				<a  href="#photography" onclick="menuHighlight(this)">
+					Photography
+				</a>
+				<a href="#whoIAm" onclick="menuHighlight(this)">
+					Who I Am?
+				</a>
+				<a href="#lifeline" onclick="menuHighlight(this)">
+					Lifeline
+				</a>
+				<a href="#blog" onclick="menuHighlight(this)">
+					Blog
+				</a>
+				<a href="#home" onclick="menuHighlight(this)">
+					Home
+				</a>
+				<a  href="#contact" onclick="menuHighlight(this)">
+					Contact
+				</a>
+				<a href="javascript:closeMenu()" class="close">
+					X
+				</a>
+				<a href="#education" onclick="menuHighlight(this)">
+					Education
+				</a>
+				<a href="#professional" onclick="menuHighlight(this)">
+					Professional
+				</a>
+		</div>
+		
 		<div class="main" id="container">
 
 			<div id="home" class="unselectable">
-				<a class="big-button" style="top:0px; left:42%;" href="#whoIAm" >
+				<a class="big-button" style="top:10px; left:42%;" href="#whoIAm" onclick="menuHighlight(this)">
 					Who I Am?
 				</a>
-				<a class="big-button" style="top:0px; right:0px" href="#lifeline" >
+				<a class="big-button" style="top:10px; right:10px" href="#lifeline" onclick="menuHighlight(this)">
 					Lifeline
 				</a>
-				<a class="big-button" style="bottom:0px; left:42%;" href="#education" >
+				<a class="big-button" style="bottom:10px; left:42%;" href="#education" onclick="menuHighlight(this)">
 					Education
 				</a>
-				<a class="big-button" style="bottom:0px; right:0px;" href="#professional" >
+				<a class="big-button" style="bottom:10px; right:10px;" href="#professional" onclick="menuHighlight(this)">
 					Professional
 				</a>
-				<a class="big-button" style="top:0px; left:0px;" href="#photography" >
+				<a class="big-button" style="top:10px; left:10px;" href="#photography" onclick="menuHighlight(this)">
 					Photography
 				</a>
-				<a class="big-button" style="top:42%; left:0px;" href="#blog" >
+				<a class="big-button" style="top:42%; left:10px;" href="#blog" onclick="menuHighlight(this)">
 					Blog
 				</a>
-				<a class="big-button" style="top:42%; right:0px" href="#contact" >
+				<a class="big-button" style="top:42%; right:10px" href="#contact" onclick="menuHighlight(this)">
 					Contact
 				</a>
 				
@@ -51,16 +86,16 @@
 			</div>
 
 			<div id="whoIAm">
-				<a class="medium-button" style="top:42%; right:0px" href="#lifeline" >
+				<a class="medium-button" style="top:42%; right:0px" href="#lifeline" onclick="menuHighlight(this)">
 					Lifeline
 				</a>
-				<a class="medium-button" style="top:42%; left:0px;" href="#photography" >
+				<a class="medium-button" style="top:42%; left:0px;" href="#photography" onclick="menuHighlight(this)">
 					Photography
 				</a>
-				<a class="medium-button" style="bottom:0px; left:0px;" href="#blog" >
+				<a class="medium-button" style="bottom:0px; left:0px;" href="#blog" onclick="menuHighlight(this)">
 					Blog
 				</a>
-				<a href="#home" class="home-button" style="bottom:0px; left:42%;">
+				<a href="#home" class="home-button" style="bottom:0px; left:42%;" onclick="menuHighlight(this)">
 					Back
 				</a>
 				<h1>Who I am?</h1>
@@ -87,10 +122,10 @@
 			</div>
 
 			<div id="lifeline" class="scrollv">
-				<a class="medium-button" style="top:42%; left:0;" href="#whoIAm" >
+				<a class="medium-button" style="top:42%; left:0;" href="#whoIAm" onclick="menuHighlight(this)">
 					Who I Am?
 				</a>
-				<a href="#home" class="home-button" style="bottom:0px; left:0px">
+				<a href="#home" class="home-button" style="bottom:0px; left:0px" onclick="menuHighlight(this)">
 					Back
 				</a>
 				<h1 style="margin: 0px">Lifeline</h1>
@@ -221,30 +256,30 @@
 			</div>
 
 			<div id="education">
-				<a class="medium-button" style="top:42%; right:0px;" href="#professional" >
+				<a class="medium-button" style="top:42%; right:0px;" href="#professional" onclick="menuHighlight(this)">
 					Professional
 				</a>
-				<a href="#home" class="home-button" style="top:0px; left:42%;">
+				<a href="#home" class="home-button" style="top:0px; left:42%;" onclick="menuHighlight(this)">
 					Back
 				</a>
 				<h1>Education</h1>
 			</div>
 
 			<div id="professional">
-				<a class="medium-button" style="top:42%; left:0px;" href="#education" >
+				<a class="medium-button" style="top:42%; left:0px;" href="#education" onclick="menuHighlight(this)">
 					Education
 				</a>
-				<a class="medium-button" style="top:0px; left:42%" href="#contact" >
+				<a class="medium-button" style="top:0px; left:42%" href="#contact" onclick="menuHighlight(this)">
 					Contact
 				</a>
-				<a href="#home" class="home-button" style="top:0px; left:0px;">
+				<a href="#home" class="home-button" style="top:0px; left:0px;" onclick="menuHighlight(this)">
 					Back
 				</a>
 				<h1>Professional</h1>
 			</div>
 
 			<div id="photography">
-				<a href="#home" class="home-button" style="bottom:0px; right:0px;">
+				<a href="#home" class="home-button" style="bottom:0px; right:0px;" onclick="menuHighlight(this)">
 					Back
 				</a>
 				<h1>Photography</h1>
@@ -255,7 +290,7 @@
 			</div>
 
 			<div id="blog" class="scrollv">
-				<a href="#home" class="home-button" style="top:42%; right:0px">
+				<a href="#home" class="home-button" style="top:42%; right:0px" onclick="menuHighlight(this)">
 					Back
 				</a>
 				<div class="sheet">
@@ -272,7 +307,7 @@
 			</div>
 
 			<div id="contact">
-				<a href="#home" class="home-button" style="top:42%; left:0px">
+				<a href="#home" class="home-button" style="top:42%; left:0px" onclick="menuHighlight(this)">
 					Back
 				</a>
 				<h1>Contact</h1>
@@ -292,10 +327,51 @@
 
 		$('#container').fullContent({ 
 		  stages: 'div', 
-		  mapPosition: [{v: 3, h: 3}, {v: 1, h: 3}, {v: 1, h: 5}, {v: 5, h: 3}, {v: 5, h: 5}, {v: 1, h: 1}, {v: 3, h: 1}, {v: 3, h: 5}], 
+		  mapPosition: [{v: 2, h: 2}, {v: 1, h: 2}, {v: 1, h: 3}, {v: 3, h: 2}, {v: 3, h: 3}, {v: 1, h: 1}, {v: 2, h: 1}, {v: 2, h: 3}], 
 		  stageStart: 1, 
-		  speedTransition: 800
+		  speedTransition: 500
 		});
+
+		function openMenu() {
+			$('.main-menu-link').hide();
+			$('.main-menu').show();
+		}
+		function closeMenu() {
+			$('.main-menu').fadeOut();
+			$('.main-menu-link').fadeIn();
+		}
+		function menuHighlight(link) {
+			switch (link.hash){
+			case "#photography":
+				$('#menu-focus').show().css('top','0px').css('left','0px');
+				break;
+			case "#blog":
+				$('#menu-focus').show().css('top','70px').css('left','0px');
+				break;
+			case "#whoIAm":
+				$('#menu-focus').show().css('top','0px').css('left','120px');
+				break;
+			case "#home":
+				$('#menu-focus').show().css('top','70px').css('left','120px');
+				break;
+			case "#education":
+				$('#menu-focus').show().css('top','140px').css('left','120px');
+				break;
+			case "#lifeline":
+				$('#menu-focus').show().css('top','0px').css('left','240px');
+				break;
+			case "#contact":
+				$('#menu-focus').show().css('top','70px').css('left','240px');
+				break;
+			case "#professional":
+				$('#menu-focus').show().css('top','140px').css('left','240px');
+				break;
+			default:
+				$('#menu-focus').hide();
+			}
+
+		}
+		
 		
 		//OPINION
 		$(document).ready(function() {
@@ -318,20 +394,11 @@
 			      height: 50,
 			      speed: 2500
 		   });
-			$('.medium-button').jqFloat({
-			      width: 50,
-			      height: 50,
-			      speed: 2500
-		   });
-			$('.home-button').jqFloat({
-			      width: 50,
-			      height: 50,
-			      speed: 2500
-		   });
 
 			$('.home-text').addClass('animated bounceIn');			   
 					   
 		});
+		
 		</script>
 		<script
 			src="#{facesContext.externalContext.requestContextPath}/resources/js/jquery.timelinr-0.9.54.js"
