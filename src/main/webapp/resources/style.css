@@ -78,17 +78,10 @@ p {
 	font-size: 18px;
 }
 
-	.home-button {
-		display: block; position: absolute; width: 70px; height: 70px; border-radius: 50%; border: 2px solid #fff; 
-		color: #fff; text-decoration: none; font-size: 22px; text-align: center; line-height: 70px; padding: 5px;  
-		margin: 0 auto; background: #000; opacity: 0.4; -webkit-transition: all 0.3s linear; transition: all 0.3s linear;
-	}
-	.home-button:hover {opacity: 1; -webkit-transform: scale(1.5,1.5); -ms-transform: scale(1.5,1.5); transform: scale(1.5,1.5) }
-
 .main-menu {
 	display: none;
 	position: fixed;
-	bottom: 10px;
+	top: 10px;
 	left: 10px;
 	width: 360px;
 	height: 210px;
@@ -128,7 +121,7 @@ p {
 	}
 	.main-menu-link {
 		position: fixed;
-		bottom: 10px;
+		top: 10px;
 		left: 10px;
 		width: 80px;
 		height: 50px;
@@ -175,12 +168,26 @@ p {
 	background: #2C3539 url('img/pattern.png') right repeat;
 	background: #111 url('img/space.jpg') right repeat;
 }
+	.top-left { top: 5px; left: 5px;}
+	.top-mid { top: 5px; left: 42%;  border-radius: 50% 50% 0 0;}
+	.top-right { top: 5px; right: 5px;}
+	.bottom-left { bottom: 5px; left: 5px;}
+	.bottom-mid { bottom: 5px; left: 42%; border-radius:0 0 50% 50%;}
+	.bottom-right { bottom: 5px; right: 5px;}
+	.left-mid { top: 42%; left: 5px; border-radius:50% 0 0 50%;}
+	.right-mid { top: 42%; right: 5px; border-radius:0 50% 50% 0;}
+	.home-button {
+		display: block; position: absolute; width: 70px; height: 70px; border-radius: 50%; border: 2px solid #fff; 
+		color: #fff; text-decoration: none; font-size: 22px; text-align: center; line-height: 70px; padding: 5px;  
+		margin: 0 auto; background: #000; opacity: 0.4; -webkit-transition: all 0.3s linear; transition: all 0.3s linear;
+	}
+	.home-button:hover {opacity: 1; -webkit-transform: scale(1.5,1.5); -ms-transform: scale(1.5,1.5); transform: scale(1.5,1.5) }
 	.big-button { position: absolute; display: block; width: 120px; height: 120px; border-radius: 50%; border: 2px solid #fff; 
 				color: #fff; text-decoration: none; font-size: 22px; text-align: center; line-height: 120px; padding: 10px;  
 				margin: 0 auto; background: rgba(0,0,0,0.7);}
 	.big-button:hover { background: rgba(255,255,255,0.10); }
-	.medium-button { position: absolute; display: block; width: 100px; height: 80px; border-radius: 50%; border: 2px solid #fff; 
-				color: #fff; text-decoration: none; font-size: 18px; text-align: center; line-height: 80px; padding: 5px;  
+	.medium-button { position: absolute; display: block; min-width: 60px; height: 50px; border: 2px solid #fff; font-weight: 400;
+				color: #fff; text-decoration: none; font-size: 18px; text-align: center; line-height: 50px; padding: 5px;  
 				margin: 0 auto; background: #000; opacity: 0.2; -webkit-transition: all 0.3s linear; transition: all 0.3s linear;}
 	.medium-button:hover { opacity: 1; }
 	.home-text {
@@ -190,6 +197,8 @@ p {
 		margin-top: 15%;
 	}
 	.home-text h1, .home-text h2, .home-text h3 { margin: 5px; }
+	
+	
 #page_whoIAm {
 	color: #222222;
 	background: #fafafa url('img/pattern.png') right repeat;
