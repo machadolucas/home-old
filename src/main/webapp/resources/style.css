@@ -199,6 +199,16 @@ p {
 	.home-text { text-align: center; width: 500px; margin: auto; margin-top: 15%;}
 	.home-text h1, .home-text h2, .home-text h3 { margin: 5px; }
 	
+	.more-links { text-align: center;}
+	.more-links a {
+		display: block; margin: 15px; padding: 15px;
+		font-size: 20px; text-decoration: none; max-width: 300px; font-weight: 400;
+		color: #fff; background: rgba(0,0,0,0.7); box-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+		-webkit-transition: all 0.2s linear; transition: all 0.2s linear;
+	}
+	.more-links a:hover {
+		background: rgba(100,100,100,1);
+	}
 	
 #page_whoIAm {
 	color: #222222;
@@ -409,31 +419,19 @@ p {
 	color: #222222;
 	background: #E5E4E2 url('img/pattern.png') right repeat;
 }
-	#page_professional h1 {
-		text-align: center;
-		margin: 15px 0px;
-		
-	}
-	.xp-list {
-		list-style: none;
-		border-top: 1px solid #222222;
-		border-bottom: 1px solid #222222;
-	}
-	.xp-list li {
-		margin-bottom: 60px;
-	}
-	.xp-list li img {
-		float: left;
-		margin: 0px 50px 25px 0px;
-	}
-	.xp-list li h3 {
-		margin: 30px auto;
-		font-size: 26px;
-	}
-	.xp-list li h4 {
-		margin: 10px auto;
-		font-size: 18px;
-	}
+	#page_professional h1 {text-align: center;margin: 15px 0px;}
+	#xp-div {width: 900px; margin: auto; margin-bottom:100px;}
+	#xp-list {list-style: none;border-top: 1px solid #222222;border-bottom: 1px solid #222222;}
+	#xp-list li {margin-bottom: 60px;}
+	#xp-list li img {float: left;margin: 0px 50px 25px 0px;}
+	#xp-list li h3 {margin: 30px auto;font-size: 26px;}
+	#xp-list li h4 {margin: 10px auto;font-size: 18px;}
+	#cv-div {width: 450px; float: left; text-align: right;}
+	#cv-link{float: right;margin: 0px 0px 50px 30px;padding-bottom: 10px;text-align: center;color: #666;
+		font-size: 16px;font-weight: 400;text-decoration: none;border-bottom: 1px solid #bbb;}
+	#cv-img {margin-bottom: 16px;display: block;width: 150px;box-shadow: 0px 4px 7px rgba(0,0,0,0.7);}
+	.two-columns-900 { width: 900px; margin: auto; margin-bottom:100px;}
+	.link-div { margin-top: 25px; width: 450px; float: left;}
 #page_photography {
 	color: #fafafa;
 	background: #222222 url('img/pattern.png') right repeat;
