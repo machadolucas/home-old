@@ -288,10 +288,10 @@
 				<div class="two-columns-900 unselectable">
 					<div class="more-links link-div">
 						<a href="#education" onclick="menuHighlight(this)">
-							See my Education
+							Want to see my<br />educational background too?
 						</a>
 						<a href="#contact" onclick="menuHighlight(this)">
-							Get in Contact!
+							Find me interesting?<br />Why not get in Contact?
 						</a>
 					</div>
 					<div id="cv-div">
@@ -368,7 +368,10 @@
 			$('.main-menu-link').fadeIn();
 		}
 		function menuHighlight(link) {
-			switch (link.hash){
+			moveMenuHighlight(link.hash);
+		}
+		function moveMenuHighlight(anchor) {
+			switch (anchor){
 			case "#photography":
 				$('#menu-focus').show().css('top','140px').css('left','0px');
 				break;
@@ -416,20 +419,15 @@
 		$(function(){
 			$().timelinr();
 
-			$('.big-button').jqFloat({
-			      width: 50,
-			      height: 50,
-			      speed: 2500
-		   });
+			$('.big-button').jqFloat({ width: 50, height: 50, speed: 2500 });
+
+			moveMenuHighlight(window.location.hash);
 
 			$('.home-text').addClass('animated bounceIn');			   
 
 			$('#cv-img').hover(
-				function() {
-					$( this ).addClass('animated pulse');
-				}, function() {
-					$( this ).removeClass('animated pulse');
-				}
+				function() {$( this ).addClass('animated pulse');},
+				function() {$( this ).removeClass('animated pulse');}
 			);
 		});
 		
