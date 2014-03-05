@@ -19,7 +19,7 @@
 
 	<ui:define name="content">
 		<div class="main-menu-link unselectable">
-				<a  href="javascript:openMenu()" >
+				<a  href="javascript:openMenu()" title="Click here to access the site menu">
 					Menu
 				</a>
 		</div>
@@ -250,7 +250,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="two-columns-900 unselectable">
+				<div class="column-900 unselectable">
 					<div class="more-links unselectable">
 						<a href="#whoIAm" onclick="menuHighlight(this)">
 							Want to know it short and sweet?
@@ -275,37 +275,71 @@
 					Back
 				</a>
 				<h1>Professional</h1>
-				<div  id="xp-div">
+				<div class="column-900">
+					<h2>Experience</h2>
 					<ul id="xp-list">
 						<li>
-							<img src="resources/img/svg/evaltec.svg" width="200px" />
-							<h3>E-Val Tecnologia</h3>
-							<h4>Developer – From June 2010, until August 2013.</h4>
-							<p>Requirements analysis for projects, development of functional and technical design documentation, application tests, and development in Java (frontend of banking systems; implementations of biometric services and authentication protocols, interfaces with cryptographic servers, with databases (DAOs), and CRUD models). Experience with implementation and testing of localization in internet banking platforms, and developing, using and testing APIs and web services.</p>
-						</li>
-						<li>
 							<img src="resources/img/svg/demola.svg" width="200px" />
-							<h3>Demola</h3>
+							<h3><a href="http://tampere.demola.fi/projects/watch-out-dangerous" target="_blank" title="Click to learn more about Demola">Demola</a></h3>
 							<h4>Project member – From February 2014, until May 2014.</h4>
 							<p>Work in a team to create innovative solutions for real-world needs. Creation of a data visualization tool of risks aiming the insurance field.</p>
 						</li>
+						<li>
+							<img src="resources/img/svg/evaltec.svg" width="200px" />
+							<h3><a href="http://evaltec.com.br/index.php/e-val-tecnologia-english" target="_blank" title="Click to learn more about E-Val Tecnologia">E-Val Tecnologia</a></h3>
+							<h4>Developer – From June 2010, until August 2013.</h4>
+							<p>Requirements analysis for projects, development of functional and technical design documentation, application tests, and development in Java (frontend of banking systems; implementations of biometric services and authentication protocols, interfaces with cryptographic servers, with databases (DAOs), and CRUD models). Experience with implementation and testing of localization in internet banking platforms, and developing, using and testing APIs and web services.</p>
+						</li>
 					</ul>
 				</div>
-				<div class="two-columns-900 unselectable">
+				<div class="column-900 unselectable">
+					<h2>Skills</h2>
+					<h3>Spoken Languages</h3>
+					<ul class="skill-list">
+						<li><img src="resources/img/professional/portuguese.png" /><p>Portuguese<br/>Native</p></li>
+						<li><img src="resources/img/professional/english.png" /><p>English<br/>Fluent</p></li>
+						<li><img src="resources/img/professional/finnish.png" /><p>Finnish<br/>Basic</p></li>
+						<li><img src="resources/img/professional/spanish.png" /><p>Spanish<br/>Basic</p></li>
+						<li><img src="resources/img/professional/german.png" /><p>German<br/>Basic</p></li>
+					</ul>
+					<h3>Development languages</h3>
+					<ul class="skill-list">
+						<li><img src="resources/img/professional/java.png" /><p>Java</p></li>
+						<li><img src="resources/img/professional/html5.png" /><p>HTML5</p></li>
+						<li><img src="resources/img/professional/css3.png" /><p>CSS3</p></li>
+						<li><img src="resources/img/professional/javascript.png" /><p>JavaScript</p></li>
+						<li><img src="resources/img/professional/sql.png" /><p>SQL</p></li>
+						<li><img src="resources/img/professional/python.png" /><p>Python</p></li>
+						<li><img src="resources/img/professional/xml.png" /><p>XML</p></li>
+						<li><img src="resources/img/professional/json.png" /><p>JSON</p></li>
+						<li><img src="resources/img/professional/nosql.png" /><p>noSQL</p></li>
+					</ul>
+					<h3>Other development technologies</h3>
+					<ul class="skill-list">
+						<li><img src="resources/img/professional/terminal.png" /><p>Unix systems</p></li>
+						<li><img src="resources/img/professional/eclipse.png" /><p>Eclipse</p></li>
+						<li><img src="resources/img/professional/jsf.png" /><p>JSF</p></li>
+						<li><img src="resources/img/professional/primefaces.png" /><p>Primefaces</p></li>
+						<li><img src="resources/img/professional/jquery.png" /><p>jQuery</p></li>
+						<li><img src="resources/img/professional/oauth.png" /><p>OAuth</p></li>
+						<li><img src="resources/img/professional/biometrics.png" /><p>Biometrics</p></li>
+					</ul>
+				</div>
+				<div class="column-900 unselectable" style="border-top: 1px solid #bbb; margin-bottom: 0px; padding-top: 100px;">
 					<div class="more-links link-div">
-						<a href="#education" onclick="menuHighlight(this)">
+						<a href="#education" onclick="menuHighlight(this)" title="Click to see more information about my educational background">
 							Want to see my<br />educational background too?
 						</a>
-						<a href="#contact" onclick="menuHighlight(this)">
+						<a href="#contact" onclick="menuHighlight(this)" title="Click to know how to contact me">
 							Find me interesting?<br />Why not get in Contact?
 						</a>
 					</div>
 					<div id="cv-div">
-						<a href="resources/files/CV.pdf" target="_blank" id="cv-link">
+						<a href="resources/files/CV.pdf" target="_blank" id="cv-link" title="Click to download a pdf version of my curriculum vitae">
 							<img src="resources/img/CV.jpg" id="cv-img" />
 							pdf version
 						</a>
-						<h2>You can also download my CV here!</h2>
+						<h2>Want a traditional CV? No problem!</h2>
 					</div>
 				</div>
 				<img class="unselectable" src="resources/img/svg/city-skyline.svg" style="width: 100%; margin-bottom: -4px;" />

@@ -123,9 +123,9 @@ p {
 		position: fixed;
 		top: 10px;
 		left: 10px;
-		width: 80px;
+		width: 70px;
 		height: 50px;
-		border-radius: 20px;
+		border-radius: 15px;
 		border: 3px solid #fff; 
 		color: #fff;
 		z-index: 999;
@@ -135,7 +135,7 @@ p {
 	.main-menu-link a {
 		display: block;
 		float: left;
-		width: 80px;
+		width: 70px;
 		height: 50px;
 		line-height: 50px;
 		
@@ -330,20 +330,29 @@ p {
 	color: #222222;
 	background: #E5E4E2 url('img/pattern.png') right repeat;
 }
+	.column-900 { width: 900px; margin: auto; margin-bottom:100px; overflow: hidden;}
 	#page_professional h1 {text-align: center;margin: 15px 0px;}
-	#xp-div {width: 900px; margin: auto; margin-bottom:100px;}
-	#xp-list {list-style: none;border-top: 1px solid #222222;border-bottom: 1px solid #222222;
+	#page_professional h2 {margin: 15px 0px; padding: 0px;}
+	#page_professional h3 {margin: 15px 0px; padding: 0px 50px;}
+	#xp-list {list-style: none;border-top: 1px solid #bbb;border-bottom: 1px solid #bbb;
 		background: #fdfdfd;padding: 0px 40px;}
+	#xp-list a {color:#222222; text-decoration: none; border-bottom: 1px dotted #666;
+		-webkit-transition: all 0.2s linear; transition: all 0.2s linear;}
+	#xp-list a:hover {color:#aa5533; text-decoration: none; border-bottom: 1px dotted #aa5533;}
 	#xp-list li {margin-bottom: 60px;}
 	#xp-list li img {float: left;margin: 0px 50px 25px 0px;}
 	#xp-list li h3 {margin: 30px auto;font-size: 26px;}
 	#xp-list li h4 {margin: 10px auto;font-size: 18px;}
+	.skill-list {list-style: none; padding: 0px 50px; margin: 30px 0px; overflow: hidden; }
+	.skill-list li {display: block; background: #fdfdfd; padding: 10px; margin: 5px; border: 1px solid #bbb;
+		border-radius: 10px; text-align: center; width: 128px; position: relative; float: left; box-shadow: 1px 1px 2px rgba(0,0,0,0.5);}
+	.skill-list li img { max-width: 128px; max-height: 128px;}
+	.skill-list li p { margin: 5px 0px 0px 0px; font-weight: 400; font-size: 20px;}
 	#cv-div {width: 450px; float: left; text-align: right;}
-	#cv-link{float: right;margin: 0px 0px 50px 30px;padding-bottom: 10px;text-align: center;color: #666;
+	#cv-link{float: right;margin: 0px 15px 50px 30px;padding-bottom: 10px;text-align: center;color: #666;
 		font-size: 16px;font-weight: 400;text-decoration: none;border-bottom: 1px solid #bbb;}
 	#cv-img {margin-bottom: 16px;display: block;width: 150px;box-shadow: 0px 4px 7px rgba(0,0,0,0.7);}
-	.two-columns-900 { width: 900px; margin: auto; margin-bottom:100px;}
-	.link-div { margin-top: 25px; width: 450px; float: left;}
+	.link-div { width: 450px; float: left;}
 #page_photography {
 	color: #fafafa;
 	background: #222222 url('img/pattern.png') right repeat;
