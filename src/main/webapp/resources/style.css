@@ -391,6 +391,13 @@ p {
 	color: #222222;
 	background: #9CB071 url('img/pattern.png') right repeat;
 }
+	#page_contact h1 { text-align: center; margin: 0px; padding: 20px 0px 10px 0px; background: rgba(0,0,0,0.1); border-bottom: 1px solid #8a8;}
+	#contact-book { width: 600px; margin: 40px auto;  background: #F7FFE6; border-radius: 50px; 
+		border: 1px solid #888; box-shadow: inset 0px 0px 10px rgba(0,0,0,0.7); overflow: hidden;}
+	.contact-table {margin: 40px; font-size: 20px; line-height: 28px;}
+	.contact-table, .contact-table tr, .contact-table td {background: transparent; border: none;}
+	.contact-label {color: #888; text-align: right; width: 200px; }
+	.contact-value {color: #222; text-align: left; width: 300px; font-weight: 400;}
 
 
 
