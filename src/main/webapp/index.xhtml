@@ -275,6 +275,10 @@
 					Back
 				</a>
 				<h1>Professional</h1>
+				<div class="column-900" style="margin: 20px auto">
+					<h2>Objective</h2>
+					<p style="font-weight: 400">Develop systems that make a difference in people’s lives, solving problems and doing the best and more efficient code possible, learning and sharing knowledge.</p>
+				</div>
 				<div class="column-900">
 					<h2>Experience</h2>
 					<ul id="xp-list">
@@ -345,14 +349,21 @@
 				<img class="unselectable" src="resources/img/svg/city-skyline.svg" style="width: 100%; margin-bottom: -4px;" />
 			</div>
 
-			<div id="photography" class="scrollv">
-				<a href="#home" class="home-button top-right" onclick="menuHighlight(this)">
-					Back
-				</a>
+			<div id="photography" class="scrollv unselectable">
+				<a href="#home" class="home-button top-right"
+					onclick="menuHighlight(this)"> Back </a>
 				<h1>Photography</h1>
-				<div class="photo">
-				<img src="resources/img/wood.jpg" width="250" height="250" />
-				photo
+				<p>One of my favourite hobbies is photography. Here you can see
+					some of my last photos!</p>
+				<p>You can take a better look at them in <a href="http://0-sirluke-0.deviantart.com/gallery/" target="_blank">my DeviantArt gallery.</a></p>
+				<div id="photos" class="js-masonry"
+					data-masonry-options='{ "itemSelector": ".photo", "columnWidth": 50 }'>
+					<ui:repeat value="#{photographyBean.photos}" var="photo">
+					<div class="photo" style="background-image: url(#{photo})"></div>
+					</ui:repeat>
+				</div>
+				<div class="more-links">
+				<a href="http://0-sirluke-0.deviantart.com/gallery/" target="_blank">See more photos in my DeviantArt gallery</a>
 				</div>
 			</div>
 
@@ -458,9 +469,7 @@
 			default:
 				$('#menu-focus').hide();
 			}
-
 		}
-		
 		
 		//OPINION
 		$(document).ready(function() {
@@ -488,11 +497,24 @@
 				function() {$( this ).addClass('animated pulse');},
 				function() {$( this ).removeClass('animated pulse');}
 			);
+
+			$('.photo').click( function() {
+				if ($(this).hasClass('big-photo')){
+					$(this).toggleClass('big-photo');
+				} else {
+					$('.photo').removeClass('big-photo');
+					$(this).toggleClass('big-photo');
+				}
+				$('#photos').data('masonry').layout();
+			});
 		});
 		
 		</script>
 		<script
 			src="#{facesContext.externalContext.requestContextPath}/resources/js/jquery.timelinr-0.9.54.js"
+			type="text/javascript" />
+		<script
+			src="#{facesContext.externalContext.requestContextPath}/resources/js/masonry.pkgd.min.js"
 			type="text/javascript" />
 
 	</ui:define>

@@ -357,14 +357,25 @@ p {
 	color: #fafafa;
 	background: #222222 url('img/pattern.png') right repeat;
 }
+	#page_photography h1{ font-family: 'Dancing Script', cursive; text-align: center; margin: 40px 0px;}
+	#page_photography p{ margin: 20px auto; font-weight: 400; font-size: 20px; max-width: 900px; color: #cacaca; }
+	#page_photography p a { color: #eaca5a; }
+	#photos {margin: 0px auto; width: 98%;}
 	.photo {
 		background: #fff;
 		color: #222;
-		padding: 5px 5px 10px 5px;
-		margin: 15px;
-		box-shadow: 0px 5px 15px 2px rgba(0,0,0,0.7);
-		width: 250px;
+		padding: 0px; margin: 5px;
+		width: 22%;
+		height: 300px;
+		border: 2px solid #888888;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		cursor: pointer;
+		border-radius: 15px;
 	}
+	.big-photo {width: 72%; height: 614px;}
+	#page_photography .more-links { margin: 50px auto; width: 330px; }
 #page_blog {
 	color: rgba(0,0,0,0.65);
 	background: #F5F5DC url('img/wood.jpg') right repeat;
