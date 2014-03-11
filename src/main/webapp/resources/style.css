@@ -323,9 +323,109 @@ p {
 		#next.disabled,#prev.disabled {opacity: 0.2;}
 
 #page_education {
-	color: #ffffff;
-	background: #98AFC7 url('img/pattern.png') right repeat;
+	color: #333;
+/* 	background: #98AFC7 url('img/pattern.png') right repeat; */
+	overflow-x: hidden;
+	background: #c9dbe9;
+	background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
 }
+	#building-sign h1 {text-align: center; margin: 0px; color: #7a4a4a; background: #efefef;
+		border-top: 6px solid #666666; border-bottom: 6px solid #666666; letter-spacing: 3px;}
+	#building-sign { border-left: 10px solid #666666; border-right: 10px solid #666666; width: 550px;
+		margin: auto; margin-top: 20px; margin-bottom: 0px; padding-bottom: 20px; position: relative;  z-index: 51;}
+	#building { margin: 0px auto; width: 820px; background: #ababab; padding: 15px 15px 0px 15px; border: 2px solid #9d9d9d;
+	 position: relative;  z-index: 50;}
+	.room { background: url('img/room-wall.png') center no-repeat; background-size:100% 100%;
+		width: 820px; margin-bottom: 20px; padding: 0px; color: #555; }
+	.room-floor { background: url('img/room-floor.png') center no-repeat; background-size:100% 100%;
+		height: 20px; width: 100%; position: relative; bottom: 0px;}
+	#building .room h1 {margin:0px;}
+	.room .item { margin: 0px 90px 30px 90px; overflow: hidden;}
+	.room .item h2 { margin: 30px 40px 0px 40px; overflow: hidden;}
+	.room .item img {float: left; margin: 10px 20px 20px 10px; max-width: 128px; max-height: 128px;}
+	#grass-background { background: url('img/svg/grass.svg') left repeat-x;
+		position: relative; bottom: 0px; width: 100%; height: 200px; margin-top: -100px; z-index: 1; }
+	#grass-background img { height: 250px; position: absolute; right: 50px; bottom: 100px;}
+	#grass-background a span{ display: none; position: absolute; right: 50px; bottom: 350px; font-size: 18px;
+		font-weight:400; color: #000; background: #fff; padding: 7px; border-radius: 10px; border: 1px solid #000;
+		-webkit-transition: all 0.2s linear; transition: all 0.2s linear;}
+	#grass-background a:hover > span{ display: block;}
+		#clouds {position: absolute; z-index: 3; padding-top: 150px;}
+		.cloud {
+			width: 200px; height: 60px;
+			background: #fff;
+			border-radius: 200px;
+			-moz-border-radius: 200px;
+			-webkit-border-radius: 200px;
+			position: relative; 
+		}
+		.cloud:before, .cloud:after {
+			content: '';
+			position: absolute; 
+			background: #fff;
+			width: 100px; height: 80px;
+			position: absolute; top: -15px; left: 10px;
+			border-radius: 100px;
+			-moz-border-radius: 100px;
+			-webkit-border-radius: 100px;
+			-webkit-transform: rotate(30deg);
+			transform: rotate(30deg);
+			-moz-transform: rotate(30deg);
+		}
+		.cloud:after {
+			width: 120px; height: 120px;
+			top: -55px; left: auto; right: 15px;
+		}
+		.x1 {
+			-webkit-animation: moveclouds 22s linear infinite;
+			animation: moveclouds 22s linear infinite;
+		}
+		.x2 {
+			left: 200px;
+			-webkit-transform: scale(0.6);
+			-moz-transform: scale(0.6);
+			transform: scale(0.6);
+			opacity: 0.6;			
+			-webkit-animation: moveclouds 37s linear infinite;
+			animation: moveclouds 37s linear infinite;
+		}
+		.x3 {
+			left: -250px; top: -200px;
+			-webkit-transform: scale(0.8);
+			-moz-transform: scale(0.8);
+			transform: scale(0.8);
+			opacity: 0.8;
+			-webkit-animation: moveclouds 30s linear infinite;
+			animation: moveclouds 30s linear infinite;
+		}
+		.x4 {
+			left: 470px; top: -250px;
+			-webkit-transform: scale(0.75);
+			-moz-transform: scale(0.75);
+			transform: scale(0.75);
+			opacity: 0.75;
+			-webkit-animation: moveclouds 27s linear infinite;
+			animation: moveclouds 27s linear infinite;
+		}
+		.x5 {
+			left: -150px; top: -150px;
+			-webkit-transform: scale(0.8);
+			-moz-transform: scale(0.8);
+			transform: scale(0.8);
+			opacity: 0.8;
+			-webkit-animation: moveclouds 30s linear infinite;
+			animation: moveclouds 30s linear infinite;
+		}
+		@keyframes moveclouds {
+			0% {margin-left: 2200px;}
+			100% {margin-left: -600px;}
+		}
+		@-webkit-keyframes moveclouds {
+			0% {margin-left: 2200px;}
+			100% {margin-left: -600px;}
+		}
 #page_professional {
 	color: #222222;
 	background: #E5E4E2 url('img/pattern.png') right repeat;
@@ -423,9 +523,7 @@ p {
 	display: inline-block;
 	margin-left: -2px;
 	-webkit-animation: blink 1s linear 0s infinite;
-	-moz-animation: blink 1s linear 0s infinite;
-	-ms-animation: blink 1s linear 0s infinite;
-	-o-animation: blink 1s linear 0s infinite;
+	animation: blink 1s linear 0s infinite;
 }
 
 
