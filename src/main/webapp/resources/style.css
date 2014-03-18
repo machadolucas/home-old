@@ -78,6 +78,10 @@ p {
 	font-size: 18px;
 }
 
+#loading { background: #111111; position: fixed; top: 0px; left: 0px; height: 100%; width: 100%;
+	z-index: 9999; text-align: center; padding-top: 5%; color: #fafafa;}
+#loading h3 { margin: 15px;}
+
 .main-menu {
 	display: none;
 	position: fixed;

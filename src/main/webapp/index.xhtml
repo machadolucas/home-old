@@ -15,9 +15,21 @@
 			content="#{request.requestURL.substring(0, request.requestURL.length() - request.requestURI.length())}" />
 		<meta property="og:type" content="website" />
 		
+		<script>
+			$(window).load(function(){
+			  $('#loading').fadeOut(500);
+			  $('.home-text').delay(500).addClass('animated bounceIn');
+			  $('.big-button').delay(500).addClass('animated fadeInUp');
+			  $('.big-button').delay(1000).jqFloat({ width: 20, height: 20, speed: 1500 });
+			});
+		</script>
 	</ui:define>
 
 	<ui:define name="content">
+		<div id="loading" class="unselectable">
+			<h3>Loading</h3>
+			<img src="resources/img/loading.gif" />
+		</div>
 		<div class="main-menu-link unselectable">
 				<a  href="javascript:openMenu()" title="Click here to access the site menu">
 					Menu
@@ -333,7 +345,7 @@
 							<img src="resources/img/svg/demola.svg" width="200px" />
 							<h3><a href="http://tampere.demola.fi/projects/watch-out-dangerous" target="_blank" title="Click to learn more about Demola">Demola</a></h3>
 							<h4>Project member – From February 2014, until May 2014.</h4>
-							<p>Work in a team to create innovative solutions for real-world needs. Creation of a data visualization tool of risks aiming the insurance field.</p>
+							<p>Working in a team to create innovative solutions for real-world needs. Development of a risks data visualization tool in D3js aiming the insurance field.</p>
 						</li>
 						<li>
 							<img src="resources/img/svg/evaltec.svg" width="200px" />
@@ -537,11 +549,7 @@
 		$(function(){
 			$().timelinr();
 
-			$('.big-button').jqFloat({ width: 50, height: 50, speed: 2500 });
-
 			moveMenuHighlight(window.location.hash);
-
-			$('.home-text').addClass('animated bounceIn');			   
 
 			$('#cv-img').hover(
 				function() {$( this ).addClass('animated pulse');},
