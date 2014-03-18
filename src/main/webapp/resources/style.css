@@ -1,8 +1,6 @@
 @CHARSET "UTF-8";
 
 @import
-	url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300);
-@import
 	url(http://fonts.googleapis.com/css?family=Roboto:400,100,300);
 @import
 	url(http://fonts.googleapis.com/css?family=Dancing+Script);
@@ -82,47 +80,17 @@ p {
 	z-index: 9999; text-align: center; padding-top: 5%; color: #fafafa;}
 #loading h3 { margin: 15px;}
 
-.main-menu {
-	display: none;
-	position: fixed;
-	top: 10px;
-	left: 10px;
-	width: 360px;
-	height: 210px;
-	border-radius: 20px;
-	border: 3px solid #fff; 
-	color: #fff;
-	z-index: 999;
-	box-shadow: inset 1px 1px 3px rgba(0,0,0,0.5), 0px 0px 30px rgba(0,0,0,0.8);
-	overflow: hidden;
-}
+.main-menu {display: none;position: fixed;top: 10px;left: 10px;
+	width: 360px;height: 210px;border-radius: 20px;border: 3px solid #fff; color: #fff;z-index: 999;
+	box-shadow: inset 1px 1px 3px rgba(0,0,0,0.5), 0px 0px 30px rgba(0,0,0,0.8);overflow: hidden;}
 	.main-menu a {
-		display: block;
-		float: left;
-		width: 118px;
-		height: 68px;
-		line-height: 68px;
-		
-		background: rgba(0,0,0,0.8);
-		text-align: center;
-		color: #fff;
-		border: 1px solid rgba(127,127,127,0.2);
-		text-decoration: none;
-		font-size: 18px;
-		font-weight: 400;
-		 -webkit-transition: all 0.1s linear; transition: all 0.1s linear;
-	}
-	.main-menu a:hover {
-		background: rgba(70,15,77,0.5);
-		border: 1px solid #fff;
-		box-shadow: inset 0px 0px 10px rgba(255,255,255,0.8);
-	}
-	.main-menu a.close {
-		background: rgba(80,0,0,0.8);
-	}
-	.main-menu a.close:hover {
-		background: rgba(255,0,0,0.5);
-	}
+		display: block;float: left;width: 118px;height: 68px;line-height: 68px;background: rgba(0,0,0,0.8);
+		text-align: center;color: #fff;border: 1px solid rgba(127,127,127,0.2);text-decoration: none;
+		font-size: 18px;font-weight: 400;-webkit-transition: all 0.1s linear; transition: all 0.1s linear;}
+	.main-menu a:hover {background: rgba(70,15,77,0.5);border: 1px solid #fff;
+		box-shadow: inset 0px 0px 10px rgba(255,255,255,0.8);}
+	.main-menu a.close {background: rgba(80,0,0,0.8);}
+	.main-menu a.close:hover {background: rgba(255,0,0,0.5);}
 	.main-menu-link {
 		position: fixed;
 		top: 10px;
@@ -137,24 +105,10 @@ p {
 		overflow: hidden;
 	}
 	.main-menu-link a {
-		display: block;
-		float: left;
-		width: 70px;
-		height: 50px;
-		line-height: 50px;
-		
-		background: rgba(0,0,0,0.8);
-		text-align: center;
-		color: #fff;
-		text-decoration: none;
-		font-size: 20px;
-		font-weight: 400;
-		 -webkit-transition: all 0.1s linear; transition: all 0.1s linear;
-	}
-	.main-menu-link a:hover {
-		background: rgba(255,0,0,0.5);
-		box-shadow: inset 0px 0px 10px rgba(255,255,255,0.8);
-	}
+		display: block;float: left;width: 70px;height: 50px;line-height: 50px;background: rgba(0,0,0,0.8);
+		text-align: center;color: #fff;text-decoration: none;font-size: 20px;font-weight: 400;
+		 -webkit-transition: all 0.1s linear; transition: all 0.1s linear;}
+	.main-menu-link a:hover {background: rgba(255,0,0,0.5);box-shadow: inset 0px 0px 10px rgba(255,255,255,0.8);}
 	#menu-focus{
 		display: none;
 		position: absolute;
@@ -195,67 +149,31 @@ p {
 				margin: 0 auto; background: rgba(0,0,0,0.7);}
 	.big-button:hover { background: rgba(255,255,255,0.10); }
 	
-	.medium-button { position: absolute; display: block; min-width: 60px; min-height: 50px; border: 1px solid #fff; font-weight: 400;
-				color: #fff; text-decoration: none; font-size: 14px; text-align: center; line-height: 50px; padding: 5px; z-index: 950;
-				margin: 0 auto; background: #000; opacity: 0.1; -webkit-transition: all 0.3s linear; transition: all 0.3s linear;}
-	.medium-button:hover { opacity: 1; }
-	
 	.home-text { text-align: center; width: 500px; margin: auto; margin-top: 15%;}
 	.home-text h1, .home-text h2, .home-text h3 { margin: 5px; }
 	
 	.more-links { text-align: center;}
-	.more-links a {
-		display: block; margin: 15px; padding: 15px;
+	.more-links a {display: block; margin: 15px auto; padding: 15px;
 		font-size: 20px; text-decoration: none; max-width: 300px; font-weight: 400;
 		color: #fff; background: rgba(0,0,0,0.7); box-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-		-webkit-transition: all 0.2s linear; transition: all 0.2s linear;
-	}
-	.more-links a:hover {
-		background: rgba(100,100,100,1);
-	}
+		-webkit-transition: all 0.2s linear; transition: all 0.2s linear;}
+	.more-links a:hover {background: rgba(100,100,100,1);}
 	
 #page_whoIAm {
-	color: #222222;
-	background: #fafafa url('img/pattern.png') right repeat;
+	color: #fafafa;
+	background: #910d0d url('img/pattern.png') right repeat;
+	font-weight: 400;
 }
-	#opinions-wrapper {
-		position: absolute;
-		height: 23%;
-		width: 22%;
-		right: 8%;
-		top: 10%;
-		max-height: 500px;
-		overflow:hidden;
-	}
-	#opinions {
-		height: 100%;
-		width: 100%;
-		position: relative;
-	}
-	.opinion {
-		position: absolute;
-		top: 5%;
-		left: 5%;
-		right: 5%;
-		bottom: 5%;
-	/* 	text-shadow:-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
-	}
-	.opinion > h5 {
-		margin: 0px;
-		padding: 2%;
-		text-align: center;
-		color:#222;
-		font-size: 1.4em;
-	}
-	.opinion > h6 {
-		margin: 0px;
-		padding: 2%;
-		text-align: center;
-		color:#222;
-		font-weight: 300;
-		font-size: 1.2em;
-	}
-
+	#page_whoIAm h1{ font-family: 'Dancing Script', cursive; text-align: center; margin: 10px 0px;}
+	#opinions-wrapper {float: right;margin: 30px;padding: 15px;width: 250px;height: 150px;
+		overflow:hidden;background: #F5E8A6;border: 3px solid #590F33;border-radius: 15px;}
+	#opinions-title { font-size: 40px; text-align: center; font-family: 'Dancing Script'; color:#000;}
+	.opinion > h5 { margin: 0px; padding: 6px; text-align: center; color:#2C2828; font-size: 18px;}
+	.opinion > h6 {margin: 0px;padding: 6px;text-align: center;color:#2C2828;font-weight: 300;font-size: 16px; letter-spacing: 2px;}
+	#ilike ul { list-style: none;}
+	#ilike li { display: block;  background: #fafafa; color: #590F33; font-size: 18px;
+		line-height: 22px; height: 22px; padding: 15px; border-radius: 20px; margin: 5px;
+		border: 2px solid #590F33; float: left;}
 
 #page_lifeline {
 	color: #fafafa;
@@ -298,7 +216,7 @@ p {
 					-webkit-transform: scale(0.7,0.7); -ms-transform: scale(0.7,0.7); transform: scale(0.7,0.7);
 			}
 			#issues li h1 {color: #ffcc00;font-size: 48px;margin: 0px;text-shadow: #000 1px 1px 2px;text-align: center;}
-			#issues li p {font-size: 14px;margin: 7px 70px 7px 70px;font-weight: normal;line-height: 22px;text-shadow: #000 1px 1px 2px;}
+			#issues li p {font-size: 16px;margin: 7px 70px 7px 70px;font-weight: normal;line-height: 22px;text-shadow: #000 1px 1px 2px;}
 			#issues li a {color: #ffcc00;}
 	
 	#grad_left,
@@ -355,71 +273,22 @@ p {
 		-webkit-transition: all 0.2s linear; transition: all 0.2s linear; z-index: 200;}
 	#grass-background a:hover > span{ display: block;}
 		#clouds {position: absolute; z-index: 3; padding-top: 150px;}
-		.cloud {
-			width: 200px; height: 60px;
-			background: #fff;
-			border-radius: 200px;
-			-moz-border-radius: 200px;
-			-webkit-border-radius: 200px;
-			position: relative; 
-		}
-		.cloud:before, .cloud:after {
-			content: '';
-			position: absolute; 
-			background: #fff;
-			width: 100px; height: 80px;
-			position: absolute; top: -15px; left: 10px;
-			border-radius: 100px;
-			-moz-border-radius: 100px;
-			-webkit-border-radius: 100px;
-			-webkit-transform: rotate(30deg);
-			transform: rotate(30deg);
-			-moz-transform: rotate(30deg);
-		}
-		.cloud:after {
-			width: 120px; height: 120px;
-			top: -55px; left: auto; right: 15px;
-		}
-		.x1 {
-			-webkit-animation: moveclouds 22s linear infinite;
-			animation: moveclouds 22s linear infinite;
-		}
-		.x2 {
-			left: 200px;
-			-webkit-transform: scale(0.6);
-			-moz-transform: scale(0.6);
-			transform: scale(0.6);
-			opacity: 0.6;			
-			-webkit-animation: moveclouds 37s linear infinite;
-			animation: moveclouds 37s linear infinite;
-		}
-		.x3 {
-			left: -250px; top: -200px;
-			-webkit-transform: scale(0.8);
-			-moz-transform: scale(0.8);
-			transform: scale(0.8);
-			opacity: 0.8;
-			-webkit-animation: moveclouds 30s linear infinite;
-			animation: moveclouds 30s linear infinite;
-		}
-		.x4 {
-			left: 470px; top: -250px;
-			-webkit-transform: scale(0.75);
-			-moz-transform: scale(0.75);
-			transform: scale(0.75);
-			opacity: 0.75;
-			-webkit-animation: moveclouds 27s linear infinite;
-			animation: moveclouds 27s linear infinite;
-		}
-		.x5 {
-			left: -150px; top: -150px;
-			-webkit-transform: scale(0.8);
-			-moz-transform: scale(0.8);
-			transform: scale(0.8);
-			opacity: 0.8;
-			-webkit-animation: moveclouds 30s linear infinite;
-			animation: moveclouds 30s linear infinite;
-		}
+		.cloud {width: 200px; height: 60px;background: #fff;border-radius: 200px;
+			-moz-border-radius: 200px;-webkit-border-radius: 200px;position: relative; }
+		.cloud:before, .cloud:after {content: '';position: absolute; background: #fff;
+			width: 100px; height: 80px;position: absolute; top: -15px; left: 10px;
+			border-radius: 100px;-moz-border-radius: 100px;-webkit-border-radius: 100px;
+			-webkit-transform: rotate(30deg);transform: rotate(30deg);-moz-transform: rotate(30deg);}
+		.cloud:after {width: 120px; height: 120px;top: -55px; left: auto; right: 15px;}
+		.x1 {-webkit-animation: moveclouds 22s linear infinite;animation: moveclouds 22s linear infinite;}
+		.x2 {left: 200px;-webkit-transform: scale(0.6);-moz-transform: scale(0.6);transform: scale(0.6);
+			opacity: 0.6;-webkit-animation: moveclouds 37s linear infinite;animation: moveclouds 37s linear infinite;}
+		.x3 {left: -250px; top: -200px;-webkit-transform: scale(0.8);-moz-transform: scale(0.8);transform: scale(0.8);
+			opacity: 0.8;-webkit-animation: moveclouds 30s linear infinite;animation: moveclouds 30s linear infinite;}
+		.x4 {left: 470px; top: -250px;-webkit-transform: scale(0.75);-moz-transform: scale(0.75);transform: scale(0.75);
+			opacity: 0.75;-webkit-animation: moveclouds 27s linear infinite;animation: moveclouds 27s linear infinite;}
+		.x5 {left: -150px; top: -150px;-webkit-transform: scale(0.8);-moz-transform: scale(0.8);transform: scale(0.8);
+			opacity: 0.8;-webkit-animation: moveclouds 30s linear infinite;animation: moveclouds 30s linear infinite;}
 		@keyframes moveclouds {
 			0% {margin-left: 2200px;}
 			100% {margin-left: -600px;}
@@ -432,6 +301,7 @@ p {
 	color: #222222;
 	background: #E5E4E2 url('img/pattern.png') right repeat;
 }
+	.column-500 { width: 500px; margin: auto; margin-bottom:50px; overflow: hidden;}
 	.column-900 { width: 900px; margin: auto; margin-bottom:100px; overflow: hidden;}
 	#page_professional h1 {text-align: center;margin: 15px 0px;}
 	#page_professional h2 {margin: 15px 0px; padding: 0px;}
@@ -515,35 +385,6 @@ p {
 
 
 
-
-
-
-
-
-
-/* Blinking cursor at my name */
-.blink {
-	display: inline-block;
-	margin-left: -2px;
-	-webkit-animation: blink 1s linear 0s infinite;
-	animation: blink 1s linear 0s infinite;
-}
-
-
-@-webkit-keyframes blink { 
-	0% {opacity: 0}
-	47%{opacity:0}
-	50%{opacity:0.75}
-	52%{opacity:1}
-	100%{opacity:0.6}
-}
-@keyframes blink { 
-	0% {opacity: 0}
-	47%{opacity:0}
-	50%{opacity:0.75}
-	52%{opacity:1}
-	100%{opacity:0.6}
-}
 
 @media screen and (max-width: 800px) {
 }
