@@ -180,6 +180,9 @@ p {
 	background: #2B3856 url('img/pattern.png') right repeat;
 }
 	#page_lifeline h1{ font-family: 'Dancing Script', cursive; text-align: center; margin: 10px 0px;}
+	#lifeline-background { background-image: url('img/svg/lifeline.svg'); background-size: 100%;
+		background-repeat: no-repeat; background-position: top right;
+		position: absolute; top:0; right:0; z-index: -1; width: 70%; height: 900px;}
 	#timeline-border {
 		margin: 0px auto;padding: 6px;width: 840px;border-radius: 18px;
 		box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
