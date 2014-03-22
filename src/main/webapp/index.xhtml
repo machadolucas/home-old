@@ -18,6 +18,7 @@
 		<script>
 			$(window).load(function(){
 			  $('#loading').fadeOut(500);
+			  scrollTo(parseInt($('#page_'+window.location.hash.substring(1)).css('left')),parseInt($('#page_'+window.location.hash.substring(1)).css('top')));
 			  $('.home-text').delay(500).addClass('animated bounceIn');
 			  $('.big-button').delay(500).addClass('animated fadeInUp');
 			  $('.big-button').delay(1000).jqFloat({ width: 20, height: 20, speed: 1500 });
@@ -534,8 +535,11 @@
 			</div>
 		</div>
 
+<!-- 		<script -->
+<!-- 			src="#{facesContext.externalContext.requestContextPath}/resources/js/scrollTo.js" -->
+<!-- 			type="text/javascript" /> -->
 		<script
-			src="#{facesContext.externalContext.requestContextPath}/resources/js/scrollTo.js"
+			src="http://demos.flesler.com/jquery/scrollTo/js/jquery.scrollTo-min.js"
 			type="text/javascript" />
 		<script
 			src="#{facesContext.externalContext.requestContextPath}/resources/js/fullCont.js"
@@ -594,6 +598,7 @@
 			default:
 				$('#menu-focus').hide();
 			}
+			scrollTo(parseInt($('#page_'+anchor.substring(1)).css('left')),parseInt($('#page_'+anchor.substring(1)).css('top')));
 		}
 		
 		//OPINION
