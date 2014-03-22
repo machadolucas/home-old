@@ -535,9 +535,6 @@
 			</div>
 		</div>
 
-<!-- 		<script -->
-<!-- 			src="#{facesContext.externalContext.requestContextPath}/resources/js/scrollTo.js" -->
-<!-- 			type="text/javascript" /> -->
 		<script
 			src="http://demos.flesler.com/jquery/scrollTo/js/jquery.scrollTo-min.js"
 			type="text/javascript" />
@@ -599,7 +596,8 @@
 				$('#menu-focus').hide();
 			}
 			if(window.chrome){
-				scrollTo(parseInt($('#page_'+anchor.substring(1)).css('left')),parseInt($('#page_'+anchor.substring(1)).css('top')));
+				$('html').animate({scrollTop: parseInt($('#page_'+anchor.substring(1)).css('top')),
+										scrollLeft: parseInt($('#page_'+anchor.substring(1)).css('left'))}, 500);
 			}
 		}
 		
