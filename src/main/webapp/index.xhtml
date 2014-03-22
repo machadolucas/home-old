@@ -598,7 +598,9 @@
 			default:
 				$('#menu-focus').hide();
 			}
-			scrollTo(parseInt($('#page_'+anchor.substring(1)).css('left')),parseInt($('#page_'+anchor.substring(1)).css('top')));
+			if(window.chrome){
+				scrollTo(parseInt($('#page_'+anchor.substring(1)).css('left')),parseInt($('#page_'+anchor.substring(1)).css('top')));
+			}
 		}
 		
 		//OPINION
