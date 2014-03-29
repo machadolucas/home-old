@@ -35,12 +35,12 @@
 	<ui:define name="content">
 		<div id="mobileDetector"></div>
 		<script>
-			if($('#mobileDetector').css('display') === 'none') {
-				if(getCookie("mobileRedirected") != "true"){
-					document.cookie = "mobileRedirected=true";
-					window.location.replace("mobile.jsf");
-				}
+		if($('#mobileDetector').css('display') === 'none') {
+			if(getCookie("mobileRedirected") != "true"){
+				document.cookie = "mobileRedirected=true";
+				window.location.replace("mobile.jsf");
 			}
+		}
 		</script>
 		<div id="loading" class="unselectable">
 			<h3>Loading</h3>

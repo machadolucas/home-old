@@ -100,9 +100,22 @@
 .professional li h3 {
 	padding-top: 1em;
 }
-.professional li h3, .professional li h4 {
+
+.professional li h3,.professional li h4 {
 	margin: 0;
 }
+.myPic { 
+display: block;
+margin: auto;
+border-radius: 70%;
+border: 2px solid #222;
+max-width: 50%;
+}
+#wia .ui-content ul {list-style: none; padding: 0;}
+#wia .ui-content li {display: inline-block; float: left; padding: 0.5em 0.8em; margin: 0.3em 0.4em; background: #468; border-radius: 0.3em; border: 1px solid #444; color: #fff; text-shadow: 1px 1px 1px #222;}
+.opinion { padding: 0.5em 0em;}
+.opinion h4 { font-weight: 300;  opacity: 0.8;}
+.opinion p, .opinion h4 { margin: 0;}
 </style>
 	</ui:define>
 
@@ -119,10 +132,11 @@
 					<h2>Menu</h2>
 					<ul data-role="listview">
 						<li data-theme="a">Home</li>
-						<li><a href="#wia">Who I Am</a></li>
-						<li><a href="#proedu">Professional</a></li>
-						<li><a href="#contact">Contact</a></li>
-						<li><a href="#otherlinks">Other links</a></li>
+						<li><a data-transition="slide" href="#wia">Who I Am</a></li>
+						<li><a data-transition="slide" href="#proedu">Professional</a></li>
+						<li><a data-transition="slide" href="#contact">Contact</a></li>
+						<li><a data-transition="slide" href="#otherlinks">Other
+								links</a></li>
 					</ul>
 					<p:spacer height="50" />
 					<ul data-role="listview">
@@ -141,21 +155,29 @@
 				</div>
 
 				<div role="main" class="ui-content">
-					<p>Welcome to the mobile version of my website!</p>
-					<p>It is still under development, so some content is missing... But feel free to access the desktop version that is complete :)</p>
+					<h3>Welcome to my website!</h3>
+					<p>
+						This is the mobile version. If you are using a computer, please
+						click <a
+							href="#{facesContext.externalContext.requestContextPath}/"
+							data-ajax="false">here</a> to go to a better version.
+					</p>
+					<p>It is still under development, so some content may be missing...
+						But feel free to access the desktop version that is complete :)</p>
 				</div>
 			</div>
-			
+
 			<div data-role="page" id="wia">
 				<div data-role="panel" data-position-fixed="true" id="wia_panel"
 					data-theme="b">
 					<h2>Menu</h2>
 					<ul data-role="listview">
-						<li><a href="#home">Home</a></li>
+						<li><a data-transition="slide" href="#home">Home</a></li>
 						<li data-theme="a">Who I Am</li>
-						<li><a href="#proedu">Professional</a></li>
-						<li><a href="#contact">Contact</a></li>
-						<li><a href="#otherlinks">Other links</a></li>
+						<li><a data-transition="slide" href="#proedu">Professional</a></li>
+						<li><a data-transition="slide" href="#contact">Contact</a></li>
+						<li><a data-transition="slide" href="#otherlinks">Other
+								links</a></li>
 					</ul>
 					<p:spacer height="50" />
 					<ul data-role="listview">
@@ -174,7 +196,85 @@
 				</div>
 
 				<div role="main" class="ui-content">
-					<p>Good question... I promise I'll answer that soon!</p>
+					<img src="http://www.gravatar.com/avatar/737f52828dfccb81197a125c9d1f6745.png?s=512" class="myPic"/>
+					<p>I'm currently a brazilian student in the Master's and Bachelor's degree in Computer Science at University of Tampere. I'm focusing my studies in usability, information visualization, and human computer interaction.</p>
+					<p>I have experience working with software and web developement in Brazil, where I'm also doing my bachelor degree at USP (University of São Paulo).</p>
+
+					<div class="ui-corner-all custom-corners">
+						<div class="ui-bar ui-bar-a">
+							<h3>Opinions about me</h3>
+						</div>
+						<div class="ui-body ui-body-a">
+							<div class="opinion">
+								<p>" A great master he is "</p>
+								<h4>Yoda</h4>
+							</div>
+							<div class="opinion">
+								<p>" I fell for him "</p>
+								<h4>Megan Fox</h4>
+							</div>
+							<div class="opinion">
+								<p>" He is the best guy in the world "</p>
+								<h4>Mom</h4>
+							</div>
+							<div class="opinion">
+								<p>" I've never seen anyone work that fast "</p>
+								<h4>Usain Bolt</h4>
+							</div>
+							<div class="opinion">
+								<p>" This man is always punctual "</p>
+								<h4>The White Rabbit</h4>
+							</div>
+							<div class="opinion">
+								<p>" He made me an offer I couldn't refuse "</p>
+								<h4>Don Corleone</h4>
+							</div>
+						</div>
+					</div>
+					<p:spacer height="15"/>
+					
+					<div class="ui-corner-all custom-corners">
+						<div class="ui-bar ui-bar-a">
+							<h3>Some of the things and topics that turn me on:</h3>
+						</div>
+						<div class="ui-body ui-body-a">
+							<ul>
+								<li>Metal Music</li>
+								<li>Sauna and ice swimming</li>
+								<li>Finland</li>
+								<li>My fiancé</li>
+								<li>Programming</li>
+								<li>Photography</li>
+								<li>Cult movies</li>
+								<li>Innovation</li>
+								<li>Photography</li>
+								<li>Social causes</li>
+								<li>Geography</li>
+								<li>Subcultures</li>
+								<li>Human computer interaction</li>
+								<li>Usability</li>
+								<li>Games</li>
+								<li>Cooking</li>
+								<li>Fashion</li>
+								<li>Books</li>
+								<li>Movie quotes</li>
+								<li>Psychology</li>
+								<li>Physics</li>
+								<li>Japanese food</li>
+								<li>Pubilc transportation</li>
+								<li>Architecture</li>
+								<li>History</li>
+								<li>Web Design</li>
+								<li>Brazilian food</li>
+								<li>Equality</li>
+								<li>Urban planning</li>
+								<li>Sharing knowledge</li>
+								<li>Humanism</li>
+								<li>Feminism</li>
+							</ul>
+						</div>
+					</div>
+					
 				</div>
 			</div>
 
@@ -184,11 +284,12 @@
 					data-theme="b">
 					<h2>Menu</h2>
 					<ul data-role="listview">
-						<li><a href="#home">Home</a></li>
-						<li><a href="#wia">Who I Am</a></li>
+						<li><a data-transition="slide" href="#home">Home</a></li>
+						<li><a data-transition="slide" href="#wia">Who I Am</a></li>
 						<li data-theme="a">Professional</li>
-						<li><a href="#contact">Contact</a></li>
-						<li><a href="#otherlinks">Other links</a></li>
+						<li><a data-transition="slide" href="#contact">Contact</a></li>
+						<li><a data-transition="slide" href="#otherlinks">Other
+								links</a></li>
 					</ul>
 					<p:spacer height="50" />
 					<ul data-role="listview">
@@ -206,36 +307,37 @@
 				</div>
 
 				<div role="main" class="ui-content">
-					
+
 					<div class="ui-corner-all custom-corners">
 						<div class="ui-bar ui-bar-a">
 							<h3>Objective</h3>
 						</div>
 						<div class="ui-body ui-body-a">
-							<p>Develop systems that make a difference in people’s lives, solving problems and doing the best and more efficient code possible, learning and sharing knowledge.</p>
+							<p>Develop systems that make a difference in people’s lives,
+								solving problems and doing the best and more efficient code
+								possible, learning and sharing knowledge.</p>
 						</div>
 					</div>
-					
+
 					<p:spacer height="10" />
-					
+
 					<div class="ui-corner-all custom-corners">
 						<div class="ui-bar ui-bar-a">
 							<h3>Experience</h3>
 						</div>
 						<div class="ui-body ui-body-a">
 							<ul class="professional">
-								<li><img
-									src="resources/img/svg/demola.svg" width="100px" />
+								<li><img src="resources/img/svg/demola.svg" width="100px" />
 									<h3>
-										<a href="http://tampere.demola.fi/projects/watch-out-dangerous"
+										<a
+											href="http://tampere.demola.fi/projects/watch-out-dangerous"
 											target="_blank" title="Click to learn more about Demola">Demola</a>
 									</h3>
 									<h4>Project member – From February 2014, until May 2014.</h4>
 									<p>Working in a team to create innovative solutions for
-										real-world needs. Development of a risks data visualization tool
-										to the insurance field.</p></li>
-								<li><img
-									src="resources/img/svg/evaltec.svg" width="100px" />
+										real-world needs. Development of a risks data visualization
+										tool to the insurance field.</p></li>
+								<li><img src="resources/img/svg/evaltec.svg" width="100px" />
 									<h3>
 										<a
 											href="http://evaltec.com.br/index.php/e-val-tecnologia-english"
@@ -248,14 +350,15 @@
 										functional and technical design documentation, application
 										tests, and development in Java (frontend of banking systems;
 										implementations of biometric services and authentication
-										protocols, interfaces with cryptographic servers, with databases
-										(DAOs), and CRUD models). Experience with implementation and
-										testing of localization in internet banking platforms, and
-										developing, using and testing APIs and web services.</p></li>
+										protocols, interfaces with cryptographic servers, with
+										databases (DAOs), and CRUD models). Experience with
+										implementation and testing of localization in internet banking
+										platforms, and developing, using and testing APIs and web
+										services.</p></li>
 							</ul>
 						</div>
 					</div>
-					
+
 
 				</div>
 			</div>
@@ -266,11 +369,12 @@
 					data-theme="b">
 					<h2>Menu</h2>
 					<ul data-role="listview">
-						<li><a href="#home">Home</a></li>
-						<li><a href="#wia">Who I Am</a></li>
-						<li><a href="#proedu">Professional</a></li>
+						<li><a data-transition="slide" href="#home">Home</a></li>
+						<li><a data-transition="slide" href="#wia">Who I Am</a></li>
+						<li><a data-transition="slide" href="#proedu">Professional</a></li>
 						<li data-theme="a">Contact</li>
-						<li><a href="#otherlinks">Other links</a></li>
+						<li><a data-transition="slide" href="#otherlinks">Other
+								links</a></li>
 					</ul>
 					<p:spacer height="50" />
 					<ul data-role="listview">
@@ -336,10 +440,10 @@
 					id="otherlinks_panel" data-theme="b">
 					<h2>Menu</h2>
 					<ul data-role="listview">
-						<li><a href="#home">Home</a></li>
-						<li><a href="#wia">Who I Am</a></li>
-						<li><a href="#proedu">Professional</a></li>
-						<li><a href="#contact">Contact</a></li>
+						<li><a data-transition="slide" href="#home">Home</a></li>
+						<li><a data-transition="slide" href="#wia">Who I Am</a></li>
+						<li><a data-transition="slide" href="#proedu">Professional</a></li>
+						<li><a data-transition="slide" href="#contact">Contact</a></li>
 						<li data-theme="a">Other links</li>
 					</ul>
 					<p:spacer height="50" />
@@ -358,7 +462,8 @@
 				</div>
 
 				<div role="main" class="ui-content">
-					<p>Here I'll put some other links, like my blog and my photography...</p>
+					<p>Here I'll put some other links, like my blog and my
+						photography...</p>
 				</div>
 			</div>
 		</div>
