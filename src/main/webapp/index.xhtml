@@ -15,18 +15,31 @@
 			content="#{request.requestURL.substring(0, request.requestURL.length() - request.requestURI.length())}" />
 		<meta property="og:type" content="website" />
 		
+		<link rel="stylesheet" type="text/css"
+			href="#{facesContext.externalContext.requestContextPath}/resources/animate.css"
+			media="all" />
+		<link rel="stylesheet" type="text/css"
+			href="#{facesContext.externalContext.requestContextPath}/resources/style.css"
+			media="all" />
 		<script>
 			$(window).load(function(){
-			  $('#loading').fadeOut(500);
-			  scrollTo(parseInt($('#page_'+window.location.hash.substring(1)).css('left')),parseInt($('#page_'+window.location.hash.substring(1)).css('top')));
-			  $('.home-text').delay(500).addClass('animated bounceIn');
-			  $('.big-button').delay(500).addClass('animated fadeInUp');
-			  $('.big-button').delay(1000).jqFloat({ width: 20, height: 20, speed: 1500 });
+				if($('#mobileDetector').css('display') === 'none') {
+					if(getCookie("mobileRedirected") != "true"){
+						document.cookie = "mobileRedirected=true";
+						window.location.replace("mobile.jsf");
+					}
+				}
+				$('#loading').fadeOut(500);
+				scrollTo(parseInt($('#page_'+window.location.hash.substring(1)).css('left')),parseInt($('#page_'+window.location.hash.substring(1)).css('top')));
+				$('.home-text').delay(500).addClass('animated bounceIn');
+				$('.big-button').delay(500).addClass('animated fadeInUp');
+				$('.big-button').delay(1000).jqFloat({ width: 20, height: 20, speed: 1500 });
 			});
 		</script>
 	</ui:define>
 
 	<ui:define name="content">
+		<div id="mobileDetector"></div>
 		<div id="loading" class="unselectable">
 			<h3>Loading</h3>
 			<img src="resources/img/loading.gif" />
@@ -533,6 +546,14 @@
 					</p:panelGrid> 
 				</div>
 			</div>
+			
+			<div id="mobile" class="unselectable">
+				<div>
+					<h1>Mobile version?</h1>
+					<h3>This site is optimized for desktop browsers... but you can access a mobile version by clicking 
+					<a href="#{facesContext.externalContext.requestContextPath}/mobile.jsf">here</a></h3>
+				</div>
+			</div>
 		</div>
 
 		<script
@@ -550,7 +571,7 @@
 		
 		$('#container').fullContent({ 
 		  stages: 'div', 
-		  mapPosition: [{v: 2, h: 2}, {v: 3, h: 2}, {v: 3, h: 3}, {v: 1, h: 2}, {v: 1, h: 3}, {v: 3, h: 1}, {v: 2, h: 1}, {v: 2, h: 3}], 
+		  mapPosition: [{v: 2, h: 2}, {v: 3, h: 2}, {v: 3, h: 3}, {v: 1, h: 2}, {v: 1, h: 3}, {v: 3, h: 1}, {v: 2, h: 1}, {v: 2, h: 3}, {v: 1, h: 1}], 
 		  stageStart: 1, 
 		  speedTransition: 500
 		});

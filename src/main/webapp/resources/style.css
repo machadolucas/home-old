@@ -384,6 +384,14 @@ p {
 	.contact-table, .contact-table tr, .contact-table td {background: transparent; border: none;}
 	.contact-label {color: #888; text-align: right; width: 200px; }
 	.contact-value {color: #222; text-align: left; width: 300px; font-weight: 400;}
+#page_mobile {
+	color: #fff;
+}
+	#page_mobile div { text-align: center; width: 500px; margin: auto; margin-top: 15%; font-family: Futura, "Trebuchet MS", Arial, sans-serif;}
+	#page_mobile h1, #page_mobile h3 { margin: 5px; }
+	#page_mobile h1 { font-size: 120px; }
+	#page_mobile h3 { font-size: 32px; }
+	#page_mobile a {color: #ff0;}
 
 
 
@@ -397,19 +405,22 @@ p {
 @media screen and (max-width: 600px) {
 }
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 1025px) {
+	#mobileDetector { display: none; }
 }
 
 /* iPad */
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)  {
+	#mobileDetector { display: none; }
 }
 
 /* iPhone */
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 600px) {
+	#mobileDetector { display: none; }
 	h1 {
 		font-size: 26px;
 	}
