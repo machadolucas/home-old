@@ -23,12 +23,6 @@
 			media="all" />
 		<script>
 			$(window).load(function(){
-				if($('#mobileDetector').css('display') === 'none') {
-					if(getCookie("mobileRedirected") != "true"){
-						document.cookie = "mobileRedirected=true";
-						window.location.replace("mobile.jsf");
-					}
-				}
 				$('#loading').fadeOut(500);
 				scrollTo(parseInt($('#page_'+window.location.hash.substring(1)).css('left')),parseInt($('#page_'+window.location.hash.substring(1)).css('top')));
 				$('.home-text').delay(500).addClass('animated bounceIn');
@@ -40,6 +34,14 @@
 
 	<ui:define name="content">
 		<div id="mobileDetector"></div>
+		<script>
+			if($('#mobileDetector').css('display') === 'none') {
+				if(getCookie("mobileRedirected") != "true"){
+					document.cookie = "mobileRedirected=true";
+					window.location.replace("mobile.jsf");
+				}
+			}
+		</script>
 		<div id="loading" class="unselectable">
 			<h3>Loading</h3>
 			<img src="resources/img/loading.gif" />
