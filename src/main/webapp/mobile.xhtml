@@ -31,6 +31,10 @@
 
 		<style>
 
+#loading {
+	background: rgba(0,0,0,0.95); position: fixed; top: 0px; left: 0px; height: 100%; width: 100%;
+	z-index: 9999; text-align: center; padding-top: 5%; color: #fafafa;
+}
 /* Basic settings */
 .ui-li-static.ui-collapsible {
 	padding: 0;
@@ -123,7 +127,7 @@ max-width: 50%;
 	<ui:define name="content">
 		<div id="loading" class="unselectable">
 			<h3>Loading</h3>
-			<img src="resources/img/loading.gif" />
+			<img src="resources/mobile/images/ajax-loader.gif" />
 		</div>
 
 		<div>
@@ -459,8 +463,33 @@ max-width: 50%;
 				</div>
 
 				<div role="main" class="ui-content">
-					<p>Here I'll put some other links, like my blog and my
-						photography...</p>
+					
+					<div class="ui-corner-all custom-corners">
+						<div class="ui-bar ui-bar-a">
+							<h3>Blog</h3>
+						</div>
+						<div class="ui-body ui-body-a">
+							<p>I have a blog in which I write about several different things like photography and programming...
+							</p>
+							<p>Unfortunately, most of the posts are only available in Portuguese, but they can be easily understood with a tool like Google Translate.
+							</p>
+							<p>You can access it here: <a href="http://blog.machadolucas.me">blog.machadolucas.me</a>
+							</p>
+						</div>
+					</div>
+
+					<p:spacer height="10" />
+					
+					<div class="ui-corner-all custom-corners">
+						<div class="ui-bar ui-bar-a">
+							<h3>Photography</h3>
+						</div>
+						<div class="ui-body ui-body-a">
+							<p>One of my hobbies is photography. Although I don't have professional equipment, I consider several of my pics very good :D</p>
+							<p>You can check them in my <a href="http://0-sirluke-0.deviantart.com/gallery/">deviantArt</a>.</p>
+						</div>
+					</div>
+					
 				</div>
 			</div>
 		</div>
