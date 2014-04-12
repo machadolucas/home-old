@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" lang="#{localeBean.language}">
+<h:head></h:head>
+<h:body>
+
+	<a href="#home" class="home-button bottom-left unselectable" onclick="menuHighlight(this)">
+		Back
+	</a>
+	<h1>Professional</h1>
+	<div class="column-900" style="margin: 20px auto">
+		<h2>Objective</h2>
+		<p style="font-weight: 400">Develop systems that make a difference in people’s lives, solving problems and doing the best and more efficient code possible, learning and sharing knowledge.</p>
+	</div>
+	<div class="column-900">
+		<h2>Experience</h2>
+		<ul id="xp-list">
+			<li>
+				<img src="resources/img/svg/demola.svg" width="200px" />
+				<h3><a href="http://tampere.demola.fi/projects/watch-out-dangerous" target="_blank" title="Click to learn more about Demola">Demola</a></h3>
+				<h4>Project member – From February 2014, until May 2014.</h4>
+				<p>Working in a team to create innovative solutions for real-world needs. Development of a risks data visualization tool to the insurance field.</p>
+			</li>
+			<li>
+				<img src="resources/img/svg/evaltec.svg" width="200px" />
+				<h3><a href="http://evaltec.com.br/index.php/e-val-tecnologia-english" target="_blank" title="Click to learn more about E-Val Tecnologia">E-Val Tecnologia</a></h3>
+				<h4>Developer – From June 2010, until August 2013.</h4>
+				<p>Requirements analysis for projects, development of functional and technical design documentation, application tests, and development in Java (frontend of banking systems; implementations of biometric services and authentication protocols, interfaces with cryptographic servers, with databases (DAOs), and CRUD models). Experience with implementation and testing of localization in internet banking platforms, and developing, using and testing APIs and web services.</p>
+			</li>
+		</ul>
+	</div>
+	<div class="column-900 unselectable">
+		<h2>Skills</h2>
+		<h3>Spoken Languages</h3>
+		<ul class="skill-list">
+			<li><div style="background-image: url('resources/img/professional/portuguese.png');"></div><p>Portuguese<br/>Native</p></li>
+			<li><div style="background-image: url('resources/img/professional/english.png');"></div><p>English<br/>Fluent</p></li>
+			<li><div style="background-image: url('resources/img/professional/finnish.png');"></div><p>Finnish<br/>Basic</p></li>
+			<li><div style="background-image: url('resources/img/professional/spanish.png');"></div><p>Spanish<br/>Basic</p></li>
+			<li><div style="background-image: url('resources/img/professional/german.png');"></div><p>German<br/>Basic</p></li>
+		</ul>
+		<h3>Development languages</h3>
+		<ul class="skill-list">
+			<li><div style="background-image: url('resources/img/professional/java.png');"></div><p>Java</p></li>
+			<li><div style="background-image: url('resources/img/professional/html5.png');"></div><p>HTML5</p></li>
+			<li><div style="background-image: url('resources/img/professional/css3.png');"></div><p>CSS3</p></li>
+			<li><div style="background-image: url('resources/img/professional/javascript.png');"></div><p>JavaScript</p></li>
+			<li><div style="background-image: url('resources/img/professional/sql.png');"></div><p>SQL</p></li>
+			<li><div style="background-image: url('resources/img/professional/python.png');"></div><p>Python</p></li>
+			<li><div style="background-image: url('resources/img/professional/xml.png');"></div><p>XML</p></li>
+			<li><div style="background-image: url('resources/img/professional/json.png');"></div><p>JSON</p></li>
+			<li><div style="background-image: url('resources/img/professional/nosql.png');"></div><p>noSQL</p></li>
+		</ul>
+		<h3>Other development technologies</h3>
+		<ul class="skill-list">
+			<li><div style="background-image: url('resources/img/professional/terminal.png');"></div><p>Unix systems</p></li>
+			<li><div style="background-image: url('resources/img/professional/eclipse.png');"></div><p>Eclipse</p></li>
+			<li><div style="background-image: url('resources/img/professional/jsp.png');"></div><p>JSP</p></li>
+			<li><div style="background-image: url('resources/img/professional/struts.gif');"></div><p>Struts</p></li>
+			<li><div style="background-image: url('resources/img/professional/struts2.png');"></div><p>Struts2</p></li>
+			<li><div style="background-image: url('resources/img/professional/jsf.png');"></div><p>JSF</p></li>
+			<li><div style="background-image: url('resources/img/professional/primefaces.png');"></div><p>Primefaces</p></li>
+			<li><div style="background-image: url('resources/img/professional/jquery.png');"></div><p>jQuery</p></li>
+			<li><div style="background-image: url('resources/img/professional/jqueryui.png');"></div><p>jQuery UI</p></li>
+			<li><div style="background-image: url('resources/img/professional/d3js.svg');"></div><p>D3js</p></li>
+			<li><div style="background-image: url('resources/img/professional/raphael.png');"></div><p>RaphaëlJs</p></li>
+			<li><div style="background-image: url('resources/img/professional/oauth.png');"></div><p>OAuth</p></li>
+			<li><div style="background-image: url('resources/img/professional/biometrics.png');"></div><p>Biometrics</p></li>
+		</ul>
+	</div>
+	<div class="column-900 unselectable" style="border-top: 1px solid #bbb; margin-bottom: 0px; padding-top: 100px;">
+		<div class="more-links link-div">
+			<a href="#education" onclick="menuHighlight(this)" title="Click to see more information about my educational background">
+				Want to see my<br />educational background too?
+			</a>
+			<a href="#contact" onclick="menuHighlight(this)" title="Click to know how to contact me">
+				Find me interesting?<br />Why not get in Contact?
+			</a>
+		</div>
+		<div id="cv-div">
+			<a href="resources/files/CV.pdf" target="_blank" id="cv-link" title="Click to download a pdf version of my curriculum vitae">
+				<img src="resources/img/CV.jpg" id="cv-img" />
+				pdf version
+			</a>
+			<h2>Want a traditional CV? No problem!</h2>
+		</div>
+	</div>
+	<img class="unselectable" src="resources/img/svg/city-skyline.svg" style="width: 100%; margin-bottom: -4px;" />
+
+	<script type="text/javascript">
+		$(function(){
+			$('#cv-img').hover(
+				function() {$( this ).addClass('animated pulse');},
+				function() {$( this ).removeClass('animated pulse');}
+			);
+		});
+	</script>
+</h:body>
+</html>
+
+

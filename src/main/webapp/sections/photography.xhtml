@@ -7,13 +7,28 @@
 <h:head></h:head>
 <h:body>
 
-		<div id="photos">
-			<ui:repeat value="#{photographyBean.photos}" var="photo">
-				<div class="photo" style="background-image: url(#{photo})"></div>
-			</ui:repeat>
-		</div>
+	<a href="#home" class="home-button top-right"
+		onclick="menuHighlight(this)"> Back </a>
+	<h1>Photography</h1>
+	<p>One of my favourite hobbies is photography. Here you can see
+		some of my last photos!</p>
+	<p>
+		You can take a better look at them in <a
+			href="http://0-sirluke-0.deviantart.com/gallery/" target="_blank">my
+			DeviantArt gallery.</a>
+	</p>
+	<div id="photos">
+		<ui:repeat value="#{photographyBean.photos}" var="photo">
+			<div class="photo" style="background-image: url(#{photo})"></div>
+		</ui:repeat>
+	</div>
+	
+	<div class="more-links">
+		<a href="http://0-sirluke-0.deviantart.com/gallery/" target="_blank">See
+			more photos in my DeviantArt gallery</a>
+	</div>
 
-		<script type="text/javascript">
+	<script type="text/javascript">
 
 		$(function(){
 			$('.photo').click( function() {
