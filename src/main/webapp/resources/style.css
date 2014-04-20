@@ -111,13 +111,13 @@ p {
 	.main-menu-link a:hover {background: rgba(255,0,0,0.5);box-shadow: inset 0px 0px 10px rgba(255,255,255,0.8);}
 	#menu-focus{
 		display: none;
-		position: absolute;
+		position: fixed;
 		width: 118px;
 		height: 68px;
 		background: rgba(200,200,200,0.6);
 		border: 1px solid #fff;
-		top: 70px;
-		left: 120px;
+		top: 82px;
+		left: 132px;
 		-webkit-transition: all 0.5s linear; transition: all 0.5s linear;	
 	}
 

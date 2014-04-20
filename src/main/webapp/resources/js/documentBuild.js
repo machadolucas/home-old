@@ -65,6 +65,7 @@ function animate() {
 
 function render() {
 
+//	if(isHome){
 	for ( var i = 0, il = particles.length; i < il; i ++ ) {
 		var particle = particles[ i ];
 		particle.opacity = particle.z > 10 ? (particle.z - 20)/-10 : 1;
@@ -81,5 +82,6 @@ function render() {
 		particle.domElement.style.zIndex = Math.floor( 1000 - particle.z * 100 );
 
 	}
+//	}
 
 }
