@@ -47,7 +47,7 @@ function init() {
 		container.appendChild( domElement );
 		particles.push( {
 			x: Math.random() * 1500 - 750,
-			y: Math.random() * 500 + 100,
+			y: Math.random() * 500 + 50,
 			z: Math.random() * 20,
 			rotation: Math.floor(Math.random() * 70),
 			scale: Math.random() * 0.3 + 0.7,
@@ -69,6 +69,7 @@ function render() {
 	for ( var i = 0, il = particles.length; i < il; i ++ ) {
 		var particle = particles[ i ];
 		particle.opacity = particle.z > 10 ? (particle.z - 20)/-10 : 1;
+		particle.opacity = particle.z < 1 ? particle.z : particle.opacity;
 		particle.opacity = particle.z < 0.1 ? 0 : particle.opacity;
 		particle.z = particle.z < 0.1 ? 20 : particle.z - 0.01;
 
