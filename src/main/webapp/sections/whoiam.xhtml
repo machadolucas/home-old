@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" lang="#{localeBean.language}">
+<h:head></h:head>
+<h:body>
+	<a href="#home" class="home-button top-right"
+		onclick="menuHighlight(this)"> Back </a>
+	<h1>Who I am?</h1>
+
+	<div class="column-500" style="border-bottom: 1px solid #590F33;">
+		<p>I'm currently a brazilian student in the Master's and
+			Bachelor's degree in Computer Science at University of Tampere. I'm
+			focusing my studies in usability, information visualization, and
+			human computer interaction.</p>
+		<p>I have experience working with software and web developement in
+			Brazil, where I'm also doing my bachelor degree at USP (University of
+			São Paulo).</p>
+	</div>
+
+	<div id="opinions-wrapper">
+		<div id="opinions-title">Testimonials</div>
+		<div id="opinions">
+			<div class="opinion">
+				<h5>" A great master he is "</h5>
+				<h6>Yoda</h6>
+			</div>
+			<div class="opinion">
+				<h5>" I fell for him "</h5>
+				<h6>Megan Fox</h6>
+			</div>
+			<div class="opinion">
+				<h5>
+					" He is the best guy<br />in the world "
+				</h5>
+				<h6>Mom</h6>
+			</div>
+			<div class="opinion">
+				<h5>
+					" I've never seen anyone<br />work that fast "
+				</h5>
+				<h6>Usain Bolt</h6>
+			</div>
+			<div class="opinion">
+				<h5>
+					" This man is<br />always punctual "
+				</h5>
+				<h6>The White Rabbit</h6>
+			</div>
+			<div class="opinion">
+				<h5>
+					" He made me an offer<br />I couldn't refuse "
+				</h5>
+				<h6>Don Corleone</h6>
+			</div>
+		</div>
+	</div>
+
+	<div id="ilike" class="column-900">
+		<h3>Some of the things and topics that turn me on:</h3>
+		<ul>
+			<li>Metal Music</li>
+			<li>Sauna and ice swimming</li>
+			<li>Finland</li>
+			<li>My fiancé</li>
+			<li>Programming</li>
+			<li>Photography</li>
+			<li>Cult movies</li>
+			<li>Innovation</li>
+			<li>Photography</li>
+			<li>Social causes</li>
+			<li>Geography</li>
+			<li>Subcultures</li>
+			<li>Human computer interaction</li>
+			<li>Usability</li>
+			<li>Games</li>
+			<li>Cooking</li>
+			<li>Fashion</li>
+			<li>Books</li>
+			<li>Movie quotes</li>
+			<li>Psychology</li>
+			<li>Physics</li>
+			<li>Japanese food</li>
+			<li>Pubilc transportation</li>
+			<li>Architecture</li>
+			<li>History</li>
+			<li>Web Design</li>
+			<li>Brazilian food</li>
+			<li>Equality</li>
+			<li>Urban planning</li>
+			<li>Sharing knowledge</li>
+			<li>Humanism</li>
+			<li>Feminism</li>
+		</ul>
+	</div>
+
+	<div class="column-900 unselectable">
+		<div class="more-links unselectable">
+			<a href="#lifeline" onclick="menuHighlight(this)"> Want to know
+				with details<br />what I did in my life?
+			</a> <a href="#photography" onclick="menuHighlight(this)"> Willing to
+				meet<br />my photography hobby?
+			</a> <a href="#education" onclick="menuHighlight(this)"> More details<br />about
+				my studies?
+			</a> <a href="#professional" onclick="menuHighlight(this)"> What
+				about my<br />professional experience?
+			</a>
+		</div>
+	</div>
+
+	<script>
+	$(document).ready(function() {
+	$("#opinions > .opinion:gt(0)").hide();
+	setInterval(function() { 
+	  $('#opinions > .opinion:first')
+	    .hide()
+	    .next()
+	    .fadeIn(2000)
+	    .end()
+	    .appendTo('#opinions');
+	},  6000);
+	});
+	</script>
+</h:body>
+</html>
+
+

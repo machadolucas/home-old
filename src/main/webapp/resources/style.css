@@ -81,7 +81,7 @@ p {
 #loading h3 { margin: 15px;}
 
 .main-menu {display: none;position: fixed;top: 10px;left: 10px;
-	width: 360px;height: 210px;border-radius: 20px;border: 3px solid #fff; color: #fff;z-index: 999;
+	width: 360px;height: 210px;border-radius: 20px;border: 3px solid #fff; color: #fff;z-index: 6999;
 	box-shadow: inset 1px 1px 3px rgba(0,0,0,0.5), 0px 0px 30px rgba(0,0,0,0.8);overflow: hidden;}
 	.main-menu a {font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 		display: block;float: left;width: 118px;height: 68px;line-height: 68px;background: rgba(0,0,0,0.8);
@@ -100,7 +100,7 @@ p {
 		border-radius: 15px;
 		border: 2px solid #fff; 
 		color: #fff;
-		z-index: 999;
+		z-index: 6999;
 		box-shadow: inset 1px 1px 3px rgba(0,0,0,0.5);
 		overflow: hidden;
 	}
@@ -123,13 +123,23 @@ p {
 
 #page_home {
 	color: #fafafa;
-	background: #111 url('img/space.jpg') right repeat;
+/* 	background: #111 url('img/space.jpg') right repeat; */
+	background: rgb(4,20,26);
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzA0MTQxYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjM1JSIgc3RvcC1jb2xvcj0iIzFkNTA4ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzUyOTlkMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxZDUwOGYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  rgba(4,20,26,1) 0%, rgba(29,80,143,1) 40%, rgba(82,153,209,1) 50%, rgba(29,80,143,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(4,20,26,1)), color-stop(40%,rgba(29,80,143,1)), color-stop(50%,rgba(82,153,209,1)), color-stop(100%,rgba(29,80,143,1)));
+	background: -webkit-linear-gradient(top,  rgba(4,20,26,1) 0%,rgba(29,80,143,1) 40%,rgba(82,153,209,1) 50%,rgba(29,80,143,1) 100%);
+	background: -o-linear-gradient(top,  rgba(4,20,26,1) 0%,rgba(29,80,143,1) 40%,rgba(82,153,209,1) 50%,rgba(29,80,143,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(4,20,26,1) 0%,rgba(29,80,143,1) 40%,rgba(82,153,209,1) 50%,rgba(29,80,143,1) 100%);
+	background: linear-gradient(to bottom,  rgba(4,20,26,1) 0%,rgba(29,80,143,1) 40%,rgba(82,153,209,1) 50%,rgba(29,80,143,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#04141a', endColorstr='#1d508f',GradientType=0 );
+
 }
 	.top-left { top: 2px; left: 2px;}
-	.top-mid { top: 2px; left: 42%;  border-radius: 50% 50% 0 0;}
+	.top-mid { top: 2px; left: 44%;  border-radius: 50% 50% 0 0;}
 	.top-right { top: 2px; right: 2px;}
 	.bottom-left { bottom: 2px; left: 2px;}
-	.bottom-mid { bottom: 2px; left: 42%; border-radius:0 0 50% 50%;}
+	.bottom-mid { bottom: 2px; left: 44%; border-radius:0 0 50% 50%;}
 	.bottom-right { bottom: 2px; right: 2px;}
 	.left-mid { bottom: 12%; left: 2px; border-radius:50% 0 0 50%;}
 	.right-mid { bottom: 12%; right: 2px; border-radius:0 50% 50% 0;}
@@ -145,10 +155,11 @@ p {
 	
 	.big-button { position: absolute; display: block; width: 120px; height: 120px; border-radius: 50%; border: 2px solid #fff; 
 				color: #fff; text-decoration: none; font-size: 22px; text-align: center; line-height: 120px; padding: 10px;  
-				margin: 0 auto; background: rgba(0,0,0,0.7);font-family: Futura, "Trebuchet MS", Arial, sans-serif;}
-	.big-button:hover { background: rgba(255,255,255,0.10); }
+				margin: 0 auto; background: rgba(0,0,0,0.7);font-family: Futura, "Trebuchet MS", Arial, sans-serif; z-index: 5000;}
+	.big-button:hover { background: rgba(0,0,0,0.2); text-shadow: 1px 1px 2px rgba(0,0,0,0.7); box-shadow: inset 0px 0px 3px rgba(0,0,0,0.7); }
 	
-	.home-text { text-align: center; width: 500px; margin: auto; margin-top: 15%; font-family: Futura, "Trebuchet MS", Arial, sans-serif;}
+	.home-text { text-align: center; width: 500px; margin: auto; margin-top: 12%;
+		font-family: Futura, "Trebuchet MS", Arial, sans-serif;z-index: 5000; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);}
 	.home-text h1, .home-text h2, .home-text h3 { margin: 5px; }
 	
 	.more-links { text-align: center;}
@@ -162,6 +173,7 @@ p {
 	color: #fafafa;
 	background: #910d0d url('img/pattern.png') right repeat;
 	font-weight: 400;
+	z-index: 5000;
 }
 	#page_whoIAm h1{ font-family: 'Dancing Script', cursive; text-align: center; margin: 10px 0px;}
 	#opinions-wrapper {float: right;margin: 30px;padding: 15px;width: 250px;height: 150px;
@@ -177,6 +189,7 @@ p {
 #page_lifeline {
 	color: #fafafa;
 	background: #2B3856 url('img/pattern.png') right repeat;
+	z-index: 5000;
 }
 	#page_lifeline h1{ font-family: 'Dancing Script', cursive; text-align: center; margin: 10px 0px;}
 	#lifeline-background { background-image: url('img/svg/lifeline.svg'); background-size: 100%;
@@ -245,6 +258,7 @@ p {
 		#next.disabled,#prev.disabled {opacity: 0.2;}
 
 #page_education {
+	z-index: 5000;
 	color: #333;
 /* 	background: #98AFC7 url('img/pattern.png') right repeat; */
 	overflow-x: hidden;
@@ -300,6 +314,7 @@ p {
 			100% {margin-left: -600px;}
 		}
 #page_professional {
+	z-index: 5000;
 	color: #222222;
 	background: #E5E4E2 url('img/pattern.png') right repeat;
 }
@@ -329,6 +344,7 @@ p {
 	#cv-img {margin-bottom: 16px;display: block;width: 150px;box-shadow: 0px 4px 7px rgba(0,0,0,0.7);}
 	.link-div { width: 450px; float: left;}
 #page_photography {
+	z-index: 5000;
 	color: #fafafa;
 	background: #222222 url('img/pattern.png') right repeat;
 }
@@ -352,6 +368,7 @@ p {
 	.big-photo {width: 72%; height: 614px;}
 	#page_photography .more-links { margin: 50px auto; width: 330px; }
 #page_blog {
+	z-index: 5000;
 	color: rgba(0,0,0,0.65);
 	background: #F5F5DC url('img/wood.jpg') right repeat;
 }
@@ -374,6 +391,7 @@ p {
 	}
 	
 #page_contact {
+	z-index: 5000;
 	color: #222222;
 	background: #9CB071 url('img/pattern.png') right repeat;
 }
@@ -385,6 +403,7 @@ p {
 	.contact-label {color: #888; text-align: right; width: 200px; }
 	.contact-value {color: #222; text-align: left; width: 300px; font-weight: 400;}
 #page_mobile {
+	z-index: 5000;
 	color: #fff;
 }
 	#page_mobile div { text-align: center; width: 500px; margin: auto; margin-top: 15%; font-family: Futura, "Trebuchet MS", Arial, sans-serif;}
