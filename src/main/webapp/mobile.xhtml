@@ -18,8 +18,10 @@
 			content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
 
 		<link rel="stylesheet" href="resources/mobile/machadolucas.min.css" />
-		<link rel="stylesheet" href="resources/mobile/jquery.mobile.icons.min.css" />
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+		<link rel="stylesheet"
+			href="resources/mobile/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet"
+			href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
 		<script
 			src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js" />
 
@@ -30,10 +32,17 @@
 		</script>
 
 		<style>
-
 #loading {
-	background: rgba(0,0,0,0.95); position: fixed; top: 0px; left: 0px; height: 100%; width: 100%;
-	z-index: 9999; text-align: center; padding-top: 5%; color: #fafafa;
+	background: rgba(0, 0, 0, 0.95);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	z-index: 9999;
+	text-align: center;
+	padding-top: 5%;
+	color: #fafafa;
 }
 /* Basic settings */
 .ui-li-static.ui-collapsible {
@@ -109,18 +118,44 @@
 .professional li h3,.professional li h4 {
 	margin: 0;
 }
-.myPic { 
-display: block;
-margin: auto;
-border-radius: 70%;
-border: 2px solid #222;
-max-width: 50%;
+
+.myPic {
+	display: block;
+	margin: auto;
+	border-radius: 70%;
+	border: 2px solid #222;
+	max-width: 50%;
 }
-#wia .ui-content ul {list-style: none; padding: 0;}
-#wia .ui-content li {display: inline-block; float: left; padding: 0.5em 0.8em; margin: 0.3em 0.4em; background: #ed1c24; border-radius: 0.3em; border: 1px solid #444; color: #fff; text-shadow: 1px 1px 1px #222;}
-.opinion { padding: 0.5em 0em;}
-.opinion h4 { font-weight: 300;  opacity: 0.8;}
-.opinion p, .opinion h4 { margin: 0;}
+
+#wia .ui-content ul {
+	list-style: none;
+	padding: 0;
+}
+
+#wia .ui-content li {
+	display: inline-block;
+	float: left;
+	padding: 0.5em 0.8em;
+	margin: 0.3em 0.4em;
+	background: #ed1c24;
+	border-radius: 0.3em;
+	border: 1px solid #444;
+	color: #fff;
+	text-shadow: 1px 1px 1px #222;
+}
+
+.opinion {
+	padding: 0.5em 0em;
+}
+
+.opinion h4 {
+	font-weight: 300;
+	opacity: 0.8;
+}
+
+.opinion p,.opinion h4 {
+	margin: 0;
+}
 </style>
 	</ui:define>
 
@@ -160,14 +195,16 @@ max-width: 50%;
 
 				<div role="main" class="ui-content">
 					<h3>Welcome to my website!</h3>
+					<img
+						src="http://www.gravatar.com/avatar/737f52828dfccb81197a125c9d1f6745.png?s=512"
+						class="myPic" />
 					<p>
 						This is the mobile version. If you are using a computer, please
 						click <a
 							href="#{facesContext.externalContext.requestContextPath}/"
 							data-ajax="false">here</a> to go to a better version.
 					</p>
-					<p>It is still under development, so some content may be missing...
-						But feel free to access the desktop version that is complete :)</p>
+					<p>You can access simple information in the menu (top left button).</p>
 				</div>
 			</div>
 
@@ -199,9 +236,16 @@ max-width: 50%;
 				</div>
 
 				<div role="main" class="ui-content">
-					<img src="http://www.gravatar.com/avatar/737f52828dfccb81197a125c9d1f6745.png?s=512" class="myPic"/>
-					<p>I'm currently a brazilian student in the Master's and Bachelor's degree in Computer Science at University of Tampere. I'm focusing my studies in usability, information visualization, and human computer interaction.</p>
-					<p>I have experience working with software and web developement in Brazil, where I'm also doing my bachelor degree at USP (University of São Paulo).</p>
+					<img
+						src="http://www.gravatar.com/avatar/737f52828dfccb81197a125c9d1f6745.png?s=512"
+						class="myPic" />
+					<p>I'm currently a brazilian student in the Master's and
+						Bachelor's degree in Computer Science at University of Tampere.
+						I'm focusing my studies in usability, information visualization,
+						and human computer interaction.</p>
+					<p>I have experience working with software and web developement
+						in Brazil, where I'm also doing my bachelor degree at USP
+						(University of São Paulo).</p>
 
 					<div class="ui-corner-all custom-corners">
 						<div class="ui-bar ui-bar-a">
@@ -234,8 +278,8 @@ max-width: 50%;
 							</div>
 						</div>
 					</div>
-					<p:spacer height="15"/>
-					
+					<p:spacer height="15" />
+
 					<div class="ui-corner-all custom-corners">
 						<div class="ui-bar ui-bar-a">
 							<h3>Some of the things and topics that turn me on:</h3>
@@ -277,7 +321,7 @@ max-width: 50%;
 							</ul>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 
@@ -361,6 +405,36 @@ max-width: 50%;
 						</div>
 					</div>
 
+					<p:spacer height="10" />
+
+					<div class="ui-corner-all custom-corners">
+						<div class="ui-bar ui-bar-a">
+							<h3>Education</h3>
+						</div>
+						<div class="ui-body ui-body-a">
+							<ul class="professional">
+								<li><img src="resources/img/usp_logo.jpg" width="100px" />
+									<h3>
+										<a href="http://www5.usp.br/en/institucional/a-usp/"
+											target="_blank"
+											title="Click to learn more about University of Sao Paulo">USP
+											- University of Sao Paulo</a>
+									</h3>
+									<h4>Bachelor degree in Information Systems.</h4>
+									<p>Started in 2010.</p>
+									<p>Top university in Latin America.</p></li>
+								<li><img src="resources/img/uta_logo.png" width="100px" />
+									<h3>
+										<a href="http://www.uta.fi/english/" target="_blank"
+											title="Click to learn more about University of Tampere">UTA
+											- University of Tampere</a>
+									</h3>
+									<h4>Exchange student in the Computer Science Master's and
+										Bachelor's degree</h4>
+									<p>Academic Year 2013-2014.</p></li>
+							</ul>
+						</div>
+					</div>
 
 				</div>
 			</div>
@@ -463,33 +537,40 @@ max-width: 50%;
 				</div>
 
 				<div role="main" class="ui-content">
-					
+
 					<div class="ui-corner-all custom-corners">
 						<div class="ui-bar ui-bar-a">
 							<h3>Blog</h3>
 						</div>
 						<div class="ui-body ui-body-a">
-							<p>I have a blog in which I write about several different things like photography and programming...
-							</p>
-							<p>Unfortunately, most of the posts are only available in Portuguese, but they can be easily understood with a tool like Google Translate.
-							</p>
-							<p>You can access it here: <a href="http://blog.machadolucas.me">blog.machadolucas.me</a>
+							<p>I have a blog in which I write about several different
+								things like photography and programming...</p>
+							<p>Unfortunately, most of the posts are only available in
+								Portuguese, but they can be easily understood with a tool like
+								Google Translate.</p>
+							<p>
+								You can access it here: <a href="http://blog.machadolucas.me">blog.machadolucas.me</a>
 							</p>
 						</div>
 					</div>
 
 					<p:spacer height="10" />
-					
+
 					<div class="ui-corner-all custom-corners">
 						<div class="ui-bar ui-bar-a">
 							<h3>Photography</h3>
 						</div>
 						<div class="ui-body ui-body-a">
-							<p>One of my hobbies is photography. Although I don't have professional equipment, I consider several of my pics very good :D</p>
-							<p>You can check them in my <a href="http://0-sirluke-0.deviantart.com/gallery/">deviantArt</a>.</p>
+							<p>One of my hobbies is photography. Although I don't have
+								professional equipment, I consider several of my pics very good
+								:D</p>
+							<p>
+								You can check them in my <a
+									href="http://0-sirluke-0.deviantart.com/gallery/">deviantArt</a>.
+							</p>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
