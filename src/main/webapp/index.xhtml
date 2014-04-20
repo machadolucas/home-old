@@ -35,9 +35,9 @@
 	<ui:define name="content">
 		<div id="mobileDetector"></div>
 		<script>
-		if($('#mobileDetector').css('display') === 'none') {
+		if($('#mobileDetector').css('color') === 'rgb(255, 0, 0)') {
 			if(getCookie("mobileRedirected") != "true"){
-				document.cookie = "mobileRedirected=true";
+ 				document.cookie = "mobileRedirected=true";
 				window.location.replace("mobile.jsf");
 			}
 		}
@@ -110,7 +110,7 @@
 				
 				<div class="home-text">
 					<h1>Hello!</h1>
-					<h3>My name is Lucas, and I invite you to explore my website</h3>
+					<h3>My name is Lucas, and I invite you to know more about me</h3>
 				</div>
 			</div>
 
@@ -190,6 +190,7 @@
 <!-- 			type="text/javascript" /> -->
 		<script type="text/javascript">
 
+		
 		$('a[class="mail"]').attr('href', "mailto:" + address);
 		
 		$('#container').fullContent({ 
@@ -210,6 +211,9 @@
 		function menuHighlight(link) {
 			moveMenuHighlight(link.hash);
 		}
+		$(window).resize(function() {
+			scrollTo(parseInt($('#page_'+window.location.hash.substring(1)).css('left')),parseInt($('#page_'+window.location.hash.substring(1)).css('top')));
+		});
 		
 		var photography_loaded = false;
 		var professional_loaded = false;
