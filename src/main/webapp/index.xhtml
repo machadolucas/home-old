@@ -22,11 +22,18 @@
 			href="#{facesContext.externalContext.requestContextPath}/resources/style.css"
 			media="all" />
 		<script>
+			function callback(){
+				$('.main-menu').addClass('animated fadeInDown');
+				$('[id^="page_"]').addClass('animated fadeInUp');
+			}
+			
 			$(window).load(function(){
-				$('#loading').fadeOut(500);
 				scrollTo(parseInt($('#page_'+window.location.hash.substring(1)).css('left')),parseInt($('#page_'+window.location.hash.substring(1)).css('top')));
-				$('.home-text').delay(500).addClass('animated fadeInDown');
-				$('.big-button').delay(500).addClass('animated fadeInUp');
+				$('#loading').fadeOut(500, callback);
+// 			setInterval(function() {
+// 				$('.home-text h1').addClass('animated shake');
+// // 				$('.home-text h1').delay(2500).removeClass('animated shake')
+// 			}, 3000);
 			});
 		</script>
 	</ui:define>
@@ -45,110 +52,75 @@
 			<h3>Loading</h3>
 			<img src="resources/img/loading.gif" />
 		</div>
-		<div class="main-menu-link unselectable">
-				<a  href="javascript:openMenu()" title="Click here to access the site menu">
-					<img src="resources/img/menu.png" style="max-height: 100%" />
-				</a>
-		</div>
-		<div class="main-menu unselectable">
-				<div id="menu-focus"></div>
-				<a href="javascript:closeMenu()" class="close">
-					X
-				</a>
-				<a href="#education" onclick="menuHighlight(this)">
-					Education
-				</a>
-				<a href="#professional" onclick="menuHighlight(this)">
-					Professional
-				</a>
-				<a href="#blog" onclick="menuHighlight(this)">
-					Blog
-				</a>
-				<a href="#home" onclick="menuHighlight(this)">
+		<div class="main-menu unselectable flexContainer">
+				<a class="flexItem" href="#home" onclick="menuHighlight(this)">
 					Home
 				</a>
-				<a  href="#contact" onclick="menuHighlight(this)">
-					Contact
-				</a>
-				<a  href="#photography" onclick="menuHighlight(this)">
-					Photography
-				</a>
-				<a href="#whoIAm" onclick="menuHighlight(this)">
+				<a class="flexItem" href="#whoIAm" onclick="menuHighlight(this)">
 					Who I Am?
 				</a>
-				<a href="#lifeline" onclick="menuHighlight(this)">
+				<a class="flexItem" href="#lifeline" onclick="menuHighlight(this)">
 					Lifeline
 				</a>
-				
+				<a class="flexItem" href="#education" onclick="menuHighlight(this)">
+					Education
+				</a>
+				<a class="flexItem" href="#professional" onclick="menuHighlight(this)">
+					Professional
+				</a>
+<!-- 				<a class="flexItem" href="#portfolio" onclick="menuHighlight(this)"> -->
+<!-- 					Portfolio -->
+<!-- 				</a> -->
+				<a class="flexItem"  href="#photography" onclick="menuHighlight(this)">
+					Photography
+				</a>
+				<a class="flexItem"  href="#contact" onclick="menuHighlight(this)">
+					Contact
+				</a>
 		</div>
 		
 		<div class="main" id="container">
 
-			<div id="home" class="unselectable">
+			<div id="home" class="unselectable flexContainer">
 				<div class="home-text">
 					<h1>Hello!</h1>
 					<h3>My name is Lucas, and I invite you to know more about me</h3>
 				</div>
-				
-				<a class="big-button bottom-mid" href="#whoIAm" onclick="menuHighlight(this)">
-					Who I Am?
-				</a>
-				<a class="big-button bottom-right" href="#lifeline" onclick="menuHighlight(this)">
-					Lifeline
-				</a>
-				<a class="big-button top-mid" href="#education" onclick="menuHighlight(this)">
-					Education
-				</a>
-				<a class="big-button top-right" href="#professional" onclick="menuHighlight(this)">
-					Professional
-				</a>
-				<a class="big-button bottom-left" href="#photography" onclick="menuHighlight(this)">
-					Photography
-				</a>
-				<a class="big-button left-mid" href="#blog" onclick="menuHighlight(this)">
-					Blog
-				</a>
-				<a class="big-button right-mid" href="#contact" onclick="menuHighlight(this)">
-					Contact
-				</a>
 			</div>
 
 			<div id="whoIAm" class="scrollv">
+				<img class="pacman" src="resources/img/pacman.gif" />
 			</div>
 
-			<div id="lifeline" class="scrollv" style="z-index: 4999">
+			<div id="lifeline" class="scrollv">
+				<img class="pacman" src="resources/img/pacman.gif" />
 			</div>
 
 			<div id="education" class="scrollv">
+				<img class="pacman" src="resources/img/pacman.gif" />
 			</div>
 
-			<div id="professional" class="scrollv" style="position: relative">
+			<div id="professional" class="scrollv">
+				<img class="pacman" src="resources/img/pacman.gif" />
 			</div>
 
 			<div id="photography" class="scrollv unselectable">
+				<img class="pacman" src="resources/img/pacman.gif" />
 			</div>
 
-			<div id="blog" class="scrollv">
-				<a href="#home" class="home-button right-mid" onclick="menuHighlight(this)">
-					Back
-				</a>
-				<div class="sheet">
-				<h1 style="margin: 0px;">Dear Visitor,</h1>
-				<p>I have a blog in which I write about several different things like photography and programming...
-				</p>
-				<p>Unfortunately, most of the posts are only available in Portuguese, but they can be easily understood with a tool like Google Translate.
-				</p>
-				<p>I developed myself the blog platform and I'm currently updating it, so I also beg your pardon for the current mess and for not displaying its content in this page.
-				</p>
-				<p>For now, you can access it here: <a href="http://blog.machadolucas.me" target="_blank" style="color: black">blog.machadolucas.me</a>
-				</p>
-				</div>
-			</div>
+<!-- 			<div id="portfolio" class="scrollv"> -->
+<!-- 				<div class="sheet"> -->
+<!-- 				<h1 style="margin: 0px;">Dear Visitor,</h1> -->
+<!-- 				<p>Soon I will include here some examples of things I have done... -->
+<!-- 				</p> -->
+<!-- 				<p>My time is quite limited, so please be patient or <a href="#contact" onclick="menuHighlight(this)" style="color: black">get in contact</a> with me ;) -->
+<!-- 				</p> -->
+<!-- 				<p>By the way, I have a blog that can be accessed here: <a href="http://blog.machadolucas.me" target="_blank" style="color: black">blog.machadolucas.me</a> -->
+<!-- 				</p> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
 
 			<div id="contact" class="scrollv">
-				<a href="#home" class="home-button left-mid" onclick="menuHighlight(this)">
-					Back
-				</a>
 				<div id="contact-book">
 				<h1>Contact</h1>
 					
@@ -169,13 +141,6 @@
 				</div>
 			</div>
 			
-			<div id="mobile" class="unselectable">
-				<div>
-					<h1>Mobile version?</h1>
-					<h3>This site is optimized for desktop browsers... but you can access a mobile version by clicking 
-					<a href="#{facesContext.externalContext.requestContextPath}/mobile.jsf">here</a></h3>
-				</div>
-			</div>
 		</div>
 
 		<script
@@ -191,19 +156,11 @@
 		
 		$('#container').fullContent({ 
 		  stages: 'div', 
-		  mapPosition: [{v: 2, h: 2}, {v: 3, h: 2}, {v: 3, h: 3}, {v: 1, h: 2}, {v: 1, h: 3}, {v: 3, h: 1}, {v: 2, h: 1}, {v: 2, h: 3}, {v: 1, h: 1}], 
+		  mapPosition: [{v: 1, h: 1}, {v: 1, h: 2}, {v: 2, h: 2}, {v: 1, h: 3}, {v: 2, h: 3}, {v: 2, h: 4}, {v: 1, h: 4}], 
 		  stageStart: 1, 
 		  speedTransition: 500
 		});
 
-		function openMenu() {
-			$('.main-menu-link').hide();
-			$('.main-menu').show();
-		}
-		function closeMenu() {
-			$('.main-menu').fadeOut();
-			$('.main-menu-link').fadeIn();
-		}
 		function menuHighlight(link) {
 			moveMenuHighlight(link.hash);
 		}
@@ -219,7 +176,6 @@
 		function moveMenuHighlight(anchor) {
 			switch (anchor){
 			case "#photography":
-				$('#menu-focus').show().css('top','153px').css('left','13px');
 				if(!photography_loaded){
 					$('#page_photography').load('sections/photography.jsf', function(){
 						photography_loaded = true;
@@ -230,11 +186,9 @@
 					});
 				}
 				break;
-			case "#blog":
-				$('#menu-focus').show().css('top','83px').css('left','13px');
+			case "#portfolio":
 				break;
 			case "#whoIAm":
-				$('#menu-focus').show().css('top','153px').css('left','133px');
 				if(!whoiam_loaded){
 					$('#page_whoIAm').load('sections/whoiam.jsf', function(){
 						whoiam_loaded = true;
@@ -242,10 +196,8 @@
 				}
 				break;
 			case "#home":
-				$('#menu-focus').show().css('top','83px').css('left','133px');
 				break;
 			case "#education":
-				$('#menu-focus').show().css('top','13px').css('left','133px');
 				if(!education_loaded){
 					$('#page_education').load('sections/education.jsf', function(){
 						education_loaded = true;
@@ -253,7 +205,6 @@
 				}
 				break;
 			case "#lifeline":
-				$('#menu-focus').show().css('top','153px').css('left','253px');
 				if(!lifeline_loaded){
 					$('#page_lifeline').load('sections/lifeline.jsf', function(){
 						lifeline_loaded = true;
@@ -261,10 +212,8 @@
 				}
 				break;
 			case "#contact":
-				$('#menu-focus').show().css('top','83px').css('left','253px');
 				break;
 			case "#professional":
-				$('#menu-focus').show().css('top','13px').css('left','253px');
 				if(!professional_loaded){
 					$('#page_professional').load('sections/professional.jsf', function(){
 						professional_loaded = true;
@@ -272,7 +221,6 @@
 				}
 				break;
 			default:
-				$('#menu-focus').hide();
 			}
 			if(window.chrome){
 				$('html').animate({scrollTop: parseInt($('#page_'+anchor.substring(1)).css('top')),
@@ -283,13 +231,6 @@
 
 		$(function(){
 			moveMenuHighlight(window.location.hash);
-		});
-
-
-		var particles = [];
-		$(function(){
-			init();
-			animate();
 		});
 
 		</script>

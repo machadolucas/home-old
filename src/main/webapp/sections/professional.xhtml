@@ -7,13 +7,14 @@
 <h:head></h:head>
 <h:body>
 
-	<a href="#home" class="home-button bottom-left unselectable" onclick="menuHighlight(this)">
-		Back
-	</a>
 	<h1>Professional</h1>
 	<div class="column-900" style="margin: 20px auto">
 		<h2>Objective</h2>
-		<p style="font-weight: 400">Develop systems that make a difference in people’s lives, solving problems and doing the best and more efficient code possible, learning and sharing knowledge.</p>
+		<ul id="xp-list">
+			<li style="margin:0px;">
+				<p style="font-weight: 400">Develop systems that make a difference in people’s lives, solving problems and doing the best and more efficient code possible, learning and sharing knowledge.</p>
+			</li>
+		</ul>
 	</div>
 	<div class="column-900">
 		<h2>Experience</h2>
@@ -21,8 +22,10 @@
 			<li>
 				<img src="resources/img/svg/demola.svg" width="200px" />
 				<h3><a href="http://tampere.demola.fi/projects/watch-out-dangerous" target="_blank" title="Click to learn more about Demola">Demola</a></h3>
-				<h4>Project member – From February 2014, until May 2014.</h4>
-				<p>Working in a team to create innovative solutions for real-world needs. Development of a risks data visualization tool to the insurance field.</p>
+				<h4>Project member – From February 2014, until August 2014.</h4>
+				<p>Working in a team to create innovative solutions for real-world needs.</p>
+				<p>Development of a risks data visualization tool (a turn based game) to the insurance field between February and May (Demola Spring).</p>
+				<p>Development of an open source educational platform for the Finnish Ministry of Education between May and August (Demola Summer).</p>
 			</li>
 			<li>
 				<img src="resources/img/svg/evaltec.svg" width="200px" />
@@ -35,7 +38,7 @@
 	<div class="column-900 unselectable">
 		<h2>Skills</h2>
 		<h3>Spoken Languages</h3>
-		<ul class="skill-list">
+		<ul class="skill-list flexContainer">
 			<li><div style="background-image: url('resources/img/professional/portuguese.png');"></div><p>Portuguese<br/>Native</p></li>
 			<li><div style="background-image: url('resources/img/professional/english.png');"></div><p>English<br/>Fluent</p></li>
 			<li><div style="background-image: url('resources/img/professional/finnish.png');"></div><p>Finnish<br/>Basic</p></li>
@@ -43,7 +46,7 @@
 			<li><div style="background-image: url('resources/img/professional/german.png');"></div><p>German<br/>Basic</p></li>
 		</ul>
 		<h3>Development languages</h3>
-		<ul class="skill-list">
+		<ul class="skill-list flexContainer">
 			<li><div style="background-image: url('resources/img/professional/java.png');"></div><p>Java</p></li>
 			<li><div style="background-image: url('resources/img/professional/html5.png');"></div><p>HTML5</p></li>
 			<li><div style="background-image: url('resources/img/professional/css3.png');"></div><p>CSS3</p></li>
@@ -55,8 +58,8 @@
 			<li><div style="background-image: url('resources/img/professional/nosql.png');"></div><p>noSQL</p></li>
 		</ul>
 		<h3>Other development technologies</h3>
-		<ul class="skill-list">
-			<li><div style="background-image: url('resources/img/professional/terminal.png');"></div><p>Unix systems</p></li>
+		<ul class="skill-list flexContainer">
+			<li><div style="background-image: url('resources/img/professional/terminal.png');"></div><p>Bash</p></li>
 			<li><div style="background-image: url('resources/img/professional/eclipse.png');"></div><p>Eclipse</p></li>
 			<li><div style="background-image: url('resources/img/professional/jsp.png');"></div><p>JSP</p></li>
 			<li><div style="background-image: url('resources/img/professional/struts.gif');"></div><p>Struts</p></li>
@@ -71,8 +74,8 @@
 			<li><div style="background-image: url('resources/img/professional/biometrics.png');"></div><p>Biometrics</p></li>
 		</ul>
 	</div>
-	<div class="column-900 unselectable" style="border-top: 1px solid #bbb; margin-bottom: 0px; padding-top: 100px;">
-		<div class="more-links link-div">
+	<div class="column-900 unselectable flexContainer" style="border-top: 1px solid #C7C9BE; margin-bottom: 0px; padding-top: 100px;">
+		<div class="more-links flexItem">
 			<a href="#education" onclick="menuHighlight(this)" title="Click to see more information about my educational background">
 				Want to see my<br />educational background too?
 			</a>
@@ -80,7 +83,7 @@
 				Find me interesting?<br />Why not get in Contact?
 			</a>
 		</div>
-		<div id="cv-div">
+		<div id="cv-div" class="flexItem">
 			<a href="resources/files/CV.pdf" target="_blank" id="cv-link" title="Click to download a pdf version of my curriculum vitae">
 				<img src="resources/img/CV.jpg" id="cv-img" />
 				pdf version
