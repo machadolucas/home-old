@@ -108,7 +108,7 @@ p {
 #loading h3 { margin: 15px;}
 
 .main-menu {position: fixed;top: 0px;left: 0px; opacity: 0;
-	width: 100%;height: 70px;border-radius: 0px;border: none; color: #fff;z-index: 6999;overflow: hidden; background: #DC4E00;}
+	width: 100%;height: 70px;border-radius: 0px;border: none; color: #fff;z-index: 6999;overflow: hidden; background: rgba(220,78,0,0.85);}
 	.main-menu a {font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 		display: block;height: 70px;line-height: 70px;
 		text-align: center;color: #fff;text-decoration: none;
@@ -126,8 +126,22 @@ p {
 	-webkit-justify-content: center;
 	justify-content: center;
 }
-	
-	.home-text { text-align: center; width: 500px; }
+	.body-section {
+		padding-bottom: 100px; 
+	}
+	.home-photo {
+		background-image: url('http://www.gravatar.com/avatar/737f52828dfccb81197a125c9d1f6745.png?s=1024');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 350px;
+		width: 350px;
+		border-radius: 50%;
+		border: 4px solid #C7C9BE;
+		margin: 20px;
+	}
+	.home-text { text-align: right; }
+	.home-text > h1, .home-text > h3 {width: 400px; }
 	
 	.more-links { text-align: center;}
 	.more-links a {display: block; margin: 15px auto; padding: 15px;
@@ -136,20 +150,14 @@ p {
 		-webkit-transition: all 0.2s linear; transition: all 0.2s linear;}
 	.more-links a:hover {color: #000; background: rgb(137,206,222); box-shadow: 1px 1px 1px rgba(0,0,0,0.8);}
 	
-#page_whoIAm {
-	padding-top: 70px;
-	color: #222222;
-	background: #F4F5ED;
-}
-	#page_whoIAm h1{ font-family: 'Dancing Script', cursive; text-align: center; margin: 10px 0px;}
-	#opinions-wrapper {float: right;margin: 30px;padding: 15px;width: 250px;height: 150px;
+	#opinions-wrapper {float: right;margin: 1em 0px 0px 30px;padding: 15px;width: 300px;height: 130px;
 		overflow:hidden;background: #C7C9BE;border-radius: 15px;}
 	#opinions-title { font-size: 40px; text-align: center; font-family: 'Dancing Script'; color:#000;}
 	.opinion > h5 { margin: 0px; padding: 6px; text-align: center; color:#2C2828; font-size: 18px;}
 	.opinion > h6 {margin: 0px;padding: 6px;text-align: center;color:#2C2828;font-weight: 300;font-size: 16px; letter-spacing: 2px;}
-	#ilike ul { list-style: none;}
+	#ilike ul { list-style: none; padding: 0px;}
 	#ilike li { display: block;  background: #fafafa; color: #333333; font-size: 18px;
-		line-height: 22px; height: 22px; padding: 15px; border-radius: 20px; margin: 5px;
+		line-height: 22px; height: 22px; padding: 15px; border-radius: 20px; margin: 5px 10px 5px 0px;
 		border: 2px solid #929487; float: left;}
 
 #page_lifeline {
@@ -272,7 +280,7 @@ p {
 	color: #222222;
 	background: #F4F5ED;
 }
-	.column-500 { width: 500px; margin: auto; margin-bottom:50px; overflow: hidden;}
+	.column-500 { width: 500px; margin-bottom:50px; overflow: hidden;}
 	.column-900 { width: 900px; margin: auto; margin-bottom:100px; overflow: hidden;}
 	#page_professional h1 {text-align: center;margin: 15px 0px;}
 	#page_professional h2 {margin: 15px 0px; padding: 0px;}
