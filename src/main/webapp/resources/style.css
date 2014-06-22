@@ -327,7 +327,7 @@ p {
 		cursor: pointer;
 	}
 	.big-photo {width: 72%; height: 614px;}
-	#page_photography .more-links { margin: 50px auto; width: 330px; }
+	#page_photography .more-links { margin: 100px auto; width: 330px; }
 #page_portfolio {
 	padding-top: 70px;
 	color: rgba(0,0,0,0.65);

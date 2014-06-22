@@ -292,7 +292,6 @@
 		var professional_loaded = false;
 		var lifeline_loaded = false;
 		var education_loaded = false;
-		var whoiam_loaded = false;
 		function moveMenuHighlight(anchor) {
 			switch (anchor){
 			case "#photography":
@@ -307,13 +306,6 @@
 				}
 				break;
 			case "#portfolio":
-				break;
-			case "#whoIAm":
-				if(!whoiam_loaded){
-					$('#page_whoIAm').load('sections/whoiam.jsf', function(){
-						whoiam_loaded = true;
-					});
-				}
 				break;
 			case "#home":
 				break;
