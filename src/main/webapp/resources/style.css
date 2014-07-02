@@ -52,6 +52,10 @@ body {
 
 .scrollv { overflow-y: auto !important; }
 
+.flexWrap {
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
 .flexContainer {
 	display: -webkit-flex;
 	display: flex;
@@ -313,20 +317,17 @@ p {
 	#page_photography h1{ font-family: 'Dancing Script', cursive; text-align: center; margin: 40px 0px;}
 	#page_photography p{ margin: 20px auto; font-weight: 400; font-size: 20px; max-width: 900px; }
 	#page_photography p a { color: #222222; }
-	#photos {margin: 0px auto; width: 98%;}
-	.photo {
+	#photos {margin: 0px auto; width: 100%;
+		-webkit-justify-content:space-around;justify-content:space-around;
+		-webkit-align-items:center;align-items:center;}
+	#photos a {text-decoration: none;}
+	#photos a img {
 		background: #929487;
-		color: #222;
 		padding: 0px; margin: 5px;
-		width: 22%;
-		height: 300px;
+		max-height: 150px;
 		border: 2px solid #929487;
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
 		cursor: pointer;
 	}
-	.big-photo {width: 72%; height: 614px;}
 	#page_photography .more-links { margin: 100px auto; width: 330px; }
 #page_portfolio {
 	padding-top: 70px;

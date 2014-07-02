@@ -3,7 +3,7 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:p="http://primefaces.org/ui" lang="#{localeBean.language}">
+	xmlns:p="http://primefaces.org/ui">
 <h:head></h:head>
 <h:body>
 	<h1>Photography</h1>
@@ -14,9 +14,11 @@
 			href="http://0-sirluke-0.deviantart.com/gallery/" target="_blank">my
 			DeviantArt gallery.</a>
 	</p>
-	<div id="photos">
+	<div id="photos" class="flexContainer flexWrap">
 		<ui:repeat value="#{photographyBean.photos}" var="photo">
-			<div class="photo" style="background-image: url(#{photo})"></div>
+			<a class="swipebox" href="#{photo}">
+				<img src="#{photo}" style="max-height:150px;" />
+			</a>
 		</ui:repeat>
 	</div>
 	
@@ -25,21 +27,6 @@
 			more photos in my DeviantArt gallery</a>
 	</div>
 
-	<script type="text/javascript">
-
-		$(function(){
-			$('.photo').click( function() {
-				if ($(this).hasClass('big-photo')){
-					$(this).toggleClass('big-photo');
-				} else {
-					$('.photo').removeClass('big-photo');
-					$(this).toggleClass('big-photo');
-				}
-				$('#photos').data('masonry').layout();
-			});
-		});
-		
-		</script>
 </h:body>
 </html>
 
