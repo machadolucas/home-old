@@ -46,11 +46,7 @@ body {
 	padding: 0;
 	color: #333;
 	background: #F4F5ED;
-	
-	overflow-x: hidden; overflow-y: hidden;
 }
-
-.scrollv { overflow-y: auto !important; }
 
 .flexWrap {
 	-webkit-flex-wrap: wrap;
@@ -122,8 +118,11 @@ p {
 [id^="page_"] {opacity: 0;}
 .pacman {margin: 10% 49%;}
 
-#page_home {
+#container {
 	padding-top: 70px;
+	
+}
+#home {
 	color: #222222;
 	background: #F4F5ED;
 	
@@ -164,12 +163,12 @@ p {
 		line-height: 22px; height: 22px; padding: 15px; border-radius: 20px; margin: 5px 10px 5px 0px;
 		border: 2px solid #929487; float: left;}
 
-#page_lifeline {
+#lifeline {
 	padding-top: 70px;
 	color: #222222;
 	background: #F4F5ED;
 }
-	#page_lifeline h1{ font-family: 'Dancing Script', cursive; text-align: center; margin: 10px 0px;}
+	#lifeline h1{ font-family: 'Dancing Script', cursive; text-align: center; margin: 10px 0px;}
 	#lifeline-background { background-image: url('img/svg/lifeline.svg'); background-size: 100%;
 		background-repeat: no-repeat; background-position: top right; opacity: 0.2;
 		position: absolute; top:0; right:0; z-index: -1; width: 70%; height: 900px;}
@@ -227,7 +226,7 @@ p {
 		#prev {left: 0;background-image: url('img/prev.png');}
 		#next.disabled,#prev.disabled {opacity: 0.2;}
 
-#page_education {
+#education {
 	padding-top: 70px;
 	color: #333;
 	overflow-x: hidden;
@@ -254,41 +253,16 @@ p {
 		font-weight:400; color: #000; background: #fff; padding: 7px; border-radius: 10px; border: 1px solid #000;
 		-webkit-transition: all 0.2s linear; transition: all 0.2s linear; z-index: 200;}
 	#prof-link:hover > span{ display: block;}
-	#clouds {position: absolute; z-index: 3; padding-top: 150px;}
-		.cloud {width: 200px; height: 60px;background: #fff;border-radius: 200px;
-			-moz-border-radius: 200px;-webkit-border-radius: 200px;position: relative; }
-		.cloud:before, .cloud:after {content: '';position: absolute; background: #fff;
-			width: 100px; height: 80px;position: absolute; top: -15px; left: 10px;
-			border-radius: 100px;-moz-border-radius: 100px;-webkit-border-radius: 100px;
-			-webkit-transform: rotate(30deg);transform: rotate(30deg);-moz-transform: rotate(30deg);}
-		.cloud:after {width: 120px; height: 120px;top: -55px; left: auto; right: 15px;}
-		.x1 {-webkit-animation: moveclouds 22s linear infinite;animation: moveclouds 22s linear infinite;}
-		.x2 {left: 200px;-webkit-transform: scale(0.6);-moz-transform: scale(0.6);transform: scale(0.6);
-			opacity: 0.6;-webkit-animation: moveclouds 37s linear infinite;animation: moveclouds 37s linear infinite;}
-		.x3 {left: -250px; top: -200px;-webkit-transform: scale(0.8);-moz-transform: scale(0.8);transform: scale(0.8);
-			opacity: 0.8;-webkit-animation: moveclouds 30s linear infinite;animation: moveclouds 30s linear infinite;}
-		.x4 {left: 470px; top: -250px;-webkit-transform: scale(0.75);-moz-transform: scale(0.75);transform: scale(0.75);
-			opacity: 0.75;-webkit-animation: moveclouds 27s linear infinite;animation: moveclouds 27s linear infinite;}
-		.x5 {left: -150px; top: -150px;-webkit-transform: scale(0.8);-moz-transform: scale(0.8);transform: scale(0.8);
-			opacity: 0.8;-webkit-animation: moveclouds 30s linear infinite;animation: moveclouds 30s linear infinite;}
-		@keyframes moveclouds {
-			0% {margin-left: 2200px;}
-			100% {margin-left: -600px;}
-		}
-		@-webkit-keyframes moveclouds {
-			0% {margin-left: 2200px;}
-			100% {margin-left: -600px;}
-		}
-#page_professional {
+#professional {
 	padding-top: 70px;
 	color: #222222;
 	background: #F4F5ED;
 }
 	.column-500 { width: 500px; margin-bottom:50px; overflow: hidden;}
 	.column-900 { width: 900px; margin: auto; margin-bottom:100px; overflow: hidden;}
-	#page_professional h1 {text-align: center;margin: 15px 0px;}
-	#page_professional h2 {margin: 15px 0px; padding: 0px;}
-	#page_professional h3 {margin: 15px 0px; padding: 0px 50px;}
+	#professional h1 {text-align: center;margin: 15px 0px;}
+	#professional h2 {margin: 15px 0px; padding: 0px;}
+	#professional h3 {margin: 15px 0px; padding: 0px 50px;}
 	#xp-list {list-style: none;border-top: 1px solid #C7C9BE;border-bottom: 1px solid #C7C9BE;
 		background: #fdfdfd;padding: 0px 40px;}
 	#xp-list a {color:#222222; text-decoration: none; border-bottom: 1px dotted #666;
@@ -309,14 +283,14 @@ p {
 	#cv-link{float: right;margin: 0px 15px 50px 30px;padding-bottom: 10px;text-align: center;color: #929487;
 		font-size: 16px;font-weight: 400;text-decoration: none;border-bottom: 1px solid #C7C9BE;}
 	#cv-img {margin-bottom: 16px;display: block;width: 150px;box-shadow: 3px 3px 1px rgba(0,0,0,0.6);}
-#page_photography {
+#photography {
 	padding-top: 70px;
 	color: #222222;
 	background: #F4F5ED;
 }
-	#page_photography h1{ font-family: 'Dancing Script', cursive; text-align: center; margin: 40px 0px;}
-	#page_photography p{ margin: 20px auto; font-weight: 400; font-size: 20px; max-width: 900px; }
-	#page_photography p a { color: #222222; }
+	#photography h1{ font-family: 'Dancing Script', cursive; text-align: center; margin: 40px 0px;}
+	#photography p{ margin: 20px auto; font-weight: 400; font-size: 20px; max-width: 900px; }
+	#photography p a { color: #222222; }
 	#photos {margin: 0px auto; width: 100%;
 		-webkit-justify-content:space-around;justify-content:space-around;
 		-webkit-align-items:center;align-items:center;}
@@ -328,8 +302,8 @@ p {
 		border: 2px solid #929487;
 		cursor: pointer;
 	}
-	#page_photography .more-links { margin: 100px auto; width: 330px; }
-#page_portfolio {
+	#photography .more-links { margin: 100px auto; width: 330px; }
+#portfolio {
 	padding-top: 70px;
 	color: rgba(0,0,0,0.65);
 	background: #C7C9BE;
@@ -352,12 +326,12 @@ p {
 		font-size: 1.8em;
 	}
 	
-#page_contact {
+#contact {
 	padding-top: 70px;
 	color: #222222;
 	background: #F4F5ED;
 }
-	#page_contact h1 { text-align: center; margin: 0px; padding: 20px 0px 10px 0px; background: #89CEDE;}
+	#contact h1 { text-align: center; margin: 0px; padding: 20px 0px 10px 0px; background: #89CEDE;}
 	#contact-book { width: 600px; margin: 40px auto;  background: #fff; border-radius: 50px; overflow: hidden;}
 	.contact-table {margin: 40px; font-size: 20px; line-height: 28px;}
 	.contact-table, .contact-table tr, .contact-table td {background: transparent; border: none !important;}
