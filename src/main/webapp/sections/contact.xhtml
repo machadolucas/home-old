@@ -14,7 +14,7 @@
 		<p:panelGrid columns="2" columnClasses="contact-label,contact-value"
 			styleClass="contact-table unselectable">
 			<h:outputText value="E-mail" />
-			<a class="mail" href="#">mail</a>
+			<a class="mail" href="#">machadolucas 'at' me.com</a>
 			<h:outputText value="Skype" />
 			<a href="skype:machado_lucas?chat">machado_lucas</a>
 		</p:panelGrid>
@@ -40,6 +40,11 @@
 				target="_blank">sirlucasmachado</a>
 		</p:panelGrid>
 	</div>
+	
+	<script>
+	$('.mail').attr('href','mailto:'+address);
+	$('.mail').text(address);
+	</script>
 </div>
 	
 </h:body>
