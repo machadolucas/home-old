@@ -25,16 +25,18 @@
 		<link rel="stylesheet" type="text/css"
 			href="#{facesContext.externalContext.requestContextPath}/resources/style.css"
 			media="all" />
-		<script>
-			function callback(){
-				$('.main-menu').addClass('animated fadeInDown');
-				$('#container div').addClass('animated fadeInUp');
-				$('.home-text').addClass('animated fadeInLeft');
-				$('.home-photo').addClass('animated fadeInRight');
-			}
 			
-			$(window).load(function(){
-				$('#loading').fadeOut(500, callback);
+		<script>
+			$(document).ready(function() {
+				$('#loading').fadeOut(500, function(){
+					$('.main-menu').animate({top: 0, opacity: 1}, 400, 'linear', function(){
+						//$('#container').fadeIn();
+					});
+					if(window.location.hash == ''){
+						window.location.hash = '#home';
+					}
+					moveMenuHighlight(window.location.hash);
+				});
 			});
 		</script>
 	</ui:define>
@@ -120,18 +122,11 @@
 		function changeContainer(address, callback){
 			$('#container').fadeOut('fast',function(){
 				$('#container').load(address, function(){
-					$('#container').fadeIn('fast', callback);
+					$('#container').fadeIn('slow', callback);
 				});
 			});
 		}
 		
-
-		$(function(){
-			if(window.location.hash == ''){
-				window.location.hash = '#home';
-			}
-			moveMenuHighlight(window.location.hash);
-		});
 
 		</script>
 		<script

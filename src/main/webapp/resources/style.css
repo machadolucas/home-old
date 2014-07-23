@@ -107,7 +107,7 @@ p {
 	z-index: 9999; text-align: center; padding-top: 5%; color: #fafafa;}
 #loading h3 { margin: 15px;}
 
-.main-menu {position: fixed;top: 0px;left: 0px; opacity: 0;
+.main-menu {position: fixed;top: -20px;left: 0px; opacity: 0;
 	width: 100%;height: 70px;border-radius: 0px;border: none; color: #fff;z-index: 6999;overflow: hidden; background: rgba(220,78,0,0.85);}
 	.main-menu a {font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 		display: block;height: 70px;line-height: 70px;
@@ -120,7 +120,7 @@ p {
 
 #container {
 	padding-top: 70px;
-	
+	display: none;
 }
 #home {
 	color: #222222;
@@ -287,6 +287,7 @@ p {
 	padding-top: 70px;
 	color: #222222;
 	background: #F4F5ED;
+	padding-bottom: 70px;
 }
 	#photography h1{ font-family: 'Dancing Script', cursive; text-align: center; margin: 40px 0px;}
 	#photography p{ margin: 20px auto; font-weight: 400; font-size: 20px; max-width: 900px; }
@@ -330,6 +331,7 @@ p {
 	padding-top: 70px;
 	color: #222222;
 	background: #F4F5ED;
+	padding-bottom: 70px;
 }
 	#contact h1 { text-align: center; margin: 0px; padding: 20px 0px 10px 0px; background: #89CEDE;}
 	#contact-book { width: 600px; margin: 40px auto;  background: #fff; border-radius: 50px; overflow: hidden;}

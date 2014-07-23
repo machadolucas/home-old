@@ -123,16 +123,16 @@
 		<div class="flexItem"></div>
 	
 		<script>
-		$(document).ready(function() {
-		$("#opinions > .opinion:gt(0)").hide();
-		setInterval(function() { 
-		  $('#opinions > .opinion:first')
-		    .hide()
-		    .next()
-		    .fadeIn(2000)
-		    .end()
-		    .appendTo('#opinions');
-		},  6000);
+		$(document).ready(function(){
+			$("#opinions > .opinion:gt(0)").hide();
+			setInterval(function() { 
+			  $('#opinions > .opinion:first')
+			    .hide()
+			    .next()
+			    .fadeIn(2000)
+			    .end()
+			    .appendTo('#opinions');
+			},  6000);
 		});
 		</script>
 	</div>
