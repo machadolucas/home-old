@@ -6,3 +6,5 @@ target
 .classpath
 Database.properties
 *.DS_Store
+.DS_Store
+*.scssc

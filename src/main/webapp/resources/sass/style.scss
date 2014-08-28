@@ -1,4 +1,9 @@
-@CHARSET "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass";
 
 @import
 	url(http://fonts.googleapis.com/css?family=Dancing+Script);
@@ -167,9 +172,9 @@ p {
 	padding-top: 70px;
 	color: #222222;
 	background: #F4F5ED;
+	h1{ font-family: 'Dancing Script', cursive; text-align: center; margin: 10px 0px;}
 }
-	#lifeline h1{ font-family: 'Dancing Script', cursive; text-align: center; margin: 10px 0px;}
-	#lifeline-background { background-image: url('img/svg/lifeline.svg'); background-size: 100%;
+	#lifeline-background { background-image: url('../img/svg/lifeline.svg'); background-size: 100%;
 		background-repeat: no-repeat; background-position: top right; opacity: 0.2;
 		position: absolute; top:0; right:0; z-index: -1; width: 70%; height: 900px;}
 	#timeline-border {
@@ -180,33 +185,35 @@ p {
 	}
 	#timeline-wrapper {padding: 20px;background: #222;}
 	#timeline {font-family: Georgia, serif;height: 500px;overflow: hidden;margin: 0px auto;
-		position: relative;background: url('img/dot.gif') left 45px repeat-x;}
+		position: relative;background: url('../img/dot.gif') left 45px repeat-x;}
 		#dates {width: 800px;height: 60px;overflow: hidden;margin-top: 0px;}
 			#dates li {list-style: none;float: left;width: 100px;height: 50px;font-size: 24px;
-				text-align: center;background: url('img/biggerdot.png') center bottom no-repeat;}
+				text-align: center;background: url('../img/biggerdot.png') center bottom no-repeat;}
 			#dates a { line-height: 38px;padding-bottom: 10px;text-decoration: none;color: #ffffcc;}
 			#dates .selected { font-size: 38px;color: #ffcc00;}
 		
-		#issues {width: 800px;height: 500px;overflow: hidden;padding: 0px; color: #ffffcc;}	
-			#issues li {width: 800px;height: 500px;list-style: none;float: left;}
-				#issues li.selected img { -webkit-transform: scale(1.1,1.1); -ms-transform: scale(1.1,1.1); transform: scale(1.1,1.1);}
-				#issues li img {
-					float: left;margin: 10px 30px 10px 50px;
-					background: transparent;
-					-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE 8 */   
-					filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);/* IE 6 & 7 */      
-					zoom: 1;
-					-webkit-transition: all 2s ease-in-out; transition: all 2s ease-in-out;
-					-webkit-transform: scale(0.7,0.7); -ms-transform: scale(0.7,0.7); transform: scale(0.7,0.7);
+		#issues {width: 800px;height: 500px;overflow: hidden;padding: 0px; color: #ffffcc;
+			li {width: 800px;height: 500px;list-style: none;float: left;
+				img {
+						float: left;margin: 10px 30px 10px 50px;
+						background: transparent;
+						-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)"; /* IE 8 */   
+						filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);/* IE 6 & 7 */      
+						zoom: 1;
+						-webkit-transition: all 2s ease-in-out; transition: all 2s ease-in-out;
+						-webkit-transform: scale(0.7,0.7); -ms-transform: scale(0.7,0.7); transform: scale(0.7,0.7);
+				}
+				h1 {color: #ffcc00;font-size: 48px;margin: 0px;text-shadow: #000 1px 1px 2px;text-align: center;}
+				p {font-size: 16px;margin: 7px 70px 7px 70px;font-weight: normal;line-height: 22px;text-shadow: #000 1px 1px 2px;}
+				a {color: #ffcc00;}
 			}
-			#issues li h1 {color: #ffcc00;font-size: 48px;margin: 0px;text-shadow: #000 1px 1px 2px;text-align: center;}
-			#issues li p {font-size: 16px;margin: 7px 70px 7px 70px;font-weight: normal;line-height: 22px;text-shadow: #000 1px 1px 2px;}
-			#issues li a {color: #ffcc00;}
+			li.selected img { -webkit-transform: scale(1.1,1.1); -ms-transform: scale(1.1,1.1); transform: scale(1.1,1.1);}
+		}	
 	
 	#grad_left,
 	#grad_right {width: 100px;height: 500px;position: absolute;top: 0;}
-	#grad_left {left: 0; background: url('img/grad_left.png') repeat-y;}
-	#grad_right {right: 0;background: url('img/grad_right.png') repeat-y;}
+	#grad_left {left: 0; background: url('../img/grad_left.png') repeat-y;}
+	#grad_right {right: 0;background: url('../img/grad_right.png') repeat-y;}
 	
 	#next,
 	#prev {
@@ -222,8 +229,8 @@ p {
 		overflow: hidden;
 	}
 		#next:hover,#prev:hover {background-position: 0 -76px;}
-		#next {right: 0;background-image: url('img/next.png');}
-		#prev {left: 0;background-image: url('img/prev.png');}
+		#next {right: 0;background-image: url('../img/next.png');}
+		#prev {left: 0;background-image: url('../img/prev.png');}
 		#next.disabled,#prev.disabled {opacity: 0.2;}
 
 #education {
@@ -238,15 +245,15 @@ p {
 		margin: auto; margin-top: 20px; margin-bottom: 0px; padding-bottom: 20px; position: relative;  z-index: 51;}
 	#building { margin: 0px auto; width: 820px; background: #929487; padding: 15px 15px 0px 15px;
 	 position: relative;  z-index: 50;}
-	.room { background: url('img/room-wall.png') center no-repeat; background-size:100% 100%;
+	.room { background: url('../img/room-wall.png') center no-repeat; background-size:100% 100%;
 		width: 820px; margin-bottom: 20px; padding: 0px; color: #555; }
-	.room-floor { background: url('img/room-floor.png') center no-repeat; background-size:100% 100%;
+	.room-floor { background: url('../img/room-floor.png') center no-repeat; background-size:100% 100%;
 		height: 20px; width: 100%; position: relative; bottom: 0px;}
 	#building .room h1 {margin:0px;}
 	.room .item { margin: 0px 90px 30px 90px; overflow: hidden;}
 	.room .item h2 { margin: 30px 40px 0px 40px; overflow: hidden;}
 	.room .item img {float: left; margin: 10px 20px 20px 10px; max-width: 128px; max-height: 128px;}
-	#grass-background { background: url('img/svg/grass.svg') left repeat-x;
+	#grass-background { background: url('../img/svg/grass.svg') left repeat-x;
 		position: relative; bottom: 0px; width: 100%; height: 200px; margin-top: -100px; z-index: 1; }
 	#prof-link img { height: 250px; position: absolute; right: -85px; bottom: 0px; z-index: 200;}
 	#prof-link span{ display: none; position: absolute; right: -30px; bottom: 220px; font-size: 18px;
@@ -265,6 +272,7 @@ p {
 	#professional h3 {margin: 15px 0px; padding: 0px 50px;}
 	#xp-list {list-style: none;border-top: 1px solid #C7C9BE;border-bottom: 1px solid #C7C9BE;
 		background: #fdfdfd;padding: 0px 40px;}
+	#xp-list hr {margin: 1.5em 0em;}
 	#xp-list a {color:#222222; text-decoration: none; border-bottom: 1px dotted #666;
 		-webkit-transition: all 0.2s linear; transition: all 0.2s linear;}
 	#xp-list a:hover {color:#aa5533; text-decoration: none; border-bottom: 1px dotted #aa5533;}
