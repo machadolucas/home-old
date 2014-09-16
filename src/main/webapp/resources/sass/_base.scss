@@ -90,6 +90,9 @@ body {
 
 h1 {
 	font-size: 96px;
+	@media screen and (max-width: 800px) {
+		font-size: 48px;
+	}
 }
 
 h2 {

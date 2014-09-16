@@ -12,12 +12,18 @@
 	z-index: 9999;
 	text-align: center;
 	padding-top: 5%;
-	color: #fafafa;
+	color: #dadada;
+	-webkit-align-items: center;
+	align-items: center;
+	h3 {
+		margin: 15px;
+	}
+	img {
+		width: 32px;
+		height: 32px;
+	}
 }
 
-#loading h3 {
-	margin: 15px;
-}
 
 .main-menu {
 	position: fixed;
@@ -66,63 +72,41 @@
 #container {
 	display: none;
 }
+.content {
+	max-width: 1024px;
+}
 
 #home {
 	color: #222222;
 	-webkit-justify-content: center;
 	justify-content: center;
-}
-
-.body-section {
-	padding-bottom: 100px;
-}
-
-.home-photo {
-	background-image:
-		url('http://www.gravatar.com/avatar/737f52828dfccb81197a125c9d1f6745.png?s=1024');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	height: 350px;
-	width: 350px;
-	border-radius: 50%;
-	border: 4px solid #C7C9BE;
-	margin: 20px;
-}
-
-.home-text {
-	text-align: right;
-	> h1, > h3 {
-		width: 400px;
+	.more-links {
+		min-width: 200px;
+	}
+	.body-section {
+		padding-bottom: 100px;
+	}
+	
+	.home-photo {
+		background-image:
+			url('http://www.gravatar.com/avatar/737f52828dfccb81197a125c9d1f6745.png?s=1024');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 350px;
+		width: 350px;
+		border-radius: 50%;
+		border: 4px solid #C7C9BE;
+		margin: 20px;
+	}
+	
+	.home-text {
+		text-align: right;
+		> h1, > h3 {
+			width: 400px;
+		}
 	}
 }
-
-
-.more-links {
-	text-align: center;
-	a {
-		display: block;
-		margin: 15px auto;
-		padding: 15px;
-		font-size: 20px;
-		text-decoration: none;
-		max-width: 300px;
-		font-weight: 400;
-		color: #efefef;
-		background: $gray2;
-		box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
-		-webkit-transition: all 0.2s linear;
-		transition: all 0.2s linear;
-	}
-	a:hover {
-		color: white;
-		background: $gray2;
-		box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-	}
-}
-
-
-
 #opinions-wrapper {
 	float: right;
 	margin: 1em 0px 0px 30px;
@@ -173,9 +157,36 @@
 		border-radius: 20px;
 		margin: 5px 10px 5px 0px;
 		border: 2px solid #929487;
-		float: left;
 	}
 }
+
+.more-links {
+	text-align: center;
+	a {
+		display: block;
+		margin: 15px auto;
+		padding: 15px;
+		font-size: 20px;
+		text-decoration: none;
+		max-width: 300px;
+		font-weight: 400;
+		color: #efefef;
+		background: $gray2;
+		box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
+		-webkit-transition: all 0.2s linear;
+		transition: all 0.2s linear;
+	}
+	a:hover {
+		color: white;
+		background: $gray2;
+		box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+	}
+}
+
+
+
+
+
 
 
 #lifeline {
@@ -474,6 +485,9 @@ li.selected img {
 	h2 {
 		margin: 1em 0em;
 		padding: 0em;
+		@media screen and (max-width: 1024px) {
+			padding: 0em 0.5em;
+		}
 	}
 	
 	h3 {
@@ -482,30 +496,16 @@ li.selected img {
 	}
 }
 
-.column-500 {
-	width: 500px;
-	margin-bottom: 50px;
-	overflow: hidden;
-}
-
-.column-900 {
-	width: 900px;
-	margin: auto;
-	margin-bottom: 100px;
-	overflow: hidden;
-}
-
-
 #xp-list {
 	list-style: none;
 	border-top: 1px solid #C7C9BE;
 	border-bottom: 1px solid #C7C9BE;
 	background: #f2f2f2;
 	padding: 0px 40px;
-	
-	hr {
-		margin: 1.5em 0em;
+	@media screen and (max-width: 800px) {
+		padding: 0em 0.5em;
 	}
+	
 	a {
 		color: #222222;
 		text-decoration: none;
@@ -542,12 +542,18 @@ li.selected img {
 
 .skill-list {
 	background: #f2f2f2;
+	border-top: 1px solid #C7C9BE;
+	border-bottom: 1px solid #C7C9BE;
 	list-style: none;
 	padding: 2em 1em;
 	margin: 1em 0px;
 	overflow: hidden;
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
+	@media screen and (max-width: 800px) {
+		padding: 2em 0.3em;
+	}
+	
 	li {
 		display: block;
 		background: #fff;
@@ -558,6 +564,9 @@ li.selected img {
 		text-align: center;
 		width: 128px;
 		box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+		@media screen and (max-width: 800px) {
+			width: 90px;
+		}
 		
 		div {
 			width: 128px;
@@ -565,11 +574,18 @@ li.selected img {
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: center;
+			@media screen and (max-width: 800px) {
+				width: 90px;
+				height: 90px;
+			}
 		}
 		p {
 			margin: 5px 0px 0px 0px;
 			font-weight: 400;
 			font-size: 20px;
+			@media screen and (max-width: 800px) {
+				font-size: 14px;
+			}
 		}
 	}
 }
@@ -597,7 +613,7 @@ li.selected img {
 	margin-bottom: 16px;
 	display: block;
 	width: 150px;
-	box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
+	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 #photography {
