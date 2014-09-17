@@ -1,5 +1,4 @@
 @import "compass";
-
 @import "base";
 
 #loading {
@@ -55,11 +54,6 @@
 	a:hover {
 		background: $red2;
 	}
-	@media screen and (max-width: 800px) {
-		a {
-			display: none;
-		}
-	}
 }
 
 .pacman {
@@ -98,6 +92,11 @@
 		border-radius: 50%;
 		border: 4px solid #C7C9BE;
 		margin: 20px;
+		@media screen and (max-width: 800px) {
+			height: 150px;
+			width: 150px;
+			border: 2px solid #C7C9BE;
+		}
 	}
 	
 	.home-text {
@@ -730,6 +729,9 @@ li.selected img {
 
 
 @media screen and (max-width: 800px) {
+	.hideSmall {
+		display: none;
+	}
 }
 
 /* iPad */
