@@ -56,7 +56,7 @@
 			}
 		}
 		#background {
-			background: black url(resources/img/background.png) repeat 5% 5%;
+			background: black url(#{facesContext.externalContext.requestContextPath}/resources/img/background.png) repeat 5% 5%;
 			position: absolute;
 			top: 0; left: 0; right: 0; bottom: 0;
 			z-index: 100;
@@ -68,7 +68,7 @@
 		}
 		
 		#midground {
-			background: url(resources/img/midground.png) repeat 20% 20%;
+			background: url(#{facesContext.externalContext.requestContextPath}/resources/img/midground.png) repeat 20% 20%;
 			position: absolute;
 			top: 0; left: 0; right: 0; bottom: 0;
 			z-index: 200;
@@ -80,7 +80,7 @@
 		}
 		
 		#foreground {
-			background: url(resources/img/foreground.png) repeat 35% 35%;
+			background: url(#{facesContext.externalContext.requestContextPath}/resources/img/foreground.png) repeat 35% 35%;
 			position: absolute;
 			top: 0; left: 0; right: 0; bottom: 0;
 			z-index: 300;
