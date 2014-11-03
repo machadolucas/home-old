@@ -7,18 +7,49 @@
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="expires" content="0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Personal webpage of Lucas Machado." />
 
 	<link rel="icon" type="image/ico"
 		href="#{facesContext.externalContext.requestContextPath}/resources/img/favicon.ico" />
-	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
-		type="text/javascript" />
+<!-- 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/base-min.css" /> -->
+	<link rel="stylesheet" href="#{facesContext.externalContext.requestContextPath}/resources/bower/pure/base-min.css" />
+<!-- 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css" /> -->
+	<link rel="stylesheet" href="#{facesContext.externalContext.requestContextPath}/resources/bower/pure/pure-min.css" />
+<!-- 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css" /> -->
+	<link rel="stylesheet" href="#{facesContext.externalContext.requestContextPath}/resources/bower/pure/grids-responsive-min.css" />
+	
+	<link href="#{facesContext.externalContext.requestContextPath}/resources/bower/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+<!-- 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" /> -->
+	
+	<link rel="stylesheet" href="#{facesContext.externalContext.requestContextPath}/resources/owl-carousel/owl.carousel.css" />
+	<link rel="stylesheet" href="#{facesContext.externalContext.requestContextPath}/resources/owl-carousel/owl.theme.css" />
+	
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/resources/css/style2.css"
+		media="all" />
+	
+	<script
+			src="#{facesContext.externalContext.requestContextPath}/resources/bower/jquery/dist/jquery.min.js"
+			type="text/javascript" />
+<!-- 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" -->
+<!-- 		type="text/javascript" /> -->
+		
+	<script
+			src="#{facesContext.externalContext.requestContextPath}/resources/bower/typed.js/js/typed.js"
+			type="text/javascript" />
+	<script src="#{facesContext.externalContext.requestContextPath}/resources/owl-carousel/owl.carousel.min.js"></script>
+	<!-- TODO
+	<link rel="stylesheet" type="text/css"
+			href="#{facesContext.externalContext.requestContextPath}/resources/animate.css"
+			media="all" />
+		<link rel="stylesheet" type="text/css"
+			href="#{facesContext.externalContext.requestContextPath}/resources/css/style.css"
+			media="all" />
+	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
-<!-- 	<script -->
-<!-- 			src="#{facesContext.externalContext.requestContextPath}/resources/js/fallback.js" -->
-<!-- 			type="text/javascript" /> -->
+	 -->
 	<script type="text/javascript">
 	//<![CDATA[
 		var server = "me.com";
@@ -34,10 +65,12 @@
 	<meta property="og:site_name" content="machadolucas" />
 	<meta property="og:image"
 		content="#{facesContext.externalContext.requestContextPath}/resources/img/site_logo.jpg" />
+	<meta property="og:title" content="Lucas Machado" />
+	<meta property="og:type" content="website" />
 
 	<f:view locale="#{localeBean.locale}" />
 </h:head>
-<h:body styleClass="flexContainerVertical">
+<h:body>
 	<ui:insert name="content" />
 
 	<ui:insert name="dialogs" />

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" lang="#{localeBean.language}">
+<h:head></h:head>
+<h:body>
+
+	<div class="content">
+		<div class="l-box-lrg">
+			<h1 class="content-head is-center">Photography - A hobby and a passion</h1>
+			<p>I'm not a professional in photography. However I have a passion
+				for it.</p>
+			<p>Photos are much more that images. Each one of them have a
+				context, a meaning, a motivation, a value, and a soul... They can portrait the
+				reality in its crudest form, distort it, and create unique feelings
+				and sensations.</p>
+		</div>
+	</div>
+
+	<div class="ribbonLight l-box-lrg">
+		<div id="owl-pics" class="owl-carousel">
+			<ui:repeat value="#{photographyBean.photos}" var="photo">
+				<div class="item">
+					<img class="lazyOwl" data-src="#{photo}"/>
+				</div>
+			</ui:repeat>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="l-box-lrg">
+			<h2 class="content-head">More photos</h2>
+			<p>I usually upload my best photos in my DeviantArt profile. You can check them out in <a href="http://0-sirluke-0.deviantart.com/gallery/" target="_blank">this link</a>.</p>
+		</div>
+	</div>
+	
+	<script>
+		jQuery(document).ready(function() {
+		  jQuery("#owl-pics").owlCarousel({
+		    items : 3,
+		    lazyLoad : true,
+		    autoPlay : 2500,
+		    navigation : true
+		  }); 
+		});
+	
+	</script>
+
+</h:body>
+</html>
+
+
