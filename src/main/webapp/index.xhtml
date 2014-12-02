@@ -27,6 +27,7 @@
 			
 			function changePageHash(anchor) {
 				switch (anchor){
+				case "#contact":
 				case "#home":
 					changeContainer('pages/home.jsf', anchor);
 					break;
@@ -85,7 +86,7 @@
 		<div class="content-wrapper">
 		</div>
 
-		<div class="footer l-box pure-g">
+		<div class="footer l-box pure-g" id="contact">
 			<div class="pure-u-1 pure-u-sm-1-2">
 				<h2 class="footer-head">Contact</h2>
 			</div>

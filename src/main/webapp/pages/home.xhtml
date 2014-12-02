@@ -15,7 +15,7 @@
 		<h2 class="content-head is-center">What are you looking for?</h2>
 
 		<div class="pure-g thumbnails">
-			<div class="l-box pure-u-1-2 pure-u-md-1-4">
+			<div class="l-box pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-5">
 				<a href="#professional" onclick="changePage(this)">
 					<h3 class="content-subhead">
 						<i class="fa fa-laptop"></i>
@@ -24,7 +24,7 @@
 						skills and studies</p>
 				</a>
 			</div>
-			<div class="l-box pure-u-1-2 pure-u-md-1-4">
+			<div class="l-box pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-5">
 				<a href="#portfolio" onclick="changePage(this)">
 					<h3 class="content-subhead">
 						<i class="fa fa-rocket"></i>
@@ -32,7 +32,7 @@
 					<p>Portfolio, demos and projects</p>
 				</a>
 			</div>
-			<div class="l-box pure-u-1-2 pure-u-md-1-4">
+			<div class="l-box pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-5">
 				<a href="#timeline" onclick="changePage(this)">
 					<h3 class="content-subhead">
 						<i class="fa fa-history"></i>
@@ -40,12 +40,20 @@
 					<p>Timeline and events of my life</p>
 				</a>
 			</div>
-			<div class="l-box pure-u-1-2 pure-u-md-1-4">
+			<div class="l-box pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-5">
 				<a href="#photography" onclick="changePage(this)">
 					<h3 class="content-subhead">
 						<i class="fa fa-camera"></i>
 					</h3>
 					<p>My photography hobby</p>
+				</a>
+			</div>
+			<div class="l-box pure-u-1-2 pure-u-md-1-3 pure-u-lg-1-5">
+				<a href="#contact">
+					<h3 class="content-subhead">
+						<i class="fa fa-envelope"></i>
+					</h3>
+					<p>Contact Information, e-mail and social networks</p>
 				</a>
 			</div>
 		</div>
@@ -57,7 +65,7 @@
 			<h2 class="content-head content-head-ribbon">About me, in some
 				words</h2>
 
-			<p>I'm a software engineer. But I'm also much more than that.</p>
+			<p>I'm a software developer. But I'm also much more than that.</p>
 			<p>My main educational background is a bachelor in Information
 				Systems at University of São Paulo (USP) and an exchange period in
 				the Computer Science Master's program at University of Tampere, in
@@ -132,9 +140,10 @@
 							{
 								strings : [
 										"Hello, visitor!",
-										"My name is Lucas Machado, and I like to build nice and beautiful things...",
-										"I'm a professional software engineer, but I'm much more than that",
-										"If you want to know more about me, you are in the right place! :D" ],
+										"My name is Lucas Machado, and I like to build nice and beautiful things!",
+										"I'm a professional software developer, but I'm much more than that...",
+										"If you came here looking for information about my experiences in Finland, get in contact",
+										"If you want to know more about me, you are also in the right place! :D"],
 								typeSpeed : 80,
 								backSpeed : 20,
 								startDelay : 0,
@@ -142,6 +151,20 @@
 								loop : false,
 								loopCount : false
 							});
+		});
+		$(document).ready(function(){
+			$('a[href^="#"]').on('click',function (e) {
+			    e.preventDefault();
+
+			    var target = this.hash;
+			    $target = $(target);
+
+			    $('html, body').stop().animate({
+			        'scrollTop': $target.offset().top
+			    }, 900, 'swing', function () {
+			        window.location.hash = target;
+			    });
+			});
 		});
 	</script>
 </h:body>
