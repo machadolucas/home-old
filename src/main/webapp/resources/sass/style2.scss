@@ -463,7 +463,13 @@ a.pure-button-primary {
 .footer-head {
 	color: #D6BECB;
 	text-align: center;
-	padding: 1em 2em;
+	padding: 1em 2em 0.5em 2em;
+	margin: 0px;
+}
+.footer-email {
+	color: #D6BECB;
+	text-align: right;
+	padding: 0.5em 2em 1em 2em;
 	margin: 0px;
 }
 
@@ -474,7 +480,11 @@ a.pure-button-primary {
 	
 	.footer-head {
 		text-align: right;
-		padding: 3em 2em;
+		padding: 3em 2em 1em 2em;
+	}
+	.footer-email {
+		text-align: right;
+		padding: 1em 2em;
 	}
 	
 	.footer ul {
