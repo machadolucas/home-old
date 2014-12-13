@@ -50,6 +50,7 @@
 				changeContainer(address, anchor, function(){});
 			}
 			function changeContainer(address, anchor, callback){
+				var stateObj = { foo: "bar" };
 				jQuery('.content-wrapper, .footer').fadeOut('fast',function(){
 					jQuery('.content-wrapper').load(address, function(){
 						jQuery('.home-menu li').removeClass('pure-menu-selected');
@@ -57,6 +58,7 @@
 						jQuery('.content-wrapper, .footer').fadeIn('slow', callback);
 					});
 				});
+				history.replaceState(stateObj, address, anchor);
 			}
 		</script>
 	</ui:define>
