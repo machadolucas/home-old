@@ -420,6 +420,21 @@ a.pure-button-primary {
 	font-size: 2em;
 }
 
+.portfolioItem {
+	padding: 1em 0em;
+	h1,h2,h3,h4,h5,h6,p,a {
+		color: white;
+	}
+	.pic {
+		padding: 1.5em;
+	}
+	img {
+		border: 2px solid rgba(255,255,255,0.7);
+		border-radius: 0.2em;
+		
+	}
+}
+
 #owl-pics .item{
   margin: 3px;
   background: white;
