@@ -1,12 +1,10 @@
 /target
-target
 .settings/*
 !.settings/.jsdtscope
 .project
 .classpath
 Database.properties
 *.DS_Store
-.DS_Store
 *.scssc
 .idea
 *.iml

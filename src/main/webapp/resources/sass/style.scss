@@ -1,772 +1,621 @@
 @import "compass";
-@import "base";
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700);
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.flexContainer {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flexContainerVertical {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.flexItem {
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.flexWrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/*
+ * -- BASE STYLES --
+ * Most of these are inherited from Base, but I want to change a few.
+ */
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  line-height: 1.7em;
+  color: #333333;
+  font-size: 13px;
+  font-family: Ubuntu, sans-serif;
+  font-weight: 300;
+}
+
+p {
+  font-family: "Vollkorn", Georgia, serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+  color: black;
+}
+
+.pure-g [class *="pure-u"] {
+  font-family: Ubuntu, sans-serif;
+}
+
+a {
+  color: #333333;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #DD4814;
+}
 
 #loading {
-	background: #111111;
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	height: 100%;
-	width: 100%;
-	z-index: 9999;
-	text-align: center;
-	padding-top: 5%;
-	color: #dadada;
-	-webkit-align-items: center;
-	align-items: center;
-	h3 {
-		margin: 15px;
-	}
-	img {
-		width: 32px;
-		height: 32px;
-	}
+  background: #111111;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  text-align: center;
+  padding-top: 5%;
+  color: #dadada;
+  -webkit-align-items: center;
+  align-items: center;
+  h3 {
+    margin: 15px;
+  }
+  img {
+    width: 32px;
+    height: 32px;
+  }
 }
 
-
-.main-menu {
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	opacity: 0;
-	width: 100%;
-	height: 50px;
-	border-radius: 0px;
-	border: none;
-	color: #fff;
-	z-index: 6999;
-	overflow: hidden;
-	background: $red1;
-	a {
-		font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-		display: block;
-		height: 50px;
-		line-height: 50px;
-		padding: 0em 1em;
-		text-align: center;
-		color: #fff;
-		text-decoration: none;
-		font-size: 18px;
-		font-weight: 400;
-		-webkit-transition: all 0.1s linear;
-		transition: all 0.1s linear;
-	}
-	a:hover {
-		background: $red2;
-	}
+.pure-img-responsive {
+  max-width: 100%;
+  height: auto;
 }
 
-.pacman {
-	margin: 10% 49%;
+/*
+ * -- LAYOUT STYLES --
+ * These are some useful classes which I will need
+ */
+.l-box {
+  padding: 1em;
 }
 
-#barShadow {
-	height: 50px;
-}
-#container {
-	display: none;
-}
-.content {
-	max-width: 1024px;
+.l-box-lrg {
+  padding: 2em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-#home {
-	color: #222222;
-	-webkit-justify-content: center;
-	justify-content: center;
-	.more-links {
-		min-width: 200px;
-	}
-	.body-section {
-		padding-bottom: 100px;
-	}
-	
-	.home-photo {
-		background-image:
-			url('http://www.gravatar.com/avatar/737f52828dfccb81197a125c9d1f6745.png?s=1024');
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		height: 350px;
-		width: 350px;
-		border-radius: 50%;
-		border: 4px solid #C7C9BE;
-		margin: 20px;
-		@media screen and (max-width: 800px) {
-			height: 150px;
-			width: 150px;
-			border: 2px solid #C7C9BE;
-		}
-	}
-	
-	.home-text {
-		text-align: right;
-		> h1, > h3 {
-			width: 400px;
-		}
-	}
-}
-#opinions-wrapper {
-	float: right;
-	margin: 1em 0px 0px 30px;
-	padding: 15px;
-	width: 300px;
-	height: 130px;
-	overflow: hidden;
-	background: #C7C9BE;
-	border-radius: 15px;
+.is-center {
+  text-align: center;
 }
 
-#opinions-title {
-	font-size: 40px;
-	text-align: center;
-	font-family: 'Dancing Script';
-	color: #000;
+/*
+ * -- PURE BUTTON STYLES --
+ * I want my pure-button elements to look a little different
+ */
+.pure-button {
+  background-color: #1f8dd6;
+  color: white;
+  padding: 0.5em 2em;
+  border-radius: 5px;
 }
 
-.opinion>h5 {
-	margin: 0px;
-	padding: 6px;
-	text-align: center;
-	color: #2C2828;
-	font-size: 18px;
+a.pure-button-primary {
+  background: white;
+  color: #1f8dd6;
+  border-radius: 5px;
+  font-size: 120%;
 }
 
-.opinion>h6 {
-	margin: 0px;
-	padding: 6px;
-	text-align: center;
-	color: #2C2828;
-	font-weight: 300;
-	font-size: 16px;
-	letter-spacing: 2px;
+/*
+ * -- MENU STYLES --
+ * I want to customize how my .pure-menu looks at the top of the page
+ */
+
+.home-menu {
+  padding: 0.5em;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.10);
+  @include user-select(none);
 }
 
-#ilike ul {
-	list-style: none;
-	padding: 0px;
-	li {
-		display: block;
-		background: white;
-		color: #333333;
-		font-size: 18px;
-		line-height: 22px;
-		height: 22px;
-		padding: 15px;
-		border-radius: 20px;
-		margin: 5px 10px 5px 0px;
-		border: 2px solid #929487;
-	}
+.home-menu.pure-menu-open {
+  background: rgba(221, 72, 20, 0.95);
 }
 
-.more-links {
-	text-align: center;
-	a {
-		display: block;
-		margin: 15px auto;
-		padding: 15px;
-		font-size: 20px;
-		text-decoration: none;
-		max-width: 300px;
-		font-weight: 400;
-		color: #efefef;
-		background: $gray2;
-		box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
-		-webkit-transition: all 0.2s linear;
-		transition: all 0.2s linear;
-	}
-	a:hover {
-		color: white;
-		background: $gray2;
-		box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-	}
+.pure-menu.pure-menu-open.pure-menu-fixed {
+  /* Fixed menus normally have a border at the bottom. */
+  border-bottom: none;
+  /* I need a higher z-index here because of the scroll-over effect. */
+  z-index: 4;
 }
 
-
-
-
-
-
-
-#lifeline {
-	h1 { font-family : 'Dancing Script', cursive;
-		text-align: center;
-		margin: 10px 0px;
-	}
-}
-#lifeline-background {
-	background-image: url('../img/svg/lifeline.svg');
-	background-size: 100%;
-	background-repeat: no-repeat;
-	background-position: top right;
-	opacity: 0.2;
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: -1;
-	width: 70%;
-	height: 900px;
+.home-menu .pure-menu-heading {
+  color: white;
+  font-weight: 400;
+  font-size: 120%;
+  text-transform: lowercase;
 }
 
-#timeline-border {
-	margin: 0px;
-	padding: 6px;
-	width: 840px;
-	box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.6);
-	background: #929487;
-	z-index: 100;
+.home-menu .pure-menu-selected a {
+  color: white;
+  font-weight: 700;
 }
 
-#timeline-wrapper {
-	padding: 20px;
-	background: #222;
+.home-menu a {
+  color: #D6D3CF;
+  font-weight: 400;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-#timeline {
-	font-family: Georgia, serif;
-	height: 500px;
-	overflow: hidden;
-	margin: 0px auto;
-	position: relative;
-	background: url('../img/dot.gif') left 45px repeat-x;
+.home-menu li a:hover,
+.home-menu li a:focus {
+  background: none;
+  border: none;
+  color: white;
 }
 
-#dates {
-	width: 800px;
-	height: 60px;
-	overflow: hidden;
-	margin-top: 0px;
-	li {
-		list-style: none;
-		float: left;
-		width: 100px;
-		height: 50px;
-		font-size: 24px;
-		text-align: center;
-		background: url('../img/biggerdot.png') center bottom no-repeat;
-	}
-	a {
-		line-height: 38px;
-		padding-bottom: 10px;
-		text-decoration: none;
-		color: #ffffcc;
-	}
-	.selected {
-		font-size: 38px;
-		color: #ffcc00;
-	}
+.roundedBox {
+  padding: 2em;
+  border-radius: 1em;
+  background: white;
+  color: #5a5d5a;
+
+  > .pure-g {
+    padding: 1em 0em;
+  }
+  h3 {
+    margin: 1em 0em 0em 0em;
+    color: #5a5d5a;
+  }
+  p {
+    margin: 0.3em 0em;
+  }
+  a {
+    color: #5a5d5a;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+
+  a:hover {
+    color: #DD4814;
+  }
 }
 
-
-
-#issues {
-	width: 800px;
-	height: 500px;
-	overflow: hidden;
-	padding: 0px;
-	color: #ffffcc;
-	li {
-			width: 800px;
-		height: 500px;
-		list-style: none;
-		float: left;
-		img {
-			float : left;
-			margin: 10px 30px 10px 50px;
-			background: transparent;
-			-ms-filter:
-				"progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)";
-			/* IE 8 */
-			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,
-				endColorstr=#00FFFFFF); /* IE 6 & 7 */
-			zoom: 1;
-			-webkit-transition: all 2s ease-in-out;
-			transition: all 2s ease-in-out;
-			-webkit-transform: scale(0.7, 0.7);
-			-ms-transform: scale(0.7, 0.7);
-			transform: scale(0.7, 0.7);
-		}
-	h1 {
-		color: #ffcc00;
-		font-size: 48px;
-		margin: 0px;
-		text-shadow: #000 1px 1px 2px;
-		text-align: center;
-	}
-	p {
-		font-size: 16px;
-		margin: 7px 70px 7px 70px;
-		font-weight: normal;
-		line-height: 22px;
-		text-shadow: #000 1px 1px 2px;
-	}
-	a {
-		color: #ffcc00;
-	}
-}
-li.selected img {
-	-webkit-transform: scale(1.1, 1.1);
-	-ms-transform: scale(1.1, 1.1);
-	transform: scale(1.1, 1.1);
+.terminal {
+  background: black;
+  border: 4px solid #AEA79F;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 0.5em;
+  font-family: "Lucida Console", courier;
+  font-weight: 400;
+  color: white;
+  font-size: 2em;
+  line-height: 1em;
+  min-height: 3.3em;
 }
 
-}
-#grad_left, #grad_right {
-	width: 100px;
-	height: 500px;
-	position: absolute;
-	top: 0;
-}
-
-#grad_left {
-	left: 0;
-	background: url('../img/grad_left.png') repeat-y;
-}
-
-#grad_right {
-	right: 0;
-	background: url('../img/grad_right.png') repeat-y;
-}
-
-#next, #prev {
-	position: absolute;
-	top: 0;
-	font-size: 70px;
-	top: 170px;
-	width: 22px;
-	height: 38px;
-	background-position: 0 0;
-	background-repeat: no-repeat;
-	text-indent: -9999px;
-	overflow: hidden;
+.logoBlock {
+  text-align: center;
+  padding: 0em 1em;
+  a {
+    border-bottom: none;
+  }
+  a h3 {
+    text-decoration: underline;
+    margin: 1em 0em;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  a:hover h3 {
+    color: #DD4814;
+  }
+  a:hover {
+    border-bottom: none;
+  }
+  h3 {
+  }
 }
 
-#next:hover, #prev:hover {
-	background-position: 0 -76px;
+/*
+ * -- CONTENT STYLES --
+ * This represents the content area (everything below the blue section)
+ */
+.content-wrapper {
+  padding-top: 110px;
+  background: white;
 }
 
-#next {
-	right: 0;
-	background-image: url('../img/next.png');
+/* This is the class used for the main content headers (<h2>) */
+.content-head {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 2em 0 1em;
 }
 
-#prev {
-	left: 0;
-	background-image: url('../img/prev.png');
+/* This is a modifier class used when the content-head is inside a ribbon */
+.content-head-ribbonLight {
+  color: white;
 }
 
-#next.disabled, #prev.disabled {
-	opacity: 0.2;
+.content-head-ribbon {
+  color: white;
 }
 
-#education {
-	color: #333;
-	overflow-x: hidden;
-	background: #89CEDE;
+/* This is the class used for the content sub-headers (<h3>) */
+.content-subhead {
+  color: white;
+  background: rgba(221, 72, 20, 1);
+  border-radius: 80px;
+  text-align: center;
+  padding: 16px;
+  width: 80px;
+  margin: auto;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+
+  .fa {
+    font-size: 48px;
+  }
 }
 
-#building-sign h1 {
-	text-align: center;
-	margin: 0px;
-	color: #7a4a4a;
-	background: #F4F5ED;
-	border-top: 6px solid #666666;
-	border-bottom: 6px solid #666666;
-	letter-spacing: 3px;
+.thumbnails {
+  p {
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+    color: #333333;
+  }
+  a:hover {
+    color: #772953;
+  }
+  a:hover .content-subhead {
+    background: #772953;
+  }
 }
 
-#building-sign {
-	border-left: 10px solid #666666;
-	border-right: 10px solid #666666;
-	width: 550px;
-	margin: auto;
-	margin-top: 20px;
-	margin-bottom: 0px;
-	padding-bottom: 20px;
-	position: relative;
-	z-index: 51;
+/* This is the class used for the dark-background areas. */
+.ribbonLight {
+  background: #AEA79F;
+  color: white;
+  font-weight: 400;
 }
 
-#building {
-	margin: 0px auto;
-	width: 820px;
-	background: #929487;
-	padding: 15px 15px 0px 15px;
-	position: relative;
-	z-index: 50;
+.ribbon {
+  background: rgba(221, 72, 20, 1);
+  color: white;
+  font-weight: 400;
 }
 
-.room {
-	background: url('../img/room-wall.png') center no-repeat;
-	background-size: 100% 100%;
-	width: 820px;
-	margin-bottom: 20px;
-	padding: 0px;
-	color: #555;
+.avatar {
+  border: 7px solid #AEA79F;
+  border-radius: 5px;
 }
 
-.room-floor {
-	background: url('../img/room-floor.png') center no-repeat;
-	background-size: 100% 100%;
-	height: 20px;
-	width: 100%;
-	position: relative;
-	bottom: 0px;
+.pure-img-responsive.photo {
+  border: 7px solid white;
+  border-radius: 5px;
 }
 
-#building .room h1 {
-	margin: 0px;
+.interests {
+  list-style: none;
+  padding: 1em;
+  margin: 0em;
+
+  li {
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    background: #AEA79F;
+    color: white;
+    border-radius: 2em;
+    font-weight: 700;
+  }
 }
-
-.room .item {
-	margin: 0px 90px 30px 90px;
-	overflow: hidden;
-}
-
-.room .item h2 {
-	margin: 30px 40px 0px 40px;
-	overflow: hidden;
-}
-
-.room .item img {
-	float: left;
-	margin: 10px 20px 20px 10px;
-	max-width: 128px;
-	max-height: 128px;
-}
-
-#grass-background {
-	background: url('../img/svg/grass.svg') left repeat-x;
-	position: relative;
-	bottom: 0px;
-	width: 100%;
-	height: 200px;
-	margin-top: -100px;
-	z-index: 1;
-}
-
-#prof-link img {
-	height: 250px;
-	position: absolute;
-	right: -85px;
-	bottom: 0px;
-	z-index: 200;
-}
-
-#prof-link span {
-	display: none;
-	position: absolute;
-	right: -30px;
-	bottom: 220px;
-	font-size: 18px;
-	font-weight: 400;
-	color: #000;
-	background: #fff;
-	padding: 7px;
-	border-radius: 10px;
-	border: 1px solid #000;
-	-webkit-transition: all 0.2s linear;
-	transition: all 0.2s linear;
-	z-index: 200;
-}
-
-#prof-link:hover>span {
-	display: block;
-}
-
-#professional {
-	
-	h1 {
-		text-align: center;
-		margin: 0.3em 0em;
-	}
-	
-	h2 {
-		margin: 1em 0em;
-		padding: 0em;
-		@media screen and (max-width: 1024px) {
-			padding: 0em 0.5em;
-		}
-	}
-	
-	h3 {
-		margin: 2em 0em 0.5em 0em;
-		padding: 0em 1em;
-	}
-}
-
-#xp-list {
-	list-style: none;
-	border-top: 1px solid #C7C9BE;
-	border-bottom: 1px solid #C7C9BE;
-	background: #f2f2f2;
-	padding: 0px 40px;
-	@media screen and (max-width: 800px) {
-		padding: 0em 0.5em;
-	}
-	
-	a {
-		color: #222222;
-		text-decoration: none;
-		border-bottom: 1px dotted #666;
-		-webkit-transition: all 0.2s linear;
-		transition: all 0.2s linear;
-	}
-	
-	a:hover {
-		color: $red2;
-		text-decoration: none;
-		border-bottom: 1px dotted #aa5533;
-	}
-	
-	li {
-		margin-bottom: 60px;
-		img {
-			float: left;
-			margin: 0px 50px 25px 0px;
-		}
-		h3 {
-			margin: 30px auto;
-			font-size: 26px;
-		}
-		h4 {
-			margin: 10px auto;
-			font-size: 18px;
-		}
-	}
-}
-
-
-
 
 .skill-list {
-	background: #f2f2f2;
-	border-top: 1px solid #C7C9BE;
-	border-bottom: 1px solid #C7C9BE;
-	list-style: none;
-	padding: 2em 1em;
-	margin: 1em 0px;
-	overflow: hidden;
-	-webkit-flex-wrap: wrap;
-	flex-wrap: wrap;
-	@media screen and (max-width: 800px) {
-		padding: 2em 0.3em;
-	}
-	
-	li {
-		display: block;
-		background: #fff;
-		padding: 10px;
-		margin: 5px;
-		border: 1px solid #F4F5ED;
-		border-radius: 0px;
-		text-align: center;
-		width: 128px;
-		box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
-		@media screen and (max-width: 800px) {
-			width: 90px;
-		}
-		
-		div {
-			width: 128px;
-			height: 128px;
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: center;
-			@media screen and (max-width: 800px) {
-				width: 90px;
-				height: 90px;
-			}
-		}
-		p {
-			margin: 5px 0px 0px 0px;
-			font-weight: 400;
-			font-size: 20px;
-			@media screen and (max-width: 800px) {
-				font-size: 14px;
-			}
-		}
-	}
+  list-style: none;
+  padding: 0em 0em 2em 0em;
+  margin: 0em 0em 1em 0em;
+  color: #333333;
+  overflow: hidden;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  li {
+    display: block;
+    background: #fff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 1em;
+    text-align: center;
+    width: 110px;
+
+    div {
+      width: 90px;
+      height: 90px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    p {
+      margin: 5px 0px 0px 0px;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
 }
 
+.cvBlock {
+  .textBlock {
+    text-align: right;
+    padding: 1em;
+  }
+  .imgBlock {
+    text-align: center;
+    padding: 0.5em;
+  }
+  .cv-link {
+    color: #333333;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    img {
+      border: 2px solid #AEA79F;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+  .cv-link:hover {
+    color: rgba(221, 72, 20, 1);
 
-
-
-#cv-div {
-	text-align: right;
+    img {
+      border: 2px solid rgba(221, 72, 20, 1);
+    }
+  }
 }
 
-#cv-link {
-	float: right;
-	margin: 0px 15px 50px 30px;
-	padding-bottom: 10px;
-	text-align: center;
-	color: #929487;
-	font-size: 16px;
-	font-weight: 400;
-	text-decoration: none;
-	border-bottom: 1px solid #C7C9BE;
+.is-right-year {
+  text-align: right;
+  padding-left: 0em;
+  padding-right: 0em;
+  font-size: 2em;
 }
 
-#cv-img {
-	margin-bottom: 16px;
-	display: block;
-	width: 150px;
-	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+.is-left-year {
+  text-align: left;
+  padding-left: 0em;
+  padding-right: 0em;
+  font-size: 2em;
 }
 
-#photography {
-	padding-bottom: 70px;
-	h1 {
-		font-family: 'Dancing Script', cursive;
-		text-align: center;
-		margin: 40px 0px;
-	}
-	
-	p {
-		margin: 20px auto;
-		font-weight: 400;
-		font-size: 20px;
-		max-width: 900px;
-		a {
-			color: #222222;
-		}
-	}
+.portfolioItem {
+  padding: 1em 0em;
+  h1, h2, h3, h4, h5, h6, p, a {
+    color: white;
+  }
+  .pic {
+    padding: 1.5em;
+  }
+  img {
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 0.2em;
+
+  }
 }
 
-
-
-#photos {
-	margin: 0px auto;
-	width: 100%;
-	-webkit-justify-content: space-around;
-	justify-content: space-around;
-	-webkit-align-items: center;
-	align-items: center;
-	a {
-		text-decoration: none;
-		img {
-			background: #929487;
-			padding: 0px;
-			margin: 5px;
-			max-height: 150px;
-			border: 2px solid #929487;
-			cursor: pointer;
-		}
-	}
+#owl-pics .item {
+  margin: 3px;
+  background: white;
 }
 
-
-
-#photography .more-links {
-	margin: 100px auto;
-	width: 330px;
+#owl-pics .item img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-#portfolio {
-	padding-top: 70px;
+/* This is the class used for the footer */
+.footer {
+  background: #772953;
+  color: #D6BECB;
+  display: none;
+
+  ul {
+    list-style: none;
+    padding: 0em 1em;
+    margin: 1em 0em;
+
+    li {
+      display: inline-block;
+      padding: 0.5em;
+      span {
+        font-size: 16px;
+        font-weight: 300;
+        padding-left: 0.5em;
+      }
+    }
+  }
+  a {
+    color: #D6BECB;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  a:hover {
+    color: white;
+  }
+
+  .fa {
+    font-size: 32px;
+  }
 }
 
-.sheet {
-	position: absolute;
-	top: 5%;
-	min-height: 85%;
-	left: 15%;
-	width: 60%;
-	margin: auto;
-	padding: 5%;
-	font-family: 'Dancing Script', cursive;
-	background: #F4F5ED;
-	box-shadow: 0px 15px 25px 5px rgba(0, 0, 0, 0.7);
-	p {
-		font-size: 1.8em;
-	}
+.footer-head {
+  color: #D6BECB;
+  text-align: center;
+  padding: 1em 2em 0.5em 2em;
+  margin: 0px;
 }
 
-
-
-
-#contact {
-	-webkit-justify-content: center;
-	justify-content: center;
-	background: $gray2;
-	
-	h1 {
-		color: white;
-		text-align: center;
-		margin: 0px;
-		padding: 20px 0px 10px 0px;
-		background: $gray1;
-	}
-	#contact-book {
-		width: 600px;
-		margin: 40px 0px;
-		background: $gray2;
-		border-radius: 50px;
-		overflow: hidden;
-		font-size: 1.3em;
-		.label {
-			text-align: right;
-			padding: 0.3em 1em; 
-			color: #dadada;
-		}
-		.value {
-			text-align: left;
-			padding: 0.3em 1em;
-			a {
-				color: white !important;
-				text-decoration: none;
-				transition: all 0.3s;
-			}
-			a:hover {
-				text-decoration: underline;
-			}
-		}
-	}
-	
+.footer-email {
+  color: #D6BECB;
+  text-align: right;
+  padding: 0.5em 2em 1em 2em;
+  margin: 0px;
 }
 
+/*
+ * -- sm MEDIA QUERIES --
+ */
+@media (min-width: 35.5em) {
 
+  .footer-head {
+    text-align: right;
+    padding: 3em 2em 1em 2em;
+  }
+  .footer-email {
+    text-align: right;
+    padding: 1em 2em;
+  }
 
-@media screen and (max-width: 800px) {
-	.hideSmall {
-		display: none;
-	}
+  .footer ul {
+    border-left: 1px solid #9F6986;
+  }
 }
 
-/* iPad */
-@media only screen and (min-device-width : 768px) and (max-device-width
-	: 1024px) {
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (min-width: 48em) {
+
+  /* We increase the body font size */
+  body {
+    font-size: 16px;
+  }
+  /* We want to give the content area some more padding */
+  .content {
+    padding: 1em;
+  }
+
+  /* We can align the menu header to the left, but float the
+  menu items to the right. */
+  .home-menu {
+    text-align: left;
+  }
+  .home-menu ul {
+    float: right;
+  }
+  .skill-list li {
+    width: 148px;
+    div {
+      width: 128px;
+      height: 128px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+  /* We increase the height of the splash-container */
+  /*    .splash-container {
+          height: 500px;
+      }*/
+
+  .content-wrapper {
+    padding-top: 60px;
+  }
+
+  /* We remove the border-separator assigned to .l-box-lrg */
+  .l-box-lrg {
+    border: none;
+  }
+
 }
 
-/* iPhone */
-@media only screen and (min-device-width : 320px) and (max-device-width
-	: 600px) {
-	h1 {
-		font-size: 26px;
-	}
-	h2 {
-		font-size: 22px;
-	}
-	h3 {
-		font-size: 18px;
-	}
-	h4 {
-		font-size: 16px;
-	}
-	h5 {
-		font-size: 14px;
-	}
-	h6 {
-		font-size: 14px;
-	}
-	p {
-		font-size: 14px;
-	}
+/*
+ * -- DESKTOP (AND UP) MEDIA QUERIES --
+ * On desktops and other large devices, we want to over-ride some
+ * of the mobile and tablet styles.
+ */
+@media (min-width: 78em) {
 }
 
-@MEDIA print {
-	body {
-		color: black !important;
-	}
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
