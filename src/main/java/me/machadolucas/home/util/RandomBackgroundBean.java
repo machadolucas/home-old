@@ -1,8 +1,5 @@
 package me.machadolucas.home.util;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
@@ -17,8 +14,6 @@ public class RandomBackgroundBean {
 
     private List<String> photos = new ArrayList<String>();
 
-    @Getter
-    @Setter
     @ManagedProperty("#{photographyBean}")
     private PhotographyBean photographyBean;
 
@@ -29,5 +24,13 @@ public class RandomBackgroundBean {
 
     public String getRandomPhoto() {
         return photos.get(ThreadLocalRandom.current().nextInt(photos.size()));
+    }
+
+    public PhotographyBean getPhotographyBean() {
+        return photographyBean;
+    }
+
+    public void setPhotographyBean(PhotographyBean photographyBean) {
+        this.photographyBean = photographyBean;
     }
 }
