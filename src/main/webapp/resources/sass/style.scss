@@ -1,6 +1,26 @@
 @import "compass";
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,700);
-@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700);
+//@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,700);
+//@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700);
+
+//@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+//@import url(http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic);
+
+//@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+//@import url(http://fonts.googleapis.com/css?family=Istok+Web:400,700,400italic,700italic);
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic);
+
+
+$finlandBlue: #002f6c;
+
+$dark: $finlandBlue;
+$darkAlpha: rgba(0, 47, 108, 0.9);
+$medium: #66717F;
+$light: #8a9a9f;
+
+$titles: Raleway, sans-serif;
+$bodies: Roboto, sans-serif;
 
 * {
   -webkit-box-sizing: border-box;
@@ -39,18 +59,20 @@
  */
 html {
   -webkit-font-smoothing: antialiased;
+  background: gray;
 }
 
 body {
   line-height: 1.7em;
-  color: #333333;
+  color: white;
+  text-shadow: 0px 0px 3px black;
   font-size: 13px;
-  font-family: Ubuntu, sans-serif;
+  font-family: $titles;
   font-weight: 300;
 }
 
 p {
-  font-family: "Vollkorn", Georgia, serif;
+  font-family: $bodies;
 }
 
 h1,
@@ -60,21 +82,21 @@ h4,
 h5,
 h6,
 label {
-  color: black;
+  color: white;
 }
 
 .pure-g [class *="pure-u"] {
-  font-family: Ubuntu, sans-serif;
+  font-family: $titles;
 }
 
 a {
-  color: #333333;
+  color: yellow;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 a:hover {
-  color: #DD4814;
+  color: white;
 }
 
 #loading {
@@ -152,7 +174,7 @@ a.pure-button-primary {
 }
 
 .home-menu.pure-menu-open {
-  background: rgba(221, 72, 20, 0.95);
+  background: $darkAlpha;
 }
 
 .pure-menu.pure-menu-open.pure-menu-fixed {
@@ -175,10 +197,12 @@ a.pure-button-primary {
 }
 
 .home-menu a {
+  text-decoration: none;
   color: #D6D3CF;
   font-weight: 400;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  padding: 0em 0.5em;
 }
 
 .home-menu li a:hover,
@@ -193,6 +217,7 @@ a.pure-button-primary {
   border-radius: 1em;
   background: white;
   color: #5a5d5a;
+  text-shadow: none;
 
   > .pure-g {
     padding: 1em 0em;
@@ -211,22 +236,8 @@ a.pure-button-primary {
   }
 
   a:hover {
-    color: #DD4814;
+    color: black;
   }
-}
-
-.terminal {
-  background: black;
-  border: 4px solid #AEA79F;
-  border-radius: 5px;
-  padding: 0.5em;
-  margin: 0.5em;
-  font-family: "Lucida Console", courier;
-  font-weight: 400;
-  color: white;
-  font-size: 2em;
-  line-height: 1em;
-  min-height: 3.3em;
 }
 
 .logoBlock {
@@ -242,7 +253,7 @@ a.pure-button-primary {
     transition: all 0.2s ease-in-out;
   }
   a:hover h3 {
-    color: #DD4814;
+    color: black;
   }
   a:hover {
     border-bottom: none;
@@ -256,8 +267,10 @@ a.pure-button-primary {
  * This represents the content area (everything below the blue section)
  */
 .content-wrapper {
-  padding-top: 110px;
-  background: white;
+  position: absolute;
+  z-index: 2;
+  background: transparent;
+  display: none;
 }
 
 /* This is the class used for the main content headers (<h2>) */
@@ -266,21 +279,24 @@ a.pure-button-primary {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: 2em 0 1em;
+  text-shadow: 0px 0px 5px black;
 }
 
 /* This is a modifier class used when the content-head is inside a ribbon */
 .content-head-ribbonLight {
   color: white;
+  text-shadow: 0px 0px 5px black;
 }
 
 .content-head-ribbon {
   color: white;
+  text-shadow: 0px 0px 5px black;
 }
 
 /* This is the class used for the content sub-headers (<h3>) */
 .content-subhead {
   color: white;
-  background: rgba(221, 72, 20, 1);
+  background: $darkAlpha;
   border-radius: 80px;
   text-align: center;
   padding: 16px;
@@ -297,28 +313,47 @@ a.pure-button-primary {
 .thumbnails {
   p {
     text-align: center;
+    text-shadow: 0px 0px 4px black;
   }
   a {
     text-decoration: none;
-    color: #333333;
+    color: white;
   }
   a:hover {
-    color: #772953;
+    color: white;
   }
   a:hover .content-subhead {
-    background: #772953;
+    background: black;
   }
 }
 
 /* This is the class used for the dark-background areas. */
 .ribbonLight {
-  background: #AEA79F;
+  background: rgba(90,90,90,0.9);
   color: white;
   font-weight: 400;
 }
 
+.landing {
+  position: fixed !important;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  z-index: 1;
+
+  background-size: cover;
+
+  @include filter(blur(0px));
+  @include transition-duration(0.2s);
+  @include transition-property(all);
+}
+.landing.blurred {
+  @include filter(blur(4px));
+}
+
 .ribbon {
-  background: rgba(221, 72, 20, 1);
+  background: $darkAlpha;
   color: white;
   font-weight: 400;
 }
@@ -341,10 +376,11 @@ a.pure-button-primary {
   li {
     margin: 0.5em;
     padding: 0.5em 1em;
-    background: #AEA79F;
+    background: rgba(0,0,0,0.4);
     color: white;
     border-radius: 2em;
     font-weight: 700;
+    text-shadow: 0px 0px 3px black;
   }
 }
 
@@ -391,21 +427,22 @@ a.pure-button-primary {
     padding: 0.5em;
   }
   .cv-link {
-    color: #333333;
+    color: white;
+    text-shadow: 0px 0px 3px black;
     text-decoration: none;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     img {
-      border: 2px solid #AEA79F;
+      border: 2px solid rgba(0,0,0,0.5);
       -webkit-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out;
     }
   }
   .cv-link:hover {
-    color: rgba(221, 72, 20, 1);
+    color: $dark;
 
     img {
-      border: 2px solid rgba(221, 72, 20, 1);
+      border: 2px solid $dark;
     }
   }
 }
@@ -452,8 +489,8 @@ a.pure-button-primary {
 
 /* This is the class used for the footer */
 .footer {
-  background: #772953;
-  color: #D6BECB;
+  background: rgba(0,0,0,0.9);
+  color: $light;
   display: none;
 
   ul {
@@ -472,7 +509,7 @@ a.pure-button-primary {
     }
   }
   a {
-    color: #D6BECB;
+    color: $light;
     text-decoration: none;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -487,14 +524,14 @@ a.pure-button-primary {
 }
 
 .footer-head {
-  color: #D6BECB;
+  color: $light;
   text-align: center;
   padding: 1em 2em 0.5em 2em;
   margin: 0px;
 }
 
 .footer-email {
-  color: #D6BECB;
+  color: $light;
   text-align: right;
   padding: 0.5em 2em 1em 2em;
   margin: 0px;
@@ -515,8 +552,13 @@ a.pure-button-primary {
   }
 
   .footer ul {
-    border-left: 1px solid #9F6986;
+    border-left: 1px solid $light;
   }
+}
+
+.transparentScreen {
+  padding-top: 62px;
+  min-height: 90%;
 }
 
 /*
@@ -535,6 +577,7 @@ a.pure-button-primary {
     padding: 1em;
   }
 
+
   /* We can align the menu header to the left, but float the
   menu items to the right. */
   .home-menu {
@@ -551,16 +594,13 @@ a.pure-button-primary {
     }
     p {
       font-size: 20px;
+      text-shadow: none;
     }
   }
   /* We increase the height of the splash-container */
   /*    .splash-container {
           height: 500px;
       }*/
-
-  .content-wrapper {
-    padding-top: 60px;
-  }
 
   /* We remove the border-separator assigned to .l-box-lrg */
   .l-box-lrg {

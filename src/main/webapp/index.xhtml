@@ -24,26 +24,28 @@
 			function changePage(link) {
 				changePageHash(link.hash);
 			}
-			
+
 			function changePageHash(anchor) {
 				switch (anchor){
-				case "#contact":
-				case "#home":
-					changeContainer('pages/home.jsf', anchor);
-					break;
-				case "#professional":
-					changeContainer('pages/professional.jsf', anchor);
-					break;
-				case "#portfolio":
-					changeContainer('pages/portfolio.jsf', anchor);
-					break;
-				case "#timeline":
-					changeContainer('pages/timeline.jsf', anchor);
-					break;
-				case "#photography":
-					changeContainer('pages/photography.jsf', anchor);
-					break;
-				default:
+					case "#contact":
+					case "#home":
+						changeContainer('pages/home.jsf', anchor);
+						break;
+					case "#professional":
+						changeContainer('pages/professional.jsf', anchor);
+						break;
+					case "#portfolio":
+						changeContainer('pages/portfolio.jsf', anchor);
+						break;
+					case "#timeline":
+						changeContainer('pages/timeline.jsf', anchor);
+						break;
+					case "#photography":
+						changeContainer('pages/photography.jsf', anchor);
+						break;
+					default:
+						changeContainer('pages/home.jsf', anchor);
+						break;
 				}
 			}
 			function changeContainer(address, anchor){
@@ -51,11 +53,14 @@
 			}
 			function changeContainer(address, anchor, callback){
 				var stateObj = { foo: "bar" };
-				jQuery('.content-wrapper, .footer').fadeOut('fast',function(){
-					jQuery('.content-wrapper').load(address, function(){
+				$('html, body').animate({ scrollTop: 0 }, 'slow');
+				jQuery('.landing').removeClass('blurred');
+				jQuery('.content-wrapper, .footer').fadeOut('normal',function(){
+					jQuery('.content-loader').load(address, function(){
 						jQuery('.home-menu li').removeClass('pure-menu-selected');
 						jQuery('.home-menu a[href="' + anchor + '"]').parent().addClass('pure-menu-selected');
 						jQuery('.content-wrapper, .footer').fadeIn('slow', callback);
+						jQuery('.landing').addClass('blurred');
 					});
 				});
 				history.replaceState(stateObj, address, anchor);
@@ -72,63 +77,70 @@
 
 		<div class="header">
 			<div
-				class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+				class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-scrollable pure-menu-fixed">
 				<a class="pure-menu-heading" href="">machadolucas</a>
 
-				<ul>
-					<li class="pure-menu-selected"><a href="#home" onclick="changePage(this)">Home</a></li>
-					<li><a href="#professional" onclick="changePage(this)">Professional</a></li>
-					<li><a href="#portfolio" onclick="changePage(this)">Portfolio</a></li>
-					<li><a href="#timeline" onclick="changePage(this)">Timeline</a></li>
-					<li><a href="#photography" onclick="changePage(this)">Photography</a></li>
-					<li><a href="http://blog.machadolucas.me" target="_blank">Blog</a></li>
+				<ul class="pure-menu-list">
+					<li class="pure-menu-item pure-menu-selected"><a href="#home" onclick="changePage(this)">Home</a></li>
+					<li class="pure-menu-item"><a href="#professional" onclick="changePage(this)">Professional</a></li>
+					<li class="pure-menu-item"><a href="#portfolio" onclick="changePage(this)">Portfolio</a></li>
+					<li class="pure-menu-item"><a href="#timeline" onclick="changePage(this)">Timeline</a></li>
+					<li class="pure-menu-item"><a href="#photography" onclick="changePage(this)">Photography</a></li>
+					<li class="pure-menu-item"><a href="http://blog.machadolucas.me" target="_blank">Blog</a></li>
 				</ul>
 			</div>
+		</div>
+
+		<div class="landing">
 		</div>
 
 		<div class="content-wrapper">
+
+			<div class="content-loader">
+			</div>
+
+			<div class="footer l-box pure-g" id="contact">
+				<div class="pure-u-1 pure-u-sm-1-2">
+					<h2 class="footer-head">Contact</h2>
+					<h3 class="footer-email"><script>writemail();</script></h3>
+				</div>
+				<div class="pure-u-1 pure-u-sm-1-2">
+					<ul class="pure-g">
+						<li class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
+							<a class="mail" href="#" title="Send me an e-mail"><i class="fa fa-envelope"></i><span> E-mail</span></a>
+						</li>
+						<li class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
+							<a href="skype:machado_lucas?chat" title="Contact me in Skype: machado_lucas"><i class="fa fa-skype"></i><span> Skype</span></a>
+						</li>
+						<li class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
+							<a href="http://www.facebook.com/sir.lucas.machado" target="_blank" title="Find me in Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+						</li>
+						<li class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
+							<a href="http://twitter.com/sir_luke" target="_blank" title="Find me in Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+						</li>
+						<li class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
+							<a href="http://github.com/machadolucas" target="_blank" title="Find me in GitHub"><i class="fa fa-github"></i><span> GitHub</span></a>
+						</li>
+						<li class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
+							<a href="http://br.linkedin.com/in/machadolucas" target="_blank" title="Find me in LinkedIn"><i class="fa fa-linkedin"></i><span> LinkedIn</span></a>
+						</li>
+						<li class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
+							<a href="http://www.slideshare.net/sirlucasmachado" target="_blank" title="Find me in Slideshare"><i class="fa fa-slideshare"></i><span> Slideshare</span></a>
+						</li>
+						<li class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
+							<a href="http://steamcommunity.com/id/sirlukestradwoski" target="_blank" title="Find me in Steam"><i class="fa fa-steam"></i><span> Steam</span></a>
+						</li>
+						<li class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
+							<a href="http://0-sirluke-0.deviantart.com/" target="_blank" title="Find me in DeviantArt"><i class="fa fa-deviantart"></i><span> deviantArt</span></a>
+						</li>
+						<li class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
+							<a href="http://www.lastfm.com.br/user/sirlucasmachado" target="_blank" title="Find me in Last.fm"><i class="fa fa-lastfm"></i><span> Last.fm</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 
-		<div class="footer l-box pure-g" id="contact">
-			<div class="pure-u-1 pure-u-sm-1-2">
-				<h2 class="footer-head">Contact</h2>
-				<h3 class="footer-email"><script>writemail();</script></h3>
-			</div>
-			<div class="pure-u-1 pure-u-sm-1-2">
-				<ul class="pure-g">
-					<li class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
-						<a class="mail" href="#" title="Send me an e-mail"><i class="fa fa-envelope"></i><span> E-mail</span></a>
-					</li>
-					<li class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
-						<a href="skype:machado_lucas?chat" title="Contact me in Skype: machado_lucas"><i class="fa fa-skype"></i><span> Skype</span></a>
-					</li>
-					<li class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
-						<a href="http://www.facebook.com/sir.lucas.machado" target="_blank" title="Find me in Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
-					</li>
-					<li class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
-						<a href="http://twitter.com/sir_luke" target="_blank" title="Find me in Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
-					</li>
-					<li class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
-						<a href="http://github.com/machadolucas" target="_blank" title="Find me in GitHub"><i class="fa fa-github"></i><span> GitHub</span></a>
-					</li>
-					<li class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
-						<a href="http://br.linkedin.com/in/machadolucas" target="_blank" title="Find me in LinkedIn"><i class="fa fa-linkedin"></i><span> LinkedIn</span></a>
-					</li>
-					<li class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
-						<a href="http://www.slideshare.net/sirlucasmachado" target="_blank" title="Find me in Slideshare"><i class="fa fa-slideshare"></i><span> Slideshare</span></a>
-					</li>
-					<li class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
-						<a href="http://steamcommunity.com/id/sirlukestradwoski" target="_blank" title="Find me in Steam"><i class="fa fa-steam"></i><span> Steam</span></a>
-					</li>
-					<li class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
-						<a href="http://0-sirluke-0.deviantart.com/" target="_blank" title="Find me in DeviantArt"><i class="fa fa-deviantart"></i><span> deviantArt</span></a>
-					</li>
-					<li class="pure-u-1 pure-u-md-1-2 pure-u-xl-1-3">
-						<a href="http://www.lastfm.com.br/user/sirlucasmachado" target="_blank" title="Find me in Last.fm"><i class="fa fa-lastfm"></i><span> Last.fm</span></a>
-					</li>
-				</ul>
-			</div>
-		</div>
 
 		<script type="text/javascript">
 		    
