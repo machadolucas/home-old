@@ -17,4 +17,16 @@
 		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
 
+	<application>
+		<locale-config>
+			<default-locale>en</default-locale>
+			<supported-locale>pt</supported-locale>
+			<supported-locale>en</supported-locale>
+		</locale-config>
+		<resource-bundle>
+			<base-name>me.machadolucas.home.resources.Strings</base-name>
+			<var>str</var>
+		</resource-bundle>
+	</application>
+
 </faces-config>

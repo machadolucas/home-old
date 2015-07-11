@@ -70,7 +70,7 @@
 
 	<ui:define name="content">
 		<div id="loading" class="unselectable flexContainerVertical">
-			<h3>Loading</h3>
+			<h3>#{str.message_loading}</h3>
 			<img src="resources/img/loading.gif" />
 		</div>
 
@@ -78,15 +78,15 @@
 		<div class="header">
 			<div
 				class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-scrollable pure-menu-fixed">
-				<a class="pure-menu-heading" href="">machadolucas</a>
+				<a class="pure-menu-heading" href="">#{str.menu_title}</a>
 
 				<ul class="pure-menu-list">
-					<li class="pure-menu-item pure-menu-selected"><a href="#home" onclick="changePage(this)">Home</a></li>
-					<li class="pure-menu-item"><a href="#professional" onclick="changePage(this)">Professional</a></li>
-					<li class="pure-menu-item"><a href="#portfolio" onclick="changePage(this)">Portfolio</a></li>
-					<li class="pure-menu-item"><a href="#timeline" onclick="changePage(this)">Timeline</a></li>
-					<li class="pure-menu-item"><a href="#photography" onclick="changePage(this)">Photography</a></li>
-					<li class="pure-menu-item"><a href="http://blog.machadolucas.me" target="_blank">Blog</a></li>
+					<li class="pure-menu-item pure-menu-selected"><a href="#home" onclick="changePage(this)">#{str.menu_home}</a></li>
+					<li class="pure-menu-item"><a href="#professional" onclick="changePage(this)">#{str.menu_professional}</a></li>
+					<li class="pure-menu-item"><a href="#portfolio" onclick="changePage(this)">#{str.menu_portfolio}</a></li>
+					<li class="pure-menu-item"><a href="#timeline" onclick="changePage(this)">#{str.menu_timeline}</a></li>
+					<li class="pure-menu-item"><a href="#photography" onclick="changePage(this)">#{str.menu_photography}</a></li>
+					<li class="pure-menu-item"><a href="http://blog.machadolucas.me" target="_blank">#{str.menu_blog}</a></li>
 				</ul>
 			</div>
 		</div>
