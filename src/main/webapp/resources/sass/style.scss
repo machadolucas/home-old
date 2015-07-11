@@ -127,7 +127,7 @@ a:hover {
 }
 
 .l-box-lrg {
-  padding: 2em;
+  padding: 0.5em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -205,7 +205,7 @@ a.pure-button-primary {
 }
 
 .roundedBox {
-  padding: 2em;
+  padding: 0.5em;
   border-radius: 1em;
   background: white;
   color: #5a5d5a;
@@ -596,7 +596,11 @@ a.pure-button-primary {
 
   /* We remove the border-separator assigned to .l-box-lrg */
   .l-box-lrg {
+    padding: 2em;
     border: none;
+  }
+  .roundedBox {
+    padding: 2em;
   }
 
 }
